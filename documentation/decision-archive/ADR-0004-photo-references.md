@@ -1,0 +1,3 @@
+# ADR-0004 — Local photo references and estimated editable interior
+Status: implemented pending quality gate.
+Decision: separate private IndexedDB for original photos, WebP previews, metadata and semantic component association; SHA-256 identity, human review and local rights approval. Store texture descriptors per garage scene, no private binary in Git. Reconstruct independent Three.js geometry using stock bounds and written specifications until photographs available. Avoid neural or photogrammetric claims, no paid APIs. Runtime additions are reversible, stock GLB immutable. Limitations documented in PhotoDigitalTwinV5.md.

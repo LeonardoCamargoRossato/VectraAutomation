@@ -1,7 +1,7 @@
 import * as T from 'three';
 import {RoundedBoxGeometry} from 'three/addons/geometries/RoundedBoxGeometry.js';
 export const interiorPresets={'Luz natural':{fill:.7,panel:0},'Inspeção técnica':{fill:2.6,panel:0},'Painel iluminado':{fill:1.2,panel:1.8},'Interior noturno':{fill:.17,panel:2}};
-export function componentFor(o){if(o.userData.referenceComponent)return o.userData.referenceComponent;const r=o.userData.automotiveRole;return ({dashboard:'Dashboard',steering:'SteeringWheel',suede:'FrontSeats',carpet:'Carpet',lining:'DoorPanels'})[r]||null}
+export function componentFor(o){if(o.userData.referenceComponent)return o.userData.referenceComponent;const r=o.userData.automotiveRole;if(r==='suede'&&/rear|back/i.test(o.parent?.name||''))return 'RearSeats';return ({dashboard:'Dashboard',steering:'SteeringWheel',suede:'FrontSeats',carpet:'Carpet',lining:'DoorPanels'})[r]||null}
 export const interiorViews={'Volante':{eye:[.36,1.04,.10],target:[.36,.71,.60]},'Instrumentação':{eye:[.36,1.05,.20],target:[.36,.83,.79]},'Console central':{eye:[-.38,1.12,.04],target:[0,.65,.57]},'Câmbio automático':{eye:[-.33,.98,-.15],target:[0,.45,.21]},'Visão ampla dos bancos':{eye:[0,1.28,.46],target:[0,.78,-.80]}};
 export function addInterior(root){
  // Coordinates in normalized vehicle world space derived from stock GLB bounds. No reference photographs were available.
