@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {captureName,history,safeHttps} from '../src/lib/SceneState.js';import {headers,validateRows,planEdit} from '../src/lib/Sheets.js';
+test('capture UTC timestamp',()=>assert.equal(captureName(new Date('2026-11-25T23:15:00Z'),'Traseira',true),'Vectra2000TraseiraCameraRe20261125T231500Z'));
+test('undo redo independent state',()=>{const h=history({v:1});h.commit({v:2});assert.equal(h.undo().v,1);assert.equal(h.redo().v,2)});
+test('URL safe',()=>{assert.equal(safeHttps('javascript:alert(1)'),null);assert.equal(safeHttps('https://example.com'),'https://example.com/')});
+test('protect formulas ids and concurrent changes',()=>{const rows=[headers,['a','C','Idea','=1+1']];assert.equal(planEdit(rows,'a',2,'Idea','New').range,"'Ideias e upgrades'!C2");assert.throws(()=>planEdit(rows,'a',3,'2','new'));assert.throws(()=>planEdit(rows,'a',2,'old','new'));assert.throws(()=>planEdit(rows,'a',0,'a','b'));assert.throws(()=>validateRows([headers,['a'],['a']]))});

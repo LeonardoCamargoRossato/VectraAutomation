@@ -1,0 +1,50 @@
+# LCR_GUARDRAILS — Regras permanentes do projeto
+
+## Finalidade e autoridade
+Normas aplicáveis a Planner, Builder/Codex, Research, Drawer, Audio Designer e Quality & Security Auditor. Todo agente deve consultar este arquivo, `LCR_WORKFLOW.md` e `LCR_NAMING_CONVENTIONS.md` antes de gerar um prompt de desenvolvimento, upgrade ou hotfix. O responsável humano aprova exceções e alterações de alto impacto.
+
+## Regras obrigatórias
+1. **Estrutura imutável por padrão:** código executável em `code/`; automações GitHub em `.github/workflows/`; normas e registros em `documentation/`; imagens do aplicativo em `code/public/assets/`; decisões em `documentation/decision-archive/`; registros dos especialistas em `documentation/agents-archive/`.
+2. **Inicialização sem dependências externas:** `LCR_START` estabelece apenas estrutura e documentos. Não provisionar Supabase, Google OAuth, Storage, Search Console nem publicar uma aplicação sem aprovação e autorização próprias.
+3. **Arquitetura com decisão humana e agentes opcionais:** `LCR_BASIC_OPTIONS` é uma verificação interna do brainstorming, não fase separada nem instalação automática. **Research, Quality & Security Auditor, Drawer e Audio Designer são papéis acionados conforme a necessidade**. O Auditor geral avalia a entrega quando indicado pelo risco; Quality Gate automatizado obrigatório em todos os PRs. Cybersecurity, Safety e Scientific/Technical Reviewer são especialistas adicionais opcionais cuja convocação depende de avaliação de risco e decisão humana. A decisão de convocar um novo especialista deve ser registrada no Decision Archive (ADR), com contexto, justificativa e impacto. A complexidade do projeto e as decisões arquiteturais dela decorrentes também devem ser avaliadas e registradas em ADR quando relevantes.
+4. **Prompt de upgrade:** declarar objetivos, escopo, caminhos afetados, critérios de aceite, testes e como preservar a arquitetura. Alterações em estrutura, serviços ou permissões exigem ADR e aprovação.
+5. **Prompt de hotfix:** reproduzir problema, atuar com a menor mudança possível e verificar regressão; não usar um hotfix para realizar migrações ou redesign amplo sem solicitação.
+6. **Nomenclatura:** aplicar `LCR_NAMING_CONVENTIONS.md`. Executar `python code/scripts/lcr_naming.py --check` no início do projeto, ao concluir o `LCR_DAY` quando houver execução autorizada, e em CI recorrente.
+7. **Privacidade:** não gravar tokens, senhas, secrets, service_role, dados pessoais ou conversas brutas privadas no Git público. Revisar/anomizar raw antes de publicar; `.gitignore` protege registros brutos não revisados.
+8. **Qualidade:** verificar código e documentação antes da entrega; distinguir claramente `proposto`, `implementado`, `testado` e `validado`. Nunca inventar testes, métricas, fontes ou resultados.
+9. **Rastreabilidade e espelhamento documental:** decisões arquiteturais relevantes ficam no Decision Archive (ADR), e registros de chats no Agents Archive. **GitHub é a fonte principal da estrutura e dos arquivos do projeto**; o **Google Drive atua como backup diário datado e espelho documental navegável**, reproduzindo, sempre que viável e permitido, a hierarquia de pastas e arquivos do GitHub para facilitar localização, auditoria, rastreabilidade e comparação entre os dois ambientes. Divergências devem ser identificadas, datadas e reconciliadas com base no GitHub, sem substituir silenciosamente registros históricos. Na inicialização do projeto, preservar também um **arquivo ZIP original, datado**, como marco verificável da estrutura inicial. O espelhamento e a geração do ZIP são requisitos do protocolo e só devem ser declarados executados após confirmação das respectivas operações.
+10. **Não destrutivo:** não sobrescrever, remover, mover dados ou fazer deploy de alto impacto sem justificativa, verificação e autorização humana quando aplicável.
+
+## Aplicação por agente
+- **Planner:** valida escopo, alternativas, critérios de aceite, ADR e solicita aos Builders que leiam estas regras.
+- **Builder / Codex:** respeita caminhos, nomenclatura, testes e requisitos aprovados.
+- **Research:** fundamenta escolhas e explicita a confiabilidade das evidências.
+- **Quality & Security Auditor:** verifica aplicação dos guardrails e registra riscos, independentemente do registro diário comum.
+- **Drawer / Audio Designer:** seguem política de recursos visuais/sonoros e nomenclatura.
+
+## Exceções e fiscalização
+- Nome exigido por linguagem, framework, sistema operacional ou protocolo prevalece sobre preferência estilística; registrar a exceção em `LCR_NAMING_CONVENTIONS.md`.
+- Exceção arquitetural relevante: documentar ADR aprovado, sem alterar retroativamente fatos do registro.
+- `AGENTS.md` resume e referencia estas normas; o arquivo Markdown sozinho **não garante** que todo chat ChatGPT o carregue automaticamente. O agente deve acessá-lo no projeto. CI automatiza apenas verificações tecnicamente verificáveis.
+
+## Protocolo permanente de prompts
+Qualquer prompt para o Builder/Codex é elaborado pelo Planner com `LCR_PROMPT_GENERATOR` quando disponível, usando somente **desenvolvimento/upgrade** (`DevelopmentPrompt.md`) ou **hotfix adaptativo** (`HotfixPrompt.md`). O formato deve ser auditável e proporcional ao escopo, respeitar aprovação humana, guardrails, arquivos existentes e nomes oficiais. Nenhuma instrução pode afirmar execução, deploy, revisão ou commit que ainda não ocorreu. O destinatário escolhido pelo usuário prevalece; pedir “faça o prompt” não autoriza executá-lo.
+
+## Avaliação obrigatória de ADR em desenvolvimento
+Na geração de cada prompt de desenvolvimento/upgrade, avaliar se há **decisão arquitetural significativa nova**, sem criar ADR automático para mudanças meramente extensas. Aplicar `documentation/decision-archive/LCR_ADR_GUARDRAILS.md` e o template único `AdrTemplate.md`. Se necessário, entregar prompt e ADR como **dois arquivos Markdown** (ou conteúdos separados quando não houver ferramenta de criação). Não duplicar decisões existentes, inventar histórico inacessível ou exigir novamente aprovação humana já explicitamente dada no brainstorming. Hotfix comum não exige ADR; hotfix que implica mudança arquitetural deve ser reclassificado ou discutido.
+
+## Registro automático de ADRs e espelhamento
+Em **decisões reais** documentadas pelo Planner, registrar o ADR no GitHub e replicar no Drive apenas pelo backup central diário (ou execução manual excepcional autorizada). A instrução para registrar não autoriza implementar código nem publicar dados sensíveis. Na ausência de integração de escrita, fornecer arquivo e estado `pendente`, sem fingir commit ou cópia. O espelhamento GitHub Actions fora do chat depende de credenciais Google específicas, independentemente do plugin do ChatGPT.
+
+## Quality Gate e auditoria proporcional (ADR-0008, ADR-0015)
+O Quality Gate automatizado é obrigatório em todos os PRs. Exigir sucesso das verificações aplicáveis antes do merge. A avaliação independente é proporcional ao risco e à complexidade; baixo risco admite revisão ordinária, alto impacto exige avaliação independente e aprovação humana. O gate técnico adicional do Auditor é opcional conforme maturidade e infraestrutura. Chats distintos na mesma identidade GitHub não demonstram segregação técnica. Não contornar controles existentes; registrar evidências, SHA e limitações. Aplicar LCR_CICD_STANDARD.md e LCR_QUALITY_SECURITY_AUDITOR_README.md.
+
+O Auditor verifica nomenclatura, conformidade, testes, build, GitHub Actions, segurança básica, SEO e documentação em commit **estável**. Pode inspecionar em paralelo ao Builder (somente leitura), mas somente emite parecer final quando a implementação terminar. Codex/Builder executa correções; o Auditor retesta independentemente. Estados: **aprovado, atenção, reprovado, não verificado**; todo achado precisa de evidência.
+
+O Planner recomenda um especialista quando **risco alto OU (especialização alta E complexidade alta)**. **Cybersecurity**: ataques digitais, autenticação, permissões e dependências; **Safety**: danos físicos, ópticos e elétricos; **Scientific/Technical Reviewer**: modelos, unidades, incertezas e método científico. A convocação depende de autorização humana, com ADR quando necessária. Normas externas são referências conforme contexto, **não certificações automáticas**. Skill: `.agents/skills/lcr-audit-generator/SKILL.md`.
+
+## Política de backup ao final do dia (ADR-0009)
+**GitHub é a fonte de verdade e o histórico contínuo. Google Drive recebe uma única rodada automática diária**: 23h55 Brasília (02h55 UTC do dia seguinte), via `LCR_BACKUP.yml`, ou `workflow_dispatch` excepcional autorizado. Não realizar upload por arquivo, ADR, relatório ou push durante o desenvolvimento. O `rclone copy` atualiza incrementalmente o espelho navegável e salva ZIP + `git bundle` por data/commit; **não apagar históricos sem política de retenção aprovada**. Status Drive é **pendente** até verificar job `success`, SHA e snapshot. OAuth do GitHub Actions é independente do plugin Drive deste chat. Em 09/11/2026, a última falha observada foi HTTP 401; não declarar corrigida sem novo teste.
+
+## Product Structure Mapping (ADR-0016)
+Em produtos com navegação, manter manifesto canônico relacionando Navigation Menu, Route Map, Page Structure e Asset Structure por IDs estáveis, com exceções explícitas e validação PSM-01 a PSM-04 no Quality Gate existente (CI-06). Consultar `LCR_FRAMEWORK_DOCUMENTATION_STANDARD.md`, `LCR_ASSET_ORGANIZATION_STANDARD.md` e `LCR_CICD_STANDARD.md`. Não duplicar catálogos, workflows ou recursos por simetria; preservar originais e aliases.

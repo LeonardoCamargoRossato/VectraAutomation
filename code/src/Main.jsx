@@ -1,0 +1,14 @@
+import React,{useState,lazy,Suspense} from 'react';
+import {createRoot} from 'react-dom/client';
+import {Icon} from './components/Icon.jsx';
+import {Gallery} from './pages/Gallery.jsx';
+import './Styles.css';
+const Viewer=lazy(()=>import('./pages/Viewer.jsx'));
+const Inventory=lazy(()=>import('./pages/Inventory.jsx'));
+const pages=[['explorar','Explorar Vectra','car'],['inventario','Inventário','list'],['galeria','Galeria','image'],['sobre','Sobre o Projeto','info']];
+function getPage(){const h=location.hash.slice(1);return pages.some(p=>p[0]===h)?h:'explorar'}
+function App(){const [page,setPage]=useState(getPage),[collapsed,setCollapsed]=useState(()=>innerWidth<680),[restore,setRestore]=useState(null);
+React.useEffect(()=>{const f=()=>setPage(getPage());addEventListener('hashchange',f);return()=>removeEventListener('hashchange',f)},[]);
+function go(id){location.hash=id;setPage(id)}
+return <div className={'app-shell '+(collapsed?'menu-collapsed':'')}><aside className="nav-sidebar"><div className="sidebar-top"><div className="identity-icon">V</div>{!collapsed&&<div className="identity-text"><strong>Vectra Virtual Lab</strong><small>VECTRA AUTOMATION</small></div>}<button className="sidebar-toggle" aria-label={collapsed?'Expandir menu':'Recolher menu'} aria-expanded={!collapsed} onClick={()=>setCollapsed(!collapsed)}><Icon name="menu"/></button></div><nav className="side-navigation">{pages.map(([id,title,icon])=><button key={id} className={'nav-item '+(page===id?'active':'')} aria-current={page===id?'page':undefined} title={title} aria-label={title} onClick={()=>go(id)}><span className="nav-icon"><Icon name={icon}/></span>{!collapsed&&title}</button>)}</nav>{!collapsed&&<div className="sidebar-bottom"><strong>LCR Virtual Lab</strong><p>Projeto independente · V1</p></div>}</aside><main className="main-column"><header className="compact-toolbar"><div><span className="overline">Chevrolet Vectra CD 2.2 · 2000</span><h1>{pages.find(p=>p[0]===page)[1]}</h1></div></header><Suspense fallback={<p role="status">Carregando módulo…</p>}>{page==='explorar'?<Viewer restore={restore} clearRestore={()=>setRestore(null)}/>:page==='inventario'?<Inventory/>:page==='galeria'?<Gallery onRestore={s=>{setRestore(s);go('explorar')}}/>:<article className="panel"><h2>Laboratório de modernização virtual</h2><p>Ambiente independente, sem conexão com o veículo. A geometria esquemática inicial não é uma reprodução fiel. O modelo importado fica no dispositivo.</p><a href="https://github.com/LeonardoCamargoRossato/NV-Quantum-VirtualLab" target="_blank" rel="noreferrer">Projeto de referência</a><p>Sem serviços pagos. Sem envio de fotos ou modelos para servidores.</p></article>}</Suspense></main></div>}
+createRoot(document.getElementById('root')).render(<App/>);

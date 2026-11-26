@@ -1,0 +1,2 @@
+# Vectra Virtual Lab — LCR
+Código em code/, assets em code/public/assets/, decisões em documentation/decision-archive/. Consultar normas LCR. Não publicar fotos privadas, placas reais, tokens ou modelo sem licença. Sem merge/deploy até aprovação e gates. Preservar originais e distinguir implementação de validação.
