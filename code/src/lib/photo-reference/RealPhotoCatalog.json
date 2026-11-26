@@ -1,0 +1,373 @@
+[
+  {
+    "assetId": "VectraReal01",
+    "logicalName": "01 — Volante",
+    "categories": [
+      "Interior / Volante",
+      "Interior / Instrumentação",
+      "Interior / Painel"
+    ],
+    "components": [
+      "SteeringWheel",
+      "InstrumentCluster",
+      "Dashboard"
+    ],
+    "perspective": "Frontal do motorista",
+    "quality": [
+      "Referência de iluminação",
+      "Oclusão"
+    ],
+    "primaryComponent": "SteeringWheel",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 1200,
+    "height": 900,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal01.png",
+        "sha256": "1cc4a2d4765d3e0d224cc249701627e0802fbed4dc20669fae626e6e1f18b2c8",
+        "bytes": 392881,
+        "format": "png",
+        "width": 1200,
+        "height": 900,
+        "gitSha": "2c61d17113b927fe0446a01d3824a86a7ac8fecb"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal01.webp",
+        "sha256": "6af9801e868ce60bf2d8c02e16d29543ef9f7589fed5dc7e6ab0db380710cb13",
+        "bytes": 18138,
+        "format": "webp",
+        "width": 600,
+        "height": 450,
+        "gitSha": "a34402a41589996fbd59deec259084db69fcd5e2"
+      }
+    },
+    "photoId": "1cc4a2d4765d3e0d224cc249701627e0802fbed4dc20669fae626e6e1f18b2c8",
+    "sha256": "1cc4a2d4765d3e0d224cc249701627e0802fbed4dc20669fae626e6e1f18b2c8"
+  },
+  {
+    "assetId": "VectraReal02",
+    "logicalName": "02 — Volante",
+    "categories": [
+      "Interior / Volante",
+      "Interior / Instrumentação",
+      "Interior / Painel"
+    ],
+    "components": [
+      "SteeringWheel",
+      "InstrumentCluster",
+      "Dashboard"
+    ],
+    "perspective": "Oblíqua esquerda",
+    "quality": [
+      "Referência de iluminação",
+      "Oclusão"
+    ],
+    "primaryComponent": "SteeringWheel",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 900,
+    "height": 1200,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal02.png",
+        "sha256": "45c1dfb5e4aa82ecb5378639e2352ca28d4840129edb8c83a285970e18c60424",
+        "bytes": 292899,
+        "format": "png",
+        "width": 900,
+        "height": 1200,
+        "gitSha": "de0ce871a19036607b90da86be24cc40d05f752f"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal02.webp",
+        "sha256": "6268da02e3ff413c1a10cbe6b4acbd491fc380743c04764700cc81c28e1b2c67",
+        "bytes": 15964,
+        "format": "webp",
+        "width": 450,
+        "height": 600,
+        "gitSha": "d3d8f464f31d4ba62453bfa290f6b846e445ee52"
+      }
+    },
+    "photoId": "45c1dfb5e4aa82ecb5378639e2352ca28d4840129edb8c83a285970e18c60424",
+    "sha256": "45c1dfb5e4aa82ecb5378639e2352ca28d4840129edb8c83a285970e18c60424"
+  },
+  {
+    "assetId": "VectraReal03",
+    "logicalName": "03 — Volante",
+    "categories": [
+      "Interior / Volante",
+      "Interior / Instrumentação",
+      "Interior / Painel"
+    ],
+    "components": [
+      "SteeringWheel",
+      "InstrumentCluster",
+      "Dashboard"
+    ],
+    "perspective": "Frontal do motorista",
+    "quality": [
+      "Referência de iluminação",
+      "Oclusão"
+    ],
+    "primaryComponent": "SteeringWheel",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 900,
+    "height": 1200,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal03.png",
+        "sha256": "b3a48954c4e188939ef4df56061a481083c5fde8cba122f76cef28c64b5c6525",
+        "bytes": 301563,
+        "format": "png",
+        "width": 900,
+        "height": 1200,
+        "gitSha": "648da6b290b5e3def04a6571486ad77af9566d9f"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal03.webp",
+        "sha256": "f3a91e7094a642a0d0055a3bd56b5fe24f9b06efcef801c40bec87eb416f376e",
+        "bytes": 15374,
+        "format": "webp",
+        "width": 450,
+        "height": 600,
+        "gitSha": "9ced5eca93cf8bb096d9f2dedd8a9d58c39e953f"
+      }
+    },
+    "photoId": "b3a48954c4e188939ef4df56061a481083c5fde8cba122f76cef28c64b5c6525",
+    "sha256": "b3a48954c4e188939ef4df56061a481083c5fde8cba122f76cef28c64b5c6525"
+  },
+  {
+    "assetId": "VectraReal04",
+    "logicalName": "04 — Volante",
+    "categories": [
+      "Interior / Volante",
+      "Interior / Instrumentação",
+      "Interior / Painel"
+    ],
+    "components": [
+      "SteeringWheel",
+      "InstrumentCluster",
+      "Dashboard"
+    ],
+    "perspective": "Oblíqua direita",
+    "quality": [
+      "Referência de iluminação",
+      "Oclusão"
+    ],
+    "primaryComponent": "SteeringWheel",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 900,
+    "height": 1200,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal04.png",
+        "sha256": "6ae97737de38cef21d0d71b0822f93009e1de3162d6631ed435e7bf8ad5070cf",
+        "bytes": 297689,
+        "format": "png",
+        "width": 900,
+        "height": 1200,
+        "gitSha": "cd86e0e73f3cf1698a52098aaf51c799692fed3f"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal04.webp",
+        "sha256": "343dbf985b1a1f4fc15d1739c6c8f30aa70917c7ad017dd883e89bacefdbce80",
+        "bytes": 15536,
+        "format": "webp",
+        "width": 450,
+        "height": 600,
+        "gitSha": "1508a6c3e1fef4c4b8f03e996271f9e3e49577b9"
+      }
+    },
+    "photoId": "6ae97737de38cef21d0d71b0822f93009e1de3162d6631ed435e7bf8ad5070cf",
+    "sha256": "6ae97737de38cef21d0d71b0822f93009e1de3162d6631ed435e7bf8ad5070cf"
+  },
+  {
+    "assetId": "VectraReal05",
+    "logicalName": "05 — Console central",
+    "categories": [
+      "Interior / Painel",
+      "Interior / Console central",
+      "Interior / Instrumentação"
+    ],
+    "components": [
+      "Dashboard",
+      "CenterConsole",
+      "InstrumentCluster"
+    ],
+    "perspective": "Oblíqua do motorista",
+    "quality": [
+      "Referência de iluminação",
+      "Baixa iluminação"
+    ],
+    "primaryComponent": "CenterConsole",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 900,
+    "height": 1200,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal05.png",
+        "sha256": "80732623c60e738f8ab3f84f81d03cf88749a64f64aa8e766e0b36fbc8807517",
+        "bytes": 367758,
+        "format": "png",
+        "width": 900,
+        "height": 1200,
+        "gitSha": "51ff5af3f4b536bf296c4216192b3617236d460e"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal05.webp",
+        "sha256": "89283bd591607a96ce39152a2e4e322565f50daeec0b3615142ff701639a92db",
+        "bytes": 17184,
+        "format": "webp",
+        "width": 450,
+        "height": 600,
+        "gitSha": "42e149a5002104490306436d8de2a3610da5d332"
+      }
+    },
+    "photoId": "80732623c60e738f8ab3f84f81d03cf88749a64f64aa8e766e0b36fbc8807517",
+    "sha256": "80732623c60e738f8ab3f84f81d03cf88749a64f64aa8e766e0b36fbc8807517"
+  },
+  {
+    "assetId": "VectraReal06",
+    "logicalName": "06 — Console central",
+    "categories": [
+      "Interior / Painel",
+      "Interior / Console central",
+      "Interior / Câmbio automático"
+    ],
+    "components": [
+      "Dashboard",
+      "CenterConsole",
+      "AutomaticSelector"
+    ],
+    "perspective": "Frontal do console",
+    "quality": [
+      "Referência de iluminação",
+      "Baixa iluminação"
+    ],
+    "primaryComponent": "CenterConsole",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 900,
+    "height": 1200,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal06.png",
+        "sha256": "c3c95173aca30bff7dec0a77bc74aa46cf14daaf9409c70b3cf83b6e7ebec12f",
+        "bytes": 409643,
+        "format": "png",
+        "width": 900,
+        "height": 1200,
+        "gitSha": "c74df22691b6107baf4723a2661c0cfdec5d548a"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal06.webp",
+        "sha256": "cf8bcfdfd62b8109921188d6e4574cbbefce69b95785137f64f7d4a4cfd51cad",
+        "bytes": 17124,
+        "format": "webp",
+        "width": 450,
+        "height": 600,
+        "gitSha": "9c5ebcca65cf3801735a9c173ea79eb746d03b04"
+      }
+    },
+    "photoId": "c3c95173aca30bff7dec0a77bc74aa46cf14daaf9409c70b3cf83b6e7ebec12f",
+    "sha256": "c3c95173aca30bff7dec0a77bc74aa46cf14daaf9409c70b3cf83b6e7ebec12f"
+  },
+  {
+    "assetId": "VectraReal07",
+    "logicalName": "07 — Console central",
+    "categories": [
+      "Interior / Painel",
+      "Interior / Console central",
+      "Interior / Câmbio automático"
+    ],
+    "components": [
+      "Dashboard",
+      "CenterConsole",
+      "AutomaticSelector"
+    ],
+    "perspective": "Frontal do console",
+    "quality": [
+      "Referência de iluminação",
+      "Baixa iluminação"
+    ],
+    "primaryComponent": "CenterConsole",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 900,
+    "height": 1200,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal07.png",
+        "sha256": "7700a7cd897ad76b24eb48730cf1bd3bb012d22cb304806ae8ca06288dc4baaf",
+        "bytes": 392467,
+        "format": "png",
+        "width": 900,
+        "height": 1200,
+        "gitSha": "c70bec56b83c3c88b3d14285002fafed5c28b4f9"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal07.webp",
+        "sha256": "976b90e6dac4ce7decec8a8bdd487487e8674661cdd2bafd302966626c9f0baa",
+        "bytes": 13130,
+        "format": "webp",
+        "width": 450,
+        "height": 600,
+        "gitSha": "e7fba7457e747d350d4e03863e20d9427dd80f10"
+      }
+    },
+    "photoId": "7700a7cd897ad76b24eb48730cf1bd3bb012d22cb304806ae8ca06288dc4baaf",
+    "sha256": "7700a7cd897ad76b24eb48730cf1bd3bb012d22cb304806ae8ca06288dc4baaf"
+  }
+]
