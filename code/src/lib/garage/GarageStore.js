@@ -1,16 +1,30 @@
 import {migrate,newRecord,validateScene,validateHistory} from './GarageSchema.js';
 function open(){return new Promise((resolve,reject)=>{const r=indexedDB.open('vectra-garage',2);r.onupgradeneeded=()=>{const db=r.result;if(!db.objectStoreNames.contains('models'))db.createObjectStore('models',{keyPath:'id'});if(!db.objectStoreNames.contains('assets'))db.createObjectStore('assets',{keyPath:'id'})};r.onsuccess=()=>{r.result.onversionchange=()=>r.result.close();resolve(r.result)};r.onerror=()=>reject(r.error);r.onblocked=()=>reject(Error('Feche outras abas para atualizar a garagem'))})}
 async function op(mode,store,fn){const db=await open();return new Promise((resolve,reject)=>{const t=db.transaction(store,mode),s=t.objectStore(store);let result,error;const fail=e=>{error=e;try{t.abort()}catch{}};try{fn(s,v=>{result=v},fail)}catch(e){fail(e)}t.oncomplete=()=>{db.close();resolve(result)};t.onabort=()=>{db.close();reject(error||t.error||Error('Gravação interrompida'))};t.onerror=()=>{error=error||t.error}})}
-export const listModels=()=>op('readonly','models',(s,done)=>{s.getAll().onsuccess=e=>done(e.target.result.map(migrate))});
-export const getModel=id=>op('readonly','models',(s,done)=>{s.get(id).onsuccess=e=>done(e.target.result?migrate(e.target.result):null)});
+const writes=new Set();function track(p){writes.add(p);p.then(()=>writes.delete(p),()=>writes.delete(p));return p}async function settleWrites(){await Promise.allSettled([...writes])}
+export const listModels=async()=>{await settleWrites();return op('readonly','models',(s,done)=>{s.getAll().onsuccess=e=>done(e.target.result.map(migrate))})};
+export const getModel=async id=>{await settleWrites();return op('readonly','models',(s,done)=>{s.get(id).onsuccess=e=>done(e.target.result?migrate(e.target.result):null)})};
 export const createModel=(name,source)=>op('readwrite','models',(s,done)=>{const m=newRecord(name,source);s.add(m);done(m)});
-export const ensureGarage=()=>op('readwrite','models',(s,done)=>{s.getAll().onsuccess=e=>{const rows=e.target.result;if(rows.length)done(rows.map(migrate));else{const m=newRecord('Vectra Original',null,'original');s.add(m);done([m])}}});
-export function updateModel(id,revision,patch){return op('readwrite','models',(s,done,fail)=>{s.get(id).onsuccess=e=>{try{const old=e.target.result;if(!old||old.revision!==revision)throw Error('Conflito de revisão: outra aba alterou ou excluiu este modelo. Exporte a versão em memória ou reabra.');const next=migrate({...old,...patch,id,revision:revision+1,updated:new Date().toISOString()});s.put(next);done(next)}catch(e){fail(e)}}})}
+export const ensureGarage=async()=>{await settleWrites();return op('readwrite','models',(s,done)=>{s.getAll().onsuccess=e=>{const rows=e.target.result;if(rows.length)done(rows.map(migrate));else{const m=newRecord('Vectra Original',null,'original');s.add(m);done([m])}}})};
+export function updateModel(id,revision,patch){return track(op('readwrite','models',(s,done,fail)=>{s.get(id).onsuccess=e=>{try{const old=e.target.result;if(!old||old.revision!==revision)throw Error('Conflito de revisão: outra aba alterou ou excluiu este modelo. Exporte a versão em memória ou reabra.');const next=migrate({...old,...patch,id,revision:revision+1,updated:new Date().toISOString()});s.put(next);done(next)}catch(e){fail(e)}}}))}
 export const removeModel=(id,revision)=>op('readwrite','models',(s,done,fail)=>{s.get(id).onsuccess=e=>{if(e.target.result?.revision!==revision){fail(Error('Modelo alterado em outra aba'));return}s.delete(id);done(true)}});
 export const importModels=rows=>op('readwrite','models',(s,done)=>{for(const row of rows)s.add(row);done(rows)});
 export const putAsset=(id,blob)=>op('readwrite','assets',(s,done)=>{s.put({id,blob});done(id)});
 export const getAsset=id=>op('readonly','assets',(s,done)=>{s.get(id).onsuccess=e=>done(e.target.result?.blob||null)});
 export async function requestPersistence(){try{return !!(await navigator.storage?.persist?.())}catch{return false}}
-export function createAutosave(record,onStatus){let rev=record.revision,latest=record,pending=null,timer=null,active=null,blocked=false,last=JSON.stringify([record.scene,record.history,record.photos]);function status(message){onStatus(message,latest)}
-async function flush(){clearTimeout(timer);timer=null;if(active)return active.then(()=>pending&&!blocked?flush():latest);if(!pending||blocked)return latest;const patch=pending;pending=null;const key=JSON.stringify([patch.scene,patch.history,patch.photos]);if(key===last&&!patch.thumbnail)return latest;status('Salvando...');active=updateModel(record.id,rev,patch).then(m=>{latest=m;rev=m.revision;last=key;status(pending?'Alterações pendentes':'Todas as alterações salvas');return m}).catch(e=>{pending=pending||patch;blocked=/Conflito/.test(e.message);status('Erro ao salvar: '+e.message);return latest}).finally(()=>{active=null});return active.then(()=>pending&&!blocked&&JSON.stringify([pending.scene,pending.history,pending.photos])!==key?flush():latest)}
-return {queue(patch,delay=220){validateScene(patch.scene);validateHistory(patch.history);const k=JSON.stringify([patch.scene,patch.history,patch.photos]);if(k===last&&!pending&&!active&&!patch.thumbnail)return;pending={...pending,...patch};status(blocked?'Erro ao salvar: conflito de revisão':'Alterações pendentes');clearTimeout(timer);if(!blocked)timer=setTimeout(flush,delay)},flush,retry(){if(!blocked)return flush();status('Erro ao salvar: conflito de revisão; reabra ou exporte')},record:()=>({...latest,...pending}),dispose(){clearTimeout(timer);return flush()}}}
+export function createAutosave(record,onStatus){
+ let rev=record.revision,latest=record,pending=null,inFlight=null,timer=null,active=null,blocked=false,failed=false;
+ const signature=x=>JSON.stringify([x.scene,x.history,x.photos]);let last=signature(record);
+ function status(message){onStatus(message,latest)}
+ async function flush(){
+  clearTimeout(timer);timer=null;
+  if(active)return active.then(()=>pending&&!blocked&&!failed?flush():latest);
+  if(!pending||blocked)return latest;
+  const patch=pending;pending=null;const key=signature(patch);
+  if(key===last&&!patch.thumbnail){status('Todas as alterações salvas');return latest}
+  inFlight=patch;failed=false;status('Salvando...');
+  active=updateModel(record.id,rev,patch).then(m=>{latest=m;rev=m.revision;last=key;status(pending?'Alterações pendentes':'Todas as alterações salvas');return m}).catch(e=>{pending={...patch,...pending};blocked=/Conflito/.test(e.message);failed=true;status('Erro ao salvar: '+e.message);return latest}).finally(()=>{active=null;inFlight=null});
+  return active.then(()=>pending&&!blocked&&!failed?flush():latest);
+ }
+ return {queue(patch,delay=220){validateScene(patch.scene);validateHistory(patch.history);if(!blocked&&!active&&signature(patch)===last&&!patch.thumbnail&&!pending?.thumbnail){pending=null;clearTimeout(timer);status('Todas as alterações salvas');return}pending={...pending,...patch};status(blocked?'Erro ao salvar: conflito de revisão':'Alterações pendentes');clearTimeout(timer);if(!blocked)timer=setTimeout(flush,delay)},flush,retry(){if(!blocked){failed=false;return flush()}status('Erro ao salvar: conflito de revisão; reabra ou exporte')},record:()=>({...latest,...inFlight,...pending}),dispose(){clearTimeout(timer);return flush()}};
+}

@@ -4,3 +4,5 @@ Environment: camera and target constrained in a convex safe volume with clearanc
 LCR standards: AGENTS, workflow, guardrails, naming, testing, performance and asset standard v1.2 (Drive) reviewed; scope limited to feature modules, no destructive reorganization. Source of truth Git, local data not published. Test evidence CI; no claim of complete visual or device validation.
 
 LCR documentation, resource governance and CI/CD v1.2 reviewed from Drive. Added README for the new responsibility folders. Opening a model reads its latest committed revision. Storage tests use synthetic conflict and simulated quota failure in isolated browser.
+
+Confirmed edits mark pending immediately; write failures retain in-memory state; retry and emergency export. Closing/reopening model reads after in-flight local transactions. Visibility change attempts flush, but primary persistence is edit-driven. Hidden mesh visibility is persisted; reset all restores original visibility. Added browser accessory/reopen/undo/redo regression and PSM mapping unit check. No guaranteed recovery for unsaved edits if OS terminates immediately before transaction commit.
