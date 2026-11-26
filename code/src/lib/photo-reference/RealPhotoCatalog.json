@@ -1549,5 +1549,384 @@
     },
     "photoId": "2063e27e857e7fb76375ca3543e715b33ac1d25ab0994cf2c2413134fd287cc9",
     "sha256": "2063e27e857e7fb76375ca3543e715b33ac1d25ab0994cf2c2413134fd287cc9"
+  },
+  {
+    "assetId": "VectraReal29",
+    "logicalName": "29 — Portas",
+    "categories": [
+      "Interior / Portas"
+    ],
+    "components": [
+      "DoorPanels"
+    ],
+    "perspective": "Detalhe da forração",
+    "quality": [
+      "Referência de textura",
+      "Reflexos"
+    ],
+    "primaryComponent": "DoorPanels",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 1200,
+    "height": 900,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal29.png",
+        "sha256": "97421e7e633c9fe7bf8588bb341347eb38cacfc576c3a63b1c18ce44d1fdef10",
+        "bytes": 477133,
+        "format": "png",
+        "width": 1200,
+        "height": 900,
+        "gitSha": "314a391a07b599c62651fdc8bb12699a04f795be"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal29.webp",
+        "sha256": "16abc9b3de29ee0d4d35a98609a2516e7b612ba697116e05f9bd0b507fdb0ae9",
+        "bytes": 15872,
+        "format": "webp",
+        "width": 600,
+        "height": 450,
+        "gitSha": "9017b066c6745fbd2e95273f8ca3b8b6149ca7a2"
+      }
+    },
+    "photoId": "97421e7e633c9fe7bf8588bb341347eb38cacfc576c3a63b1c18ce44d1fdef10",
+    "sha256": "97421e7e633c9fe7bf8588bb341347eb38cacfc576c3a63b1c18ce44d1fdef10"
+  },
+  {
+    "assetId": "VectraReal30",
+    "logicalName": "30 — Portas",
+    "categories": [
+      "Interior / Portas"
+    ],
+    "components": [
+      "DoorPanels"
+    ],
+    "perspective": "Detalhe da forração",
+    "quality": [
+      "Referência de textura",
+      "Reflexos"
+    ],
+    "primaryComponent": "DoorPanels",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 1200,
+    "height": 900,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal30.png",
+        "sha256": "24e3494c646ae3aee81dccabec3213d9cc43a98592dc43b3a242686d1ab0157a",
+        "bytes": 650781,
+        "format": "png",
+        "width": 1200,
+        "height": 900,
+        "gitSha": "08f785413bfd7a435de3452dd1b4db38188dab43"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal30.webp",
+        "sha256": "a85f7aa3413ad7677bfee962c53b09f12e3ed15c145fcf9b4ab399f9b907656f",
+        "bytes": 19000,
+        "format": "webp",
+        "width": 600,
+        "height": 450,
+        "gitSha": "4d3122991ac5be3d87fb8c3216b7d2cf9eeed49b"
+      }
+    },
+    "photoId": "24e3494c646ae3aee81dccabec3213d9cc43a98592dc43b3a242686d1ab0157a",
+    "sha256": "24e3494c646ae3aee81dccabec3213d9cc43a98592dc43b3a242686d1ab0157a"
+  },
+  {
+    "assetId": "VectraReal31",
+    "logicalName": "31 — Portas",
+    "categories": [
+      "Interior / Portas"
+    ],
+    "components": [
+      "DoorPanels"
+    ],
+    "perspective": "Lateral direita",
+    "quality": [
+      "Referência de textura",
+      "Reflexos"
+    ],
+    "primaryComponent": "DoorPanels",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 1200,
+    "height": 900,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal31.png",
+        "sha256": "6ac8fef593ff91ff633a1b1ee12b80b479b93d1c419f84db46d6b61c68967b94",
+        "bytes": 535458,
+        "format": "png",
+        "width": 1200,
+        "height": 900,
+        "gitSha": "2ef705df1d140eae181b2f0437bec099e7a07b6d"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal31.webp",
+        "sha256": "1922d1c0314c46dca00d78a03e8b9bfff6a326d3e0358b926f747c822fa96002",
+        "bytes": 23730,
+        "format": "webp",
+        "width": 600,
+        "height": 450,
+        "gitSha": "8606030918d52d52cea93d05854f86678a514af6"
+      }
+    },
+    "photoId": "6ac8fef593ff91ff633a1b1ee12b80b479b93d1c419f84db46d6b61c68967b94",
+    "sha256": "6ac8fef593ff91ff633a1b1ee12b80b479b93d1c419f84db46d6b61c68967b94"
+  },
+  {
+    "assetId": "VectraReal32",
+    "logicalName": "32 — Portas",
+    "categories": [
+      "Interior / Portas"
+    ],
+    "components": [
+      "DoorPanels"
+    ],
+    "perspective": "Lateral direita",
+    "quality": [
+      "Referência de textura",
+      "Reflexos"
+    ],
+    "primaryComponent": "DoorPanels",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 1200,
+    "height": 900,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal32.png",
+        "sha256": "3fd5fac923856b892d5cd1df60d606b992966df08db761a2703f5360fe1189cf",
+        "bytes": 608955,
+        "format": "png",
+        "width": 1200,
+        "height": 900,
+        "gitSha": "f6dfd0db7b6b01e1a2d80e5e36846f4c8cc2a892"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal32.webp",
+        "sha256": "28498e1a5b105c9449888c8fe3020b519a450c5705b08d86a9897c36dd027989",
+        "bytes": 20516,
+        "format": "webp",
+        "width": 600,
+        "height": 450,
+        "gitSha": "c68d83925aa28ee0c3191fc145cc582739c1bba5"
+      }
+    },
+    "photoId": "3fd5fac923856b892d5cd1df60d606b992966df08db761a2703f5360fe1189cf",
+    "sha256": "3fd5fac923856b892d5cd1df60d606b992966df08db761a2703f5360fe1189cf"
+  },
+  {
+    "assetId": "VectraReal33",
+    "logicalName": "33 — Bancos dianteiros",
+    "categories": [
+      "Interior / Bancos dianteiros",
+      "Interior / Painel",
+      "Interior / Console central",
+      "Interior / Volante",
+      "Interior / Instrumentação",
+      "Interior / Portas",
+      "Interior / Porta-objetos superior"
+    ],
+    "components": [
+      "FrontSeats",
+      "Dashboard",
+      "CenterConsole",
+      "SteeringWheel",
+      "InstrumentCluster",
+      "DoorPanels",
+      "UpperStorage"
+    ],
+    "perspective": "Lateral direita",
+    "quality": [
+      "Perspectiva complementar",
+      "Referência geométrica"
+    ],
+    "primaryComponent": "FrontSeats",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 900,
+    "height": 1200,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal33.png",
+        "sha256": "e3c6db6b76d1fcffe4d817d0159ccfdc9abac41f55e465dbf2a783b8e364146a",
+        "bytes": 507748,
+        "format": "png",
+        "width": 900,
+        "height": 1200,
+        "gitSha": "45f7bcebe271046e800564e78dabf2183b2311eb"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal33.webp",
+        "sha256": "ff6b2d0f834e83779f7f816ee22c44e0ef21020c831404b821bb92c7fc628ed0",
+        "bytes": 27230,
+        "format": "webp",
+        "width": 450,
+        "height": 600,
+        "gitSha": "8c211417ce6d38f1784061b39e71d939a4b7a51c"
+      }
+    },
+    "photoId": "e3c6db6b76d1fcffe4d817d0159ccfdc9abac41f55e465dbf2a783b8e364146a",
+    "sha256": "e3c6db6b76d1fcffe4d817d0159ccfdc9abac41f55e465dbf2a783b8e364146a"
+  },
+  {
+    "assetId": "VectraReal34",
+    "logicalName": "34 — Bancos dianteiros",
+    "categories": [
+      "Interior / Bancos dianteiros",
+      "Interior / Painel",
+      "Interior / Console central",
+      "Interior / Volante",
+      "Interior / Instrumentação",
+      "Interior / Portas",
+      "Interior / Porta-objetos superior"
+    ],
+    "components": [
+      "FrontSeats",
+      "Dashboard",
+      "CenterConsole",
+      "SteeringWheel",
+      "InstrumentCluster",
+      "DoorPanels",
+      "UpperStorage"
+    ],
+    "perspective": "Lateral direita",
+    "quality": [
+      "Perspectiva complementar",
+      "Referência geométrica"
+    ],
+    "primaryComponent": "FrontSeats",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 900,
+    "height": 1200,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal34.png",
+        "sha256": "e80a277d667e46c679b45167f422f5ee59d4639ef92bc2dd22aacb15a633f7f6",
+        "bytes": 475821,
+        "format": "png",
+        "width": 900,
+        "height": 1200,
+        "gitSha": "6de6870d54090148c32f7125f1a7bd6e6d471f7b"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal34.webp",
+        "sha256": "d5705511378a62caf2fdf2816d9888897befe47c6a78fd8de0e4a5ccbd883804",
+        "bytes": 25158,
+        "format": "webp",
+        "width": 450,
+        "height": 600,
+        "gitSha": "fb24e78521c714eb59dff35a20950df2f4baa63d"
+      }
+    },
+    "photoId": "e80a277d667e46c679b45167f422f5ee59d4639ef92bc2dd22aacb15a633f7f6",
+    "sha256": "e80a277d667e46c679b45167f422f5ee59d4639ef92bc2dd22aacb15a633f7f6"
+  },
+  {
+    "assetId": "VectraReal35",
+    "logicalName": "35 — Bancos dianteiros",
+    "categories": [
+      "Interior / Bancos dianteiros",
+      "Interior / Painel",
+      "Interior / Console central",
+      "Interior / Volante",
+      "Interior / Instrumentação",
+      "Interior / Portas",
+      "Interior / Porta-objetos superior"
+    ],
+    "components": [
+      "FrontSeats",
+      "Dashboard",
+      "CenterConsole",
+      "SteeringWheel",
+      "InstrumentCluster",
+      "DoorPanels",
+      "UpperStorage"
+    ],
+    "perspective": "Lateral direita",
+    "quality": [
+      "Perspectiva complementar",
+      "Referência geométrica"
+    ],
+    "primaryComponent": "FrontSeats",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 900,
+    "height": 1200,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal35.png",
+        "sha256": "6e98c77f50d2895de7fe702192a09210bed2ea228f577d9eac06529172383491",
+        "bytes": 478455,
+        "format": "png",
+        "width": 900,
+        "height": 1200,
+        "gitSha": "5157a557fb722b69c0164f809ba4e353f8c51fc5"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal35.webp",
+        "sha256": "116522ebcc276caa3bf6e2e43998e0ab3eaddf91c36e867d3e7f1071d1ed8a6b",
+        "bytes": 23400,
+        "format": "webp",
+        "width": 450,
+        "height": 600,
+        "gitSha": "d91f2ac5a1518aee167a0044fcac9ecdf1b9c178"
+      }
+    },
+    "photoId": "6e98c77f50d2895de7fe702192a09210bed2ea228f577d9eac06529172383491",
+    "sha256": "6e98c77f50d2895de7fe702192a09210bed2ea228f577d9eac06529172383491"
   }
 ]
