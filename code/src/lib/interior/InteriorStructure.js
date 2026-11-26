@@ -4,7 +4,7 @@ import {addInterior,interiorViews} from './InteriorReconstruction.js';
 
 export const structuralViews={
  ...interiorViews,
- Pedais:{eye:[.36,.78,.12],target:[.34,.55,.67]},
+ Pedais:{eye:[.36,.78,.12],target:[.34,.34,.67]},
  'Porta-objetos superior':{eye:[-.35,1.05,.12],target:[-.39,.84,.72]},
  'Porta-luvas':{eye:[-.36,.91,.12],target:[-.4,.59,.69]},
  'Lateral interna':{eye:[-.59,1.12,.03],target:[.42,.74,.55]}

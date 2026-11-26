@@ -137,7 +137,9 @@
       "Interior / Câmbio automático",
       "Interior / Bancos dianteiros",
       "Interior / Portas",
-      "Interior / Carpete"
+      "Interior / Carpete",
+      "Interior / Porta-luvas",
+      "Interior / Porta-objetos superior"
     ],
     "components": [
       "Dashboard",
@@ -147,7 +149,9 @@
       "AutomaticSelector",
       "FrontSeats",
       "DoorPanels",
-      "Carpet"
+      "Carpet",
+      "Glovebox",
+      "UpperStorage"
     ],
     "perspective": "Cabine vista de trás",
     "origin": "Desconhecida",
@@ -157,7 +161,7 @@
     "approval": "Aprovada",
     "publication": "Publicação solicitada pelo responsável",
     "classification": "Classificação visual manual",
-    "notes": "Referência fornecida na conversa; autoria e licença de terceiros não verificadas. Placas das referências não identificam necessariamente o veículo do projeto.",
+    "notes": "Referência fornecida na conversa; autoria e licença de terceiros não verificadas. Placas das referências não identificam necessariamente o veículo do projeto. Vista ampla usada como referência do conjunto do passageiro; abertura do compartimento superior definida pelo proprietário.",
     "width": 1920,
     "height": 1440,
     "format": "image/jpeg",
