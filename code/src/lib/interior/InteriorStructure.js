@@ -51,8 +51,8 @@ export function addStructuralInterior(root){
  }
  const front=face-.015,back=face+.12,stackY=.72+top-.94,consoleZ=.16+face-.59;
  // The dash skin joins the stock dash and fills the mounting volume behind the center stack.
- box('DashboardAssembly','Dashboard','DashCrossMember',[half*2,.13,.15],[0,top-.105,back],plastic);
- box('DashboardAssembly','Dashboard','DashboardLowerCarrier',[half*1.94,.10,.12],[0,top-.28,back],plastic);
+ box('DashboardAssembly','Dashboard','DashCrossMember',[half*2,.18,.15],[0,top-.105,back],plastic);
+ box('DashboardAssembly','Dashboard','DashboardLowerCarrier',[half*1.94,.16,.12],[0,top-.28,back],plastic);
  for(const side of [-1,1])box('DashboardAssembly','Dashboard',side<0?'PassengerSideMount':'DriverSideMount',[.10,.24,.16],[side*(half-.055),top-.19,back],plastic);
  box('DashboardAssembly','Dashboard','CenterStackMount',[.25,.31,.14],[0,stackY,front+.075],plastic);
  // Integrated center stack transitions down into the molded tunnel; no independent suspended radio module.
@@ -82,6 +82,7 @@ export function addStructuralInterior(root){
  const pedalZ=front+.15,pedalFloor=ground(wx,pedalZ);
  const pedalY=clamp(pedalFloor+.14,.25,.43);
  box('PedalAssembly','Pedals','PedalFirewall',[.37,.29,.085],[wx,pedalY+.12,pedalZ+.11],dark);
+ bar('PedalAssembly','Pedals','PedalCarrier',[wx,pedalY+.22,pedalZ+.10],[wx,top-.28,back],.16,.085,dark);
  for(const [name,x,w,h] of [['Brake',wx+.045,.105,.059],['Accelerator',wx-.087,.047,.10]]){
   const pad=[x,pedalY,pedalZ-.045],mount=[x,pedalY+.23,pedalZ+.075];
   bar('PedalAssembly','Pedals',name+'Arm',mount,pad,.025,.026,metal);
@@ -106,9 +107,9 @@ export function addStructuralInterior(root){
   box('RoofAssembly','Dashboard','ClosedHeadliner',[s.x+.018,.025,s.z+.018],[c.x,rb.min.y+.008,c.z],fabric);roofClosed=true;
  }}
  root.updateMatrixWorld(true);
- const pairs=[['DashCrossMember','DashboardLowerCarrier'],['CenterStackMount','CenterStack'],['StackTunnelBridge','CenterStackMount'],['StackTunnelBridge','ConsoleBase'],['ConsoleFloorMount','FloorTunnel'],['UpperPocketBack','PocketDashMount'],['GloveboxDoor','GloveboxHousing'],['SteeringColumn','ColumnFirewallBracket'],['SteeringColumn','SteeringHub'],['BrakeArm','BrakePad'],['AcceleratorArm','AcceleratorPad']];
+ const pairs=[['DashCrossMember','DashboardLowerCarrier'],['CenterStackMount','CenterStack'],['StackTunnelBridge','CenterStackMount'],['StackTunnelBridge','ConsoleBase'],['ConsoleFloorMount','FloorTunnel'],['UpperPocketBack','PocketDashMount'],['GloveboxDoor','GloveboxHousing'],['SteeringColumn','ColumnFirewallBracket'],['SteeringColumn','SteeringHub'],['PedalCarrier','PedalFirewall'],['PedalCarrier','DashboardLowerCarrier'],['BrakeArm','BrakePad'],['AcceleratorArm','AcceleratorPad']];
  const links=pairs.map(([a,b])=>({a,b,gap:byName.has(a)&&byName.has(b)?connectionGap(byName.get(a),byName.get(b)):null}));
- const report={revision:2,dashAnchor:dashOK,wheelAnchor:wheelOK,carpetAnchor:valid(floor),seatRails:rails,sunroofMeshes:sunroof.length,roofClosed,suppressedPedals:suppressed,links};
+ const report={revision:2,dashAnchor:dashOK,wheelAnchor:wheelOK,carpetAnchor:valid(floor),seatRails:rails,sunroofMeshes:sunroof.length,roofClosed,suppressedPedals:suppressed,anchors:{dashboard:dashboard.map(o=>({name:o.name,parent:o.parent?.name})),steering:steering.map(o=>({name:o.name,parent:o.parent?.name})),seats:seats.map(o=>({name:o.name,parent:o.parent?.name})),sunroof:sunroof.map(o=>({name:o.name,parent:o.parent?.name})),dash:dashOK?{min:dash.min.toArray(),max:dash.max.toArray()}:null,wheel:wheelOK?{min:wheel.min.toArray(),max:wheel.max.toArray()}:null},links};
  for(const m of [plastic,dark,trim,metal,fabric])m.dispose();
  let count=0;g.traverse(o=>{if(o.isMesh)count++});return {group:g,count,report};
 }
