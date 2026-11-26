@@ -28,8 +28,9 @@ export function addStructuralInterior(root){
  // The stock GLB is the coordinate authority; fallbacks are explicitly diagnostic.
  const dashOK=valid(dash)&&size(dash).x>.65&&size(dash).x<2.1&&size(dash).z<1.5;
  const wheelOK=valid(wheel)&&size(wheel).x<.85&&size(wheel).y<.85;
- const face=dashOK?clamp(dash.min.z,.46,.85):.59;
  const top=dashOK?clamp(dash.max.y,.83,1.10):.94;
+ const dashSurface=(x,y,fallback)=>{const ray=new T.Raycaster(new T.Vector3(x,y,-.7),new T.Vector3(0,0,1));return ray.intersectObjects(dashboard,false).find(h=>h.point.z>.27&&h.point.z<1.12)?.point.z??fallback};
+ const face=dashOK?clamp(dashSurface(0,top-.23,.59),.38,.86):.59;
  const half=dashOK?clamp(size(dash).x/2,.56,.78):.69;
  const wheelCenter=wheelOK?mid(wheel):new T.Vector3(.36,.70,.52);
  const wx=clamp(wheelCenter.x,.21,.53),wy=clamp(wheelCenter.y,.60,.95),wz=clamp(wheelCenter.z,.30,.76);
@@ -72,7 +73,7 @@ export function addStructuralInterior(root){
  box('PassengerAssembly','Glovebox','GloveboxDoor',[pw-.012,.128,.025],[px,py-.132,pz-.043],plastic);
  box('PassengerAssembly','Glovebox','GloveboxLatch',[.065,.018,.013],[px,py-.102,pz-.059],dark);
  // Column from the real steering hub toward the dashboard carrier. Housing encloses the shaft.
- const hub=[wx,wy,wz],columnEnd=[wx,wy-.045,Math.max(wz+.09,back)];
+ const hub=[wx,wy,wz],columnEnd=[wx,wy-.045,Math.max(wz+.09,dashSurface(wx,wy-.045,back)+.025,back)];
  bar('SteeringAssembly','SteeringWheel','SteeringColumn',hub,columnEnd,.075,.075,dark);
  box('SteeringAssembly','SteeringWheel','ColumnFirewallBracket',[.14,.12,.09],columnEnd,metal);
  box('DriverAssembly','InstrumentCluster','ClusterDashMount',[.32,.15,.10],[wx,top-.10,front+.026],plastic);
@@ -90,11 +91,16 @@ export function addStructuralInterior(root){
  }
  // Seat support is measured from the existing stock seats to the carpet under them.
  const seatGroups=new Map();
- for(const o of seats){const sb=boxOf(o);if(!valid(sb))continue;const c=mid(sb);if(size(sb).y<.02||size(sb).x>.95)continue;const key=(c.z>-.45?'Front':'Rear')+(c.x>0?'Driver':'Passenger');const old=seatGroups.get(key)||new T.Box3();old.union(sb);seatGroups.set(key,old)}
- let rails=0;
- for(const [name,sb] of seatGroups){const c=mid(sb),s=size(sb),id=name.startsWith('Front')?'FrontSeats':'RearSeats';const z=clamp(c.z,-1.13,.30);
-  for(const side of [-1,1]){const x=c.x+side*Math.min(.15,s.x*.25),y=ground(x,z),seatY=sb.min.y;const h=seatY-y+.016;if(h<.015||h>.32)continue;
-   box('SeatAssembly',id,name+'Rail'+(side<0?'L':'R'),[.045,h,Math.min(.38,Math.max(.12,s.z*.55))],[x,(y+seatY)/2,z],metal);rails++;
+ for(const o of seats){const sb=boxOf(o);if(!valid(sb)||size(sb).y<.02)continue;const c=mid(sb),parent=o.parent?.name||o.name,key=/seats_R$|rear/i.test(parent)?'RearBench':/seat_FR$/i.test(parent)?'FrontPassenger':/seat_FL$/i.test(parent)?'FrontDriver':(c.z>-.45?'Front':'Rear')+(c.x>0?'Driver':'Passenger');const entry=seatGroups.get(key)||{bounds:new T.Box3(),meshes:[]};entry.bounds.union(sb);entry.meshes.push(o);seatGroups.set(key,entry)}
+ let rails=0;const seatSupports=[];
+ for(const [name,entry] of seatGroups){const sb=entry.bounds,c=mid(sb),s=size(sb),id=name.startsWith('Front')?'FrontSeats':'RearSeats';const z=clamp(c.z,-1.16,.36),offset=Math.min(name==='RearBench'?.39:.15,s.x*.28);
+  for(const side of [-1,1]){const x=c.x+side*offset,y=ground(x,z);const ray=new T.Raycaster(new T.Vector3(x,.015,z),new T.Vector3(0,1,0));const hit=ray.intersectObjects(entry.meshes,false).find(h=>h.point.y<.65);const bottom=hit?.point.y??sb.min.y,gapToFloor=bottom-y;
+   // When the original seat already meets the carpet, retain the existing support; do not
+   // lift the complete seat or invent a large rail that would intersect the cabin.
+   const attached=gapToFloor<=.025&&gapToFloor>=-.09;
+   let added=false;
+   if(!attached&&gapToFloor>.025&&gapToFloor<=.32){box('SeatAssembly',id,name+'Rail'+(side<0?'L':'R'),[.045,gapToFloor+.016,Math.min(.34,Math.max(.12,s.z*.5))],[x,(y+bottom)/2,z],metal);rails++;added=true}
+   seatSupports.push({seat:name,side:side<0?'left':'right',x,z,floorY:y,seatBottom:bottom,boundsMin:sb.min.toArray(),boundsMax:sb.max.toArray(),surfaceHit:!!hit,gapToFloor,attached,added});
   }
  }
  // Closed roof: identify source sunroof meshes; hide only that assembly and close its measured opening.
@@ -109,7 +115,7 @@ export function addStructuralInterior(root){
  root.updateMatrixWorld(true);
  const pairs=[['DashCrossMember','DashboardLowerCarrier'],['CenterStackMount','CenterStack'],['StackTunnelBridge','CenterStackMount'],['StackTunnelBridge','ConsoleBase'],['ConsoleFloorMount','FloorTunnel'],['UpperPocketBack','PocketDashMount'],['GloveboxDoor','GloveboxHousing'],['SteeringColumn','ColumnFirewallBracket'],['SteeringColumn','SteeringHub'],['PedalCarrier','PedalFirewall'],['PedalCarrier','DashboardLowerCarrier'],['BrakeArm','BrakePad'],['AcceleratorArm','AcceleratorPad']];
  const links=pairs.map(([a,b])=>({a,b,gap:byName.has(a)&&byName.has(b)?connectionGap(byName.get(a),byName.get(b)):null}));
- const report={revision:2,dashAnchor:dashOK,wheelAnchor:wheelOK,carpetAnchor:valid(floor),seatRails:rails,sunroofMeshes:sunroof.length,roofClosed,suppressedPedals:suppressed,anchors:{dashboard:dashboard.map(o=>({name:o.name,parent:o.parent?.name})),steering:steering.map(o=>({name:o.name,parent:o.parent?.name})),seats:seats.map(o=>({name:o.name,parent:o.parent?.name})),sunroof:sunroof.map(o=>({name:o.name,parent:o.parent?.name})),dash:dashOK?{min:dash.min.toArray(),max:dash.max.toArray()}:null,wheel:wheelOK?{min:wheel.min.toArray(),max:wheel.max.toArray()}:null},links};
+ const report={revision:2,dashAnchor:dashOK,wheelAnchor:wheelOK,carpetAnchor:valid(floor),seatRails:rails,seatSupports,sunroofMeshes:sunroof.length,roofClosed,suppressedPedals:suppressed,anchors:{centerDashFace:face,columnEnd,footwell:stock.filter(o=>{const b=boxOf(o),c=mid(b);return valid(b)&&c.y<.62&&c.y>.08&&c.z>.32&&c.z<1.12&&c.x>.12&&c.x<.65}).map(o=>({name:o.name,parent:o.parent?.name,role:o.userData.automotiveRole,bounds:{min:boxOf(o).min.toArray(),max:boxOf(o).max.toArray()}})),dashboard:dashboard.map(o=>({name:o.name,parent:o.parent?.name})),steering:steering.map(o=>({name:o.name,parent:o.parent?.name})),seats:seats.map(o=>({name:o.name,parent:o.parent?.name})),sunroof:sunroof.map(o=>({name:o.name,parent:o.parent?.name})),dash:dashOK?{min:dash.min.toArray(),max:dash.max.toArray()}:null,wheel:wheelOK?{min:wheel.min.toArray(),max:wheel.max.toArray()}:null},links};
  for(const m of [plastic,dark,trim,metal,fabric])m.dispose();
  let count=0;g.traverse(o=>{if(o.isMesh)count++});return {group:g,count,report};
 }
