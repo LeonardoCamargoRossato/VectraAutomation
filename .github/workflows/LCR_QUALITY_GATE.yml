@@ -53,10 +53,13 @@ jobs:
       - name: Published reference photo delivery
         run: npx playwright test --config PlaywrightConfig.js PublishedReferences.spec.js --output test-results/PublishedReferences
       - name: Structural cabin V5.2 evidence
+        if: ${{ !cancelled() }}
         run: npx playwright test --config PlaywrightConfig.js InteriorStructure.spec.js --output test-results/InteriorStructure
       - name: Comparative visual evidence
+        if: ${{ !cancelled() }}
         run: npx playwright test --config PlaywrightConfig.js AutomotiveVisual.spec.js --output test-results/Visual
       - run: npm audit --audit-level=high
+        if: ${{ !cancelled() }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
