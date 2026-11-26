@@ -1138,5 +1138,416 @@
     },
     "photoId": "71374bf1c5a24386b1468bdc7f8c1f3c43d479272d0e20d19d61185d594e30b4",
     "sha256": "71374bf1c5a24386b1468bdc7f8c1f3c43d479272d0e20d19d61185d594e30b4"
+  },
+  {
+    "assetId": "VectraReal22",
+    "logicalName": "22 — Painel",
+    "categories": [
+      "Interior / Painel",
+      "Interior / Console central",
+      "Interior / Câmbio automático",
+      "Interior / Bancos dianteiros",
+      "Interior / Porta-objetos superior",
+      "Interior / Portas"
+    ],
+    "components": [
+      "Dashboard",
+      "CenterConsole",
+      "AutomaticSelector",
+      "FrontSeats",
+      "UpperStorage",
+      "DoorPanels"
+    ],
+    "perspective": "Vista do banco traseiro oblíqua direita",
+    "quality": [
+      "Perspectiva complementar",
+      "Referência de iluminação"
+    ],
+    "primaryComponent": "Dashboard",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 900,
+    "height": 1200,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal22.png",
+        "sha256": "b2e1cd00a800906f52f881876dbe0de0fa4a1420af4fee3e60e6c005a94158c4",
+        "bytes": 419764,
+        "format": "png",
+        "width": 900,
+        "height": 1200,
+        "gitSha": "8c3e7ae26a9ea2cc3961e93fa3bf20086b7dcf57"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal22.webp",
+        "sha256": "b400a2cc0dd99a342a5c14a6306b8ba4321aba16590fcbd35f45ea528f74adbd",
+        "bytes": 22874,
+        "format": "webp",
+        "width": 450,
+        "height": 600,
+        "gitSha": "20b92d2cac51f112176e8a8129f4ec0993edf5cf"
+      }
+    },
+    "photoId": "b2e1cd00a800906f52f881876dbe0de0fa4a1420af4fee3e60e6c005a94158c4",
+    "sha256": "b2e1cd00a800906f52f881876dbe0de0fa4a1420af4fee3e60e6c005a94158c4"
+  },
+  {
+    "assetId": "VectraReal23",
+    "logicalName": "23 — Painel",
+    "categories": [
+      "Interior / Painel",
+      "Interior / Volante",
+      "Interior / Instrumentação",
+      "Interior / Console central",
+      "Interior / Câmbio automático",
+      "Interior / Bancos dianteiros",
+      "Interior / Porta-objetos superior"
+    ],
+    "components": [
+      "Dashboard",
+      "SteeringWheel",
+      "InstrumentCluster",
+      "CenterConsole",
+      "AutomaticSelector",
+      "FrontSeats",
+      "UpperStorage"
+    ],
+    "perspective": "Visão ampla do banco traseiro",
+    "quality": [
+      "Perspectiva complementar",
+      "Referência de iluminação"
+    ],
+    "primaryComponent": "Dashboard",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 900,
+    "height": 1200,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal23.png",
+        "sha256": "227224b87ac5406bf15faa5b64826dad10cf190e742da0c25240c55e5caba881",
+        "bytes": 333554,
+        "format": "png",
+        "width": 900,
+        "height": 1200,
+        "gitSha": "962006b48988788e030068a8a3498e69930b896c"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal23.webp",
+        "sha256": "112a9cb8c8b196be1a81c75a24ba8c90897ed2f118dafb09f92d684be682f1f0",
+        "bytes": 18788,
+        "format": "webp",
+        "width": 450,
+        "height": 600,
+        "gitSha": "99d6445ebdc423d89f6c7d875dd9fc945f972c8f"
+      }
+    },
+    "photoId": "227224b87ac5406bf15faa5b64826dad10cf190e742da0c25240c55e5caba881",
+    "sha256": "227224b87ac5406bf15faa5b64826dad10cf190e742da0c25240c55e5caba881"
+  },
+  {
+    "assetId": "VectraReal24",
+    "logicalName": "24 — Câmbio automático",
+    "categories": [
+      "Interior / Console central",
+      "Interior / Câmbio automático",
+      "Interior / Bancos dianteiros"
+    ],
+    "components": [
+      "CenterConsole",
+      "AutomaticSelector",
+      "FrontSeats"
+    ],
+    "perspective": "Detalhe frontal do console",
+    "quality": [
+      "Referência geométrica",
+      "Referência de iluminação"
+    ],
+    "primaryComponent": "AutomaticSelector",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 900,
+    "height": 1200,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal24.png",
+        "sha256": "4d6a6a39170eb38e3d76a28bdd89ceee1bd4c3615e6db1b79113ade46db19297",
+        "bytes": 613695,
+        "format": "png",
+        "width": 900,
+        "height": 1200,
+        "gitSha": "7e23cd32a84c1f8531e1eb457878e6969af56a52"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal24.webp",
+        "sha256": "5353d9b6c4df6805b971bee2796162ae8ea3f16d8c0a580a9ae40ed641a890d4",
+        "bytes": 24216,
+        "format": "webp",
+        "width": 450,
+        "height": 600,
+        "gitSha": "a96aadba3409a00b59842f6f72654a51480a108a"
+      }
+    },
+    "photoId": "4d6a6a39170eb38e3d76a28bdd89ceee1bd4c3615e6db1b79113ade46db19297",
+    "sha256": "4d6a6a39170eb38e3d76a28bdd89ceee1bd4c3615e6db1b79113ade46db19297"
+  },
+  {
+    "assetId": "VectraReal25",
+    "logicalName": "25 — Câmbio automático",
+    "categories": [
+      "Interior / Console central",
+      "Interior / Câmbio automático",
+      "Interior / Bancos dianteiros",
+      "Interior / Painel"
+    ],
+    "components": [
+      "CenterConsole",
+      "AutomaticSelector",
+      "FrontSeats",
+      "Dashboard"
+    ],
+    "perspective": "Detalhe frontal do console",
+    "quality": [
+      "Referência geométrica",
+      "Referência de iluminação"
+    ],
+    "primaryComponent": "AutomaticSelector",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 900,
+    "height": 1200,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal25.png",
+        "sha256": "29d2b1543c55807feec04b84833810310af89f8d27be848bc021f966c3dfa286",
+        "bytes": 630608,
+        "format": "png",
+        "width": 900,
+        "height": 1200,
+        "gitSha": "68fe1b1843f78cf6f7fc0a8a8cc47369545abc28"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal25.webp",
+        "sha256": "20f561f9c7c3f99ddce6a470bae5f906b65d143f8ecf7121accba80a9b8908dc",
+        "bytes": 25812,
+        "format": "webp",
+        "width": 450,
+        "height": 600,
+        "gitSha": "00ad7b47c6f896e9896ae2e10edbc206158a667b"
+      }
+    },
+    "photoId": "29d2b1543c55807feec04b84833810310af89f8d27be848bc021f966c3dfa286",
+    "sha256": "29d2b1543c55807feec04b84833810310af89f8d27be848bc021f966c3dfa286"
+  },
+  {
+    "assetId": "VectraReal26",
+    "logicalName": "26 — Painel",
+    "categories": [
+      "Interior / Painel",
+      "Interior / Console central",
+      "Interior / Câmbio automático",
+      "Interior / Bancos dianteiros",
+      "Interior / Volante",
+      "Interior / Instrumentação",
+      "Interior / Porta-objetos superior"
+    ],
+    "components": [
+      "Dashboard",
+      "CenterConsole",
+      "AutomaticSelector",
+      "FrontSeats",
+      "SteeringWheel",
+      "InstrumentCluster",
+      "UpperStorage"
+    ],
+    "perspective": "Vista do banco traseiro",
+    "quality": [
+      "Baixa iluminação",
+      "Referência de iluminação"
+    ],
+    "primaryComponent": "Dashboard",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 900,
+    "height": 1200,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal26.png",
+        "sha256": "3dce2e22587adb04fb27f952730394295db9fb30cb11816bb9ed64057ef03cc6",
+        "bytes": 534827,
+        "format": "png",
+        "width": 900,
+        "height": 1200,
+        "gitSha": "6e82bddf491349caeb6e010f46abc81fad57d4ec"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal26.webp",
+        "sha256": "d7e6b8a33dff851d9fefe3f1bea3407e787344d033d890124647a2bc6e733cb6",
+        "bytes": 21364,
+        "format": "webp",
+        "width": 450,
+        "height": 600,
+        "gitSha": "a6590a1fc7d7611e4aa5a6bdfe786562ca144ab0"
+      }
+    },
+    "photoId": "3dce2e22587adb04fb27f952730394295db9fb30cb11816bb9ed64057ef03cc6",
+    "sha256": "3dce2e22587adb04fb27f952730394295db9fb30cb11816bb9ed64057ef03cc6"
+  },
+  {
+    "assetId": "VectraReal27",
+    "logicalName": "27 — Painel",
+    "categories": [
+      "Interior / Painel",
+      "Interior / Console central",
+      "Interior / Câmbio automático",
+      "Interior / Bancos dianteiros",
+      "Interior / Volante",
+      "Interior / Instrumentação",
+      "Interior / Porta-objetos superior"
+    ],
+    "components": [
+      "Dashboard",
+      "CenterConsole",
+      "AutomaticSelector",
+      "FrontSeats",
+      "SteeringWheel",
+      "InstrumentCluster",
+      "UpperStorage"
+    ],
+    "perspective": "Vista do banco traseiro",
+    "quality": [
+      "Baixa iluminação",
+      "Referência de iluminação"
+    ],
+    "primaryComponent": "Dashboard",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 900,
+    "height": 1200,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal27.png",
+        "sha256": "ee2471d5af1023b52bd99c5ebc1939a3598dea28dd1298de2f8782549040870f",
+        "bytes": 449966,
+        "format": "png",
+        "width": 900,
+        "height": 1200,
+        "gitSha": "a86038d0559571dd3a06e78f87233a8a9f0167ea"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal27.webp",
+        "sha256": "8f5d9af2acaff8839c59802b5a24c8f28c1cffbd2206a547a7317b7ff26fa3fb",
+        "bytes": 18044,
+        "format": "webp",
+        "width": 450,
+        "height": 600,
+        "gitSha": "7e9a6ba99536d53d6433e9dc68037d029cf4b30f"
+      }
+    },
+    "photoId": "ee2471d5af1023b52bd99c5ebc1939a3598dea28dd1298de2f8782549040870f",
+    "sha256": "ee2471d5af1023b52bd99c5ebc1939a3598dea28dd1298de2f8782549040870f"
+  },
+  {
+    "assetId": "VectraReal28",
+    "logicalName": "28 — Painel",
+    "categories": [
+      "Interior / Painel",
+      "Interior / Console central",
+      "Interior / Câmbio automático",
+      "Interior / Bancos dianteiros",
+      "Interior / Volante",
+      "Interior / Instrumentação",
+      "Interior / Porta-objetos superior"
+    ],
+    "components": [
+      "Dashboard",
+      "CenterConsole",
+      "AutomaticSelector",
+      "FrontSeats",
+      "SteeringWheel",
+      "InstrumentCluster",
+      "UpperStorage"
+    ],
+    "perspective": "Vista do banco traseiro",
+    "quality": [
+      "Baixa iluminação",
+      "Referência de iluminação"
+    ],
+    "primaryComponent": "Dashboard",
+    "reconstructionStatus": "Referência candidata",
+    "group": "interior",
+    "dataset": "VectraReal20261126",
+    "origin": "Própria",
+    "rights": "Publicação solicitada pelo proprietário",
+    "approval": "Aguardando revisão",
+    "publication": "Derivado público com proteção de privacidade",
+    "classification": "Classificação visual preliminar",
+    "width": 1200,
+    "height": 900,
+    "format": "image/png",
+    "assets": {
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal28.png",
+        "sha256": "2063e27e857e7fb76375ca3543e715b33ac1d25ab0994cf2c2413134fd287cc9",
+        "bytes": 454289,
+        "format": "png",
+        "width": 1200,
+        "height": 900,
+        "gitSha": "bb2f4cac81f2bcb3672f83ac2123df6ff62a3b86"
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal28.webp",
+        "sha256": "2fe44342120439a64aa543c9b46dd7aed2becf8a46a15183caeabc79b12453d2",
+        "bytes": 17096,
+        "format": "webp",
+        "width": 600,
+        "height": 450,
+        "gitSha": "6faa7640dfb52822093428e4e17cae09a2a07574"
+      }
+    },
+    "photoId": "2063e27e857e7fb76375ca3543e715b33ac1d25ab0994cf2c2413134fd287cc9",
+    "sha256": "2063e27e857e7fb76375ca3543e715b33ac1d25ab0994cf2c2413134fd287cc9"
   }
 ]
