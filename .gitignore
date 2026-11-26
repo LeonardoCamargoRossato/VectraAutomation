@@ -9,3 +9,5 @@ test-results/
 *.glb
 *.gltf
 *.blend
+
+!code/public/assets/explorar/VectraStock.glb
