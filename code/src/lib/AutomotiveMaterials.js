@@ -1,7 +1,7 @@
 import * as T from 'three';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 export const defaultPaint='#18191b';
-export const qualityProfiles={Econômico:{pixel:1,shadow:512},Equilibrado:{pixel:1.5,shadow:1024},'Alta qualidade':{pixel:2,shadow:2048},Fotografia:{pixel:2.5,shadow:2048}};
+export const qualityProfiles={Econômico:{pixel:1,shadow:512},Equilibrado:{pixel:1.5,shadow:1024},Ultra:{pixel:2,shadow:2048},Fotografia:{pixel:1.5,shadow:2048}};
 export function roleFor(name,parent=''){
  if(name==='vectra')return 'paint';
  if(name==='vectra_glass')return parent.includes('headlight')?'headlightLens':'glass';
@@ -22,8 +22,8 @@ export function roleFor(name,parent=''){
  return 'trim';
 }
 const settings={
- paint:{color:defaultPaint,metalness:.42,roughness:.29,clearcoat:1,clearcoatRoughness:.12,envMapIntensity:1.15},
- glass:{color:'#a0b2bb',roughness:.075,metalness:0,transparent:true,opacity:.23,depthWrite:false,clearcoat:1,clearcoatRoughness:.07,side:T.DoubleSide},
+ paint:{color:defaultPaint,metalness:.32,roughness:.32,clearcoat:1,clearcoatRoughness:.14,envMapIntensity:1.05},
+ glass:{color:'#384b59',roughness:.10,metalness:0,transparent:true,opacity:.35,depthWrite:false,clearcoat:1,clearcoatRoughness:.07,side:T.DoubleSide},
  headlightLens:{color:'#e5eff8',roughness:.08,metalness:0,transparent:true,opacity:.20,depthWrite:false,clearcoat:1},
  headlight:{color:'#a8adb4',metalness:.88,roughness:.23,emissive:'#fff1d0',emissiveIntensity:0},
  tailLens:{color:'#950d1c',metalness:.05,roughness:.17,transparent:true,opacity:.76,depthWrite:false,clearcoat:1},
@@ -42,7 +42,7 @@ const settings={
  trim:{color:'#25282b',metalness:0,roughness:.8}
 };
 function suedeNormal(){const s=64,bytes=new Uint8Array(s*s*4);let seed=713;for(let i=0;i<s*s;i++){seed=(Math.imul(seed,1664525)+1013904223)>>>0;bytes[i*4]=112+(seed&31);bytes[i*4+1]=112+((seed>>>8)&31);bytes[i*4+2]=253;bytes[i*4+3]=255}const tex=new T.DataTexture(bytes,s,s,T.RGBAFormat);tex.wrapS=tex.wrapT=T.RepeatWrapping;tex.repeat.set(16,16);tex.magFilter=T.LinearFilter;tex.minFilter=T.LinearMipmapLinearFilter;tex.generateMipmaps=true;tex.needsUpdate=true;return tex}
-function plateTexture(){const c=document.createElement('canvas');c.width=256;c.height=80;const ctx=c.getContext('2d');ctx.fillStyle='#d6d8da';ctx.fillRect(0,0,256,80);ctx.fillStyle='#243a65';ctx.fillRect(0,0,256,13);ctx.font='bold 32px sans-serif';ctx.textAlign='center';ctx.fillStyle='#171b20';ctx.fillText('VECTRA',128,54);const t=new T.CanvasTexture(c);t.colorSpace=T.SRGBColorSpace;t.flipY=false;return t}
+function plateTexture(){const c=document.createElement('canvas');c.width=512;c.height=150;const ctx=c.getContext('2d');ctx.fillStyle='#c6c6c0';ctx.fillRect(0,0,512,150);ctx.strokeStyle='#4c4d4b';ctx.lineWidth=5;ctx.strokeRect(4,4,504,142);ctx.font='bold 86px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#171b20';ctx.fillText('BAH 1997',256,82,470);for(const x of [18,494]){ctx.beginPath();ctx.arc(x,18,4,0,Math.PI*2);ctx.fill()}const t=new T.CanvasTexture(c);t.colorSpace=T.SRGBColorSpace;t.flipY=true;t.repeat.set(1/(.325169-.022599),1/(.233556-.144699));t.offset.set(-.022599*t.repeat.x,-.144699*t.repeat.y);return t}
 // Rebuild only alloy mesh in source-local Z-up coordinates; preserve axle, tire and all body vertices.
 function fiveSpoke(source){source.computeBoundingBox();const b=source.boundingBox,c=b.getCenter(new T.Vector3()),s=b.getSize(new T.Vector3()),r=Math.min(s.y,s.z)*.5;if(!Number.isFinite(r)||r<=0)return null;const sign=Math.sign(c.x)||1,face=sign>0?b.max.x:b.min.x,depth=Math.min(s.x,.055),parts=[];
  const ring=new T.LatheGeometry([new T.Vector2(r*.82,-depth),new T.Vector2(r*.82,0),new T.Vector2(r*.98,0),new T.Vector2(r, -depth),new T.Vector2(r*.82,-depth)],48);ring.rotateZ(-sign*Math.PI/2);ring.translate(face,c.y,c.z);parts.push(ring.toNonIndexed());

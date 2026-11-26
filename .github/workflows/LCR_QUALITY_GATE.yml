@@ -2,6 +2,9 @@ name: Vectra Quality Gate
 on:
   pull_request:
   workflow_dispatch:
+concurrency:
+  group: vectra-quality-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
@@ -23,7 +26,14 @@ jobs:
       - run: python code/scripts/lcr_naming.py --check
         working-directory: .
       - run: npx playwright install --with-deps chromium
-      - run: npx playwright test --config PlaywrightConfig.js
+      - name: Browser navigation, capture and mobile
+        run: npx playwright test --config PlaywrightConfig.js Browser.spec.js --output test-results/Browser
+      - name: Stock model and undo
+        run: npx playwright test --config PlaywrightConfig.js StockModel.spec.js --output test-results/Stock
+      - name: Environment and capture persistence
+        run: npx playwright test --config PlaywrightConfig.js EnvironmentExperience.spec.js --output test-results/Environment
+      - name: Comparative visual evidence
+        run: npx playwright test --config PlaywrightConfig.js AutomotiveVisual.spec.js --output test-results/Visual
       - run: npm audit --audit-level=high
       - uses: actions/upload-artifact@v4
         if: always()
