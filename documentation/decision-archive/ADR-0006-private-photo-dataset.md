@@ -1,0 +1,5 @@
+# ADR-0006 — Private dataset packages and independent photo release
+Status: proposed/implemented in candidate PR; production subject to CI.
+Context: public GitHub Pages, personal cabin photographs and private metadata; no paid hosting. V5.2 geometry remains awaiting visual acceptance. 
+Decision: keep original ZIP and four prepared derivative ZIPs plus canonical manifest in private Drive. User explicitly imports those packages into browser IndexedDB; no unauthenticated external image requests, no private Drive URLs in public code, no public assets or metadata leaks. Only publish separately reviewed and redacted derivatives after approval. Use PNG SHA-256 as local content identifier, retain JPEG source SHA-256 in private metadata. Reuse V5.2 viewer independently of geometry, preserve six existing external references.
+Consequences: one-time private import per browser, local storage quota and device retention; not a server upload. Dataset reconstruction and review remain future gated stages. No data migration or deletion. Rollback by reverting code; existing stored blobs remain recoverable.
