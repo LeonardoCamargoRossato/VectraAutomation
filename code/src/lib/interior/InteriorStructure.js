@@ -4,10 +4,18 @@ import {addInterior,interiorViews} from './InteriorReconstruction.js';
 
 export const structuralViews={
  ...interiorViews,
- Pedais:{eye:[.36,.78,.12],target:[.34,.34,.67]},
- 'Porta-objetos superior':{eye:[-.35,1.05,.12],target:[-.39,.84,.72]},
- 'Porta-luvas':{eye:[-.36,.91,.12],target:[-.4,.59,.69]},
- 'Lateral interna':{eye:[-.59,1.12,.03],target:[.42,.74,.55]}
+ Motorista:{eye:[.36,1.08,.29],target:[.36,.74,.74]},
+ Passageiro:{eye:[-.36,1.08,.29],target:[-.32,.74,.75]},
+ Painel:{eye:[0,1.10,.13],target:[0,.75,.71]},
+ Volante:{eye:[.36,1.00,.27],target:[.36,.70,.59]},
+ 'Instrumentação':{eye:[.36,1.02,.43],target:[.36,.82,.73]},
+ 'Console central':{eye:[0,1.13,.12],target:[0,.66,.66]},
+ 'Câmbio automático':{eye:[0,1.10,.10],target:[0,.45,.31]},
+ 'Visão ampla dos bancos':{eye:[0,1.25,-.60],target:[0,.65,.35]},
+ Pedais:{eye:[.36,.77,.37],target:[.34,.34,.81]},
+ 'Porta-objetos superior':{eye:[-.33,1.05,.29],target:[-.39,.80,.68]},
+ 'Porta-luvas':{eye:[-.34,.89,.33],target:[-.4,.60,.65]},
+ 'Lateral interna':{eye:[-.49,1.11,.26],target:[.38,.75,.61]}
 };
 const boxOf=o=>new T.Box3().setFromObject(o,true);
 const mid=b=>b.getCenter(new T.Vector3());
@@ -34,6 +42,7 @@ export function addStructuralInterior(root){
  const half=dashOK?clamp(size(dash).x/2,.56,.78):.69;
  const wheelCenter=wheelOK?mid(wheel):new T.Vector3(.36,.70,.52);
  const wx=clamp(wheelCenter.x,.21,.53),wy=clamp(wheelCenter.y,.60,.95),wz=clamp(wheelCenter.z,.30,.76);
+ const clusterY=top-.075,clusterFace=clamp(dashSurface(wx,clusterY,.73)-.023,wz+.07,.91);
  const ground=(x,z)=>floorAt(carpet,x,z,valid(floor)?clamp(floor.min.y,.10,.30):.20);
  const old=addInterior(root),g=old.group;g.name='InteriorV52';g.updateMatrixWorld(true);
  const all=[...g.children],byName=new Map(all.map(o=>[o.name,o]));
@@ -46,7 +55,7 @@ export function addStructuralInterior(root){
  // then parent them into physically related assemblies instead of loose siblings.
  for(const o of all){const id=o.userData.referenceComponent;
   if(id==='Dashboard'){o.position.z+=face-.49;o.position.y+=top-.94;group('DashboardAssembly').add(o)}
-  else if(id==='InstrumentCluster'){o.position.x+=wx-.36;o.position.y+=top-.94;o.position.z+=face-.76;group('DriverAssembly').add(o)}
+  else if(id==='InstrumentCluster'){o.position.x+=wx-.36;o.position.y+=clusterY-.84;o.position.z+=clusterFace-.735;group('DriverAssembly').add(o)}
   else if(id==='SteeringWheel'){o.position.x+=wx-.366;o.position.y+=wy-.70;o.position.z+=wz-.526;group('SteeringAssembly').add(o)}
   else if(id==='CenterConsole'||id==='AutomaticSelector'){o.position.z+=face-.59;group('ConsoleAssembly').add(o)}
  }
@@ -60,8 +69,8 @@ export function addStructuralInterior(root){
  const consoleGround=ground(0,consoleZ),consoleBottom=Math.min(.27,consoleGround);
  box('ConsoleAssembly','CenterConsole','FloorTunnel',[.19,.14,.76],[0,consoleBottom+.055,consoleZ-.025],fabric);
  box('ConsoleAssembly','CenterConsole','ConsoleFloorMount',[.20,Math.max(.08,.31-consoleBottom),.57],[0,(.31+consoleBottom)/2,consoleZ],plastic);
- bar('ConsoleAssembly','CenterConsole','StackTunnelBridge',[0,.39,consoleZ+.22],[0,stackY-.115,front+.015],.23,.13,plastic);
- box('DashboardAssembly','Dashboard','InformationDisplay',[.105,.054,.025],[.10,top-.095,front-.046],dark);
+ bar('ConsoleAssembly','CenterConsole','StackTunnelBridge',[0,.36,consoleZ+.24],[0,stackY-.15,front+.09],.19,.085,plastic);
+ box('DashboardAssembly','Dashboard','InformationDisplay',[.105,.054,.025],[.10,top-.095,dashSurface(.10,top-.095,front)-.018],dark);
  // Recess with five surrounding walls: no solid block covering the opening.
  const px=-half*.57,py=top-.145,pz=front-.035,pw=half*.73;
  box('PassengerAssembly','UpperStorage','UpperPocketBack',[pw,.095,.025],[px,py,pz+.075],dark);
@@ -76,7 +85,7 @@ export function addStructuralInterior(root){
  const hub=[wx,wy,wz],columnEnd=[wx,wy-.045,Math.max(wz+.09,dashSurface(wx,wy-.045,back)+.025,back)];
  bar('SteeringAssembly','SteeringWheel','SteeringColumn',hub,columnEnd,.075,.075,dark);
  box('SteeringAssembly','SteeringWheel','ColumnFirewallBracket',[.14,.12,.09],columnEnd,metal);
- box('DriverAssembly','InstrumentCluster','ClusterDashMount',[.32,.15,.10],[wx,top-.10,front+.026],plastic);
+ box('DriverAssembly','InstrumentCluster','ClusterDashMount',[.32,.135,.055],[wx,clusterY,clusterFace+.055],plastic);
  // Suppress specifically named stock pedal variants, not unrelated meshes.
  const suppressed=[];
  for(const m of stock.filter(o=>named(o,/(?:^|[_ .-])(?:pedals?|clutch|accelerator|brakepedal|gas[_-]?pedal)(?:$|[_ .-])/i))){m.visible=false;m.userData.structuralSuppressed=true;suppressed.push(m.name)}
@@ -105,8 +114,8 @@ export function addStructuralInterior(root){
  }
  // Closed roof: identify source sunroof meshes; hide only that assembly and close its measured opening.
  const sunroof=stock.filter(o=>named(o,/sun[_ -]?roof|moon[_ -]?roof/i));
- let roofClosed=false;
- if(sunroof.length){const rb=bounds(sunroof),s=size(rb),c=mid(rb);if(valid(rb)&&s.x>.12&&s.z>.12&&s.x<1.8&&s.z<2.2&&c.y>1){
+ let roofClosed=false,roofBounds=null;
+ if(sunroof.length){const rb=bounds(sunroof),s=size(rb),c=mid(rb);roofBounds={min:rb.min.toArray(),max:rb.max.toArray()};if(valid(rb)&&s.x>.12&&s.z>.12&&s.x<1.8&&s.z<2.2&&c.y>1){
   const paint=stock.find(o=>o.userData.automotiveRole==='paint')?.material;for(const m of sunroof){m.visible=false;m.userData.structuralSuppressed=true}
   const cover=box('RoofAssembly','Dashboard','ClosedRoofSkin',[s.x+.024,.035,s.z+.024],[c.x,rb.max.y-.012,c.z],paint||plastic);
   cover.material.name='vectra';cover.userData.automotiveRole='paint';
@@ -115,7 +124,8 @@ export function addStructuralInterior(root){
  root.updateMatrixWorld(true);
  const pairs=[['DashCrossMember','DashboardLowerCarrier'],['CenterStackMount','CenterStack'],['StackTunnelBridge','CenterStackMount'],['StackTunnelBridge','ConsoleBase'],['ConsoleFloorMount','FloorTunnel'],['UpperPocketBack','PocketDashMount'],['GloveboxDoor','GloveboxHousing'],['SteeringColumn','ColumnFirewallBracket'],['SteeringColumn','SteeringHub'],['PedalCarrier','PedalFirewall'],['PedalCarrier','DashboardLowerCarrier'],['BrakeArm','BrakePad'],['AcceleratorArm','AcceleratorPad']];
  const links=pairs.map(([a,b])=>({a,b,gap:byName.has(a)&&byName.has(b)?connectionGap(byName.get(a),byName.get(b)):null}));
- const report={revision:2,dashAnchor:dashOK,wheelAnchor:wheelOK,carpetAnchor:valid(floor),seatRails:rails,seatSupports,sunroofMeshes:sunroof.length,roofClosed,suppressedPedals:suppressed,anchors:{centerDashFace:face,columnEnd,footwell:stock.filter(o=>{const b=boxOf(o),c=mid(b);return valid(b)&&c.y<.62&&c.y>.08&&c.z>.32&&c.z<1.12&&c.x>.12&&c.x<.65}).map(o=>({name:o.name,parent:o.parent?.name,role:o.userData.automotiveRole,bounds:{min:boxOf(o).min.toArray(),max:boxOf(o).max.toArray()}})),dashboard:dashboard.map(o=>({name:o.name,parent:o.parent?.name})),steering:steering.map(o=>({name:o.name,parent:o.parent?.name})),seats:seats.map(o=>({name:o.name,parent:o.parent?.name})),sunroof:sunroof.map(o=>({name:o.name,parent:o.parent?.name})),dash:dashOK?{min:dash.min.toArray(),max:dash.max.toArray()}:null,wheel:wheelOK?{min:wheel.min.toArray(),max:wheel.max.toArray()}:null},links};
+ const cameraSightlines=Object.entries(structuralViews).map(([name,pose])=>{const eye=new T.Vector3(...pose.eye),target=new T.Vector3(...pose.target),direction=target.clone().sub(eye),distance=direction.length();const ray=new T.Raycaster(eye,direction.normalize(),.02,distance+.08);const first=ray.intersectObjects([...stock.filter(o=>o.visible),...Array.from(byName.values())],false)[0];return {name,first:first?{mesh:first.object.name,role:first.object.userData.automotiveRole,component:first.object.userData.referenceComponent,distance:first.distance}:null,targetDistance:distance}});
+ const report={revision:2,cameraSightlines,dashAnchor:dashOK,wheelAnchor:wheelOK,carpetAnchor:valid(floor),seatRails:rails,seatSupports,sunroofMeshes:sunroof.length,roofClosed,suppressedPedals:suppressed,anchors:{centerDashFace:face,clusterFace,roofBounds,columnEnd,footwell:stock.filter(o=>{const b=boxOf(o),c=mid(b);return valid(b)&&c.y<.62&&c.y>.08&&c.z>.32&&c.z<1.12&&c.x>.12&&c.x<.65}).map(o=>({name:o.name,parent:o.parent?.name,role:o.userData.automotiveRole,bounds:{min:boxOf(o).min.toArray(),max:boxOf(o).max.toArray()}})),dashboard:dashboard.map(o=>({name:o.name,parent:o.parent?.name})),steering:steering.map(o=>({name:o.name,parent:o.parent?.name})),seats:seats.map(o=>({name:o.name,parent:o.parent?.name})),sunroof:sunroof.map(o=>({name:o.name,parent:o.parent?.name})),dash:dashOK?{min:dash.min.toArray(),max:dash.max.toArray()}:null,wheel:wheelOK?{min:wheel.min.toArray(),max:wheel.max.toArray()}:null},links};
  for(const m of [plastic,dark,trim,metal,fabric])m.dispose();
  let count=0;g.traverse(o=>{if(o.isMesh)count++});return {group:g,count,report};
 }
