@@ -38,6 +38,8 @@ jobs:
         run: npx playwright test --config PlaywrightConfig.js PhotoReference.spec.js --output test-results/PhotoReference
       - name: Published reference photo delivery
         run: npx playwright test --config PlaywrightConfig.js PublishedReferences.spec.js --output test-results/PublishedReferences
+      - name: Prepared private photographic dataset
+        run: npx playwright test --config PlaywrightConfig.js PreparedDataset.spec.js --output test-results/PreparedDataset
       - name: Comparative visual evidence
         run: npx playwright test --config PlaywrightConfig.js AutomotiveVisual.spec.js --output test-results/Visual
       - run: npm audit --audit-level=high
