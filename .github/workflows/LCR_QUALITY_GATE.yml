@@ -22,6 +22,31 @@ jobs:
           cache-dependency-path: code/package-lock.json
       - run: npm ci
       - run: node --test tests/InteriorStructure.test.js
+  structural-visual:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: code
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: code/package-lock.json
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Structural cabin V5.2 evidence
+        run: npx playwright test --config PlaywrightConfig.js InteriorStructure.spec.js --output test-results/InteriorStructure
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: InteriorStructuralEvidence
+          path: |
+            code/test-results/InteriorStructure/**/*.png
+            code/test-results/InteriorStructure/**/StructureReport.json
+          if-no-files-found: warn
+          retention-days: 14
   quality:
     runs-on: ubuntu-latest
     defaults:
@@ -52,9 +77,6 @@ jobs:
         run: npx playwright test --config PlaywrightConfig.js PhotoReference.spec.js --output test-results/PhotoReference
       - name: Published reference photo delivery
         run: npx playwright test --config PlaywrightConfig.js PublishedReferences.spec.js --output test-results/PublishedReferences
-      - name: Structural cabin V5.2 evidence
-        if: ${{ !cancelled() }}
-        run: npx playwright test --config PlaywrightConfig.js InteriorStructure.spec.js --output test-results/InteriorStructure
       - name: Comparative visual evidence
         if: ${{ !cancelled() }}
         run: npx playwright test --config PlaywrightConfig.js AutomotiveVisual.spec.js --output test-results/Visual
