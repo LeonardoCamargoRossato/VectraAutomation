@@ -1,0 +1,31 @@
+name: Assemble Vectra reference PNG
+on:
+  push:
+    branches: [feat/classified-photo-assets]
+    paths:
+      - '.github/workflows/ASSEMBLE_REFERENCE_PNG.yml'
+      - 'documentation/asset-transfer/**'
+permissions:
+  contents: write
+jobs:
+  assemble:
+    if: github.ref == 'refs/heads/feat/classified-photo-assets'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/classified-photo-assets
+      - name: Reassemble exact PNG and verify identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          p=code/public/assets/acervo-fotografico/interior/png/FrontCabin.png
+          cat documentation/asset-transfer/FrontCabin*.txt | base64 --decode > "$p"
+          test "$(git hash-object "$p")" = 38eea9b2c834c6d1bc83952cee00d12c0742b14e
+          test "$(wc -c < "$p")" = 3308670
+          git add "$p"
+          git rm documentation/asset-transfer/FrontCabin*.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "assets: reassemble and verify full-resolution cabin PNG"
+          git push origin HEAD:refs/heads/feat/classified-photo-assets
