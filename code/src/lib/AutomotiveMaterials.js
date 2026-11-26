@@ -36,6 +36,7 @@ const settings={
  tyre:{color:'#17191b',metalness:0,roughness:.93,envMapIntensity:.32},
  rim:{color:'#bcc2c9',metalness:.78,roughness:.35,envMapIntensity:1.15},
  metal:{color:'#aeb6bf',metalness:.78,roughness:.32},
+ mirror:{color:'#d3dbe4',metalness:1,roughness:.12},
  plate:{color:'#b5b8bd',metalness:.08,roughness:.68},
  indicator:{color:'#d58b31',metalness:.08,roughness:.26,clearcoat:.8},
  trim:{color:'#25282b',metalness:0,roughness:.8}
@@ -53,7 +54,7 @@ export function upgradeAutomotive(root){const normal=suedeNormal(),plate=plateTe
  if(role==='rim'){const g=fiveSpoke(o.geometry);if(g){o.geometry.dispose();o.geometry=g;wheels++}}
  if(name==='chrome'&&parent.startsWith('wheel_')){o.visible=false;return}
  if(role==='paint')paints++;
- const props={...settings[role],name,side:settings[role].side??old.side};
+ const definition=settings[role]??settings.trim;const props={...definition,name,side:definition.side??old.side};
  if(role==='suede'&&o.geometry.attributes.uv){props.normalMap=normal;props.normalScale=new T.Vector2(.17,.17)}
  if(role==='plate'&&o.geometry.attributes.uv){props.map=plate;props.color='#ffffff'}
  if(role==='glass'||role.endsWith('Lens')){o.castShadow=false;o.renderOrder=3}
