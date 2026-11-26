@@ -23,5 +23,5 @@ jobs:
       - run: python code/scripts/lcr_naming.py --check
         working-directory: .
       - run: npx playwright install --with-deps chromium
-      - run: npx playwright test
+      - run: npx playwright test --config PlaywrightConfig.js
       - run: npm audit --audit-level=high
