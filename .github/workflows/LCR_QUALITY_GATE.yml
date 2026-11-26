@@ -38,6 +38,8 @@ jobs:
         run: npx playwright test --config PlaywrightConfig.js PhotoReference.spec.js --output test-results/PhotoReference
       - name: Published reference photo delivery
         run: npx playwright test --config PlaywrightConfig.js PublishedReferences.spec.js --output test-results/PublishedReferences
+      - name: Structural cabin V5.2 evidence
+        run: npx playwright test --config PlaywrightConfig.js InteriorStructure.spec.js --output test-results/InteriorStructure
       - name: Comparative visual evidence
         run: npx playwright test --config PlaywrightConfig.js AutomotiveVisual.spec.js --output test-results/Visual
       - run: npm audit --audit-level=high
@@ -45,6 +47,8 @@ jobs:
         if: always()
         with:
           name: AutomotiveVisualEvidence
-          path: code/test-results/**/*.png
+          path: |
+            code/test-results/**/*.png
+            code/test-results/**/StructureReport.json
           if-no-files-found: warn
           retention-days: 14
