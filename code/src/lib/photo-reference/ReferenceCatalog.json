@@ -1,0 +1,392 @@
+[
+  {
+    "assetId": "DashboardSteering",
+    "photoId": "b5bfb5445791577f4c1c29b985789feb95da1cba7dceae232712164fec5f2681",
+    "sha256": "b5bfb5445791577f4c1c29b985789feb95da1cba7dceae232712164fec5f2681",
+    "vehicleId": "Vectra2000",
+    "originalName": "painelVolanteVectra(1).jpeg",
+    "logicalName": "Painel e volante",
+    "group": "interior",
+    "categories": [
+      "Interior / Painel",
+      "Interior / Volante",
+      "Interior / Instrumentação",
+      "Interior / Console central",
+      "Interior / Iluminação interna"
+    ],
+    "components": [
+      "Dashboard",
+      "SteeringWheel",
+      "InstrumentCluster",
+      "CenterConsole"
+    ],
+    "perspective": "Frontal do motorista",
+    "origin": "Desconhecida",
+    "author": "Não informado",
+    "license": "Não informada",
+    "rights": "Não confirmados",
+    "approval": "Aprovada",
+    "publication": "Publicação solicitada pelo responsável",
+    "classification": "Classificação visual manual",
+    "notes": "Referência fornecida na conversa; autoria e licença de terceiros não verificadas. Placas das referências não identificam necessariamente o veículo do projeto.",
+    "width": 627,
+    "height": 540,
+    "format": "image/jpeg",
+    "assets": {
+      "original": {
+        "path": "documentation/asset-source/acervo-fotografico/interior/DashboardSteering.jpg",
+        "sha256": "b5bfb5445791577f4c1c29b985789feb95da1cba7dceae232712164fec5f2681",
+        "gitSha": "95da3ba99b9c01096ad0b15f19ec206ecc66d202",
+        "bytes": 49233,
+        "format": "jpg",
+        "width": 627,
+        "height": 540
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/webp/DashboardSteering.webp",
+        "sha256": "59fc0fe092136f6d8acd6e8868be38b72ffe9737e960f817b86e310992728399",
+        "gitSha": "1818a11f1d471f434c250c38880945f27f32324d",
+        "bytes": 40694,
+        "format": "webp",
+        "width": 600,
+        "height": 517
+      },
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/png/DashboardSteering.png",
+        "sha256": "2720bdd8ace604e026aa0480ec1cb8d9c269b0a921aa93fca93a5510d3bdfee3",
+        "gitSha": "2a36b141b7abb4f8beeb2c42f2cdec286fb1ae09",
+        "bytes": 374550,
+        "format": "png",
+        "width": 627,
+        "height": 540
+      }
+    }
+  },
+  {
+    "assetId": "AutomaticSelector",
+    "photoId": "cc2f2d6f5b36c3b4126d6df3900ca03ab8bafa1e852bb467e4ec454c36067dc4",
+    "sha256": "cc2f2d6f5b36c3b4126d6df3900ca03ab8bafa1e852bb467e4ec454c36067dc4",
+    "vehicleId": "Vectra2000",
+    "originalName": "cambioVectra(1).jpeg",
+    "logicalName": "Câmbio automático",
+    "group": "interior",
+    "categories": [
+      "Interior / Câmbio automático",
+      "Interior / Console central"
+    ],
+    "components": [
+      "AutomaticSelector",
+      "CenterConsole"
+    ],
+    "perspective": "Detalhe superior",
+    "origin": "Desconhecida",
+    "author": "Não informado",
+    "license": "Não informada",
+    "rights": "Não confirmados",
+    "approval": "Aprovada",
+    "publication": "Publicação solicitada pelo responsável",
+    "classification": "Classificação visual manual",
+    "notes": "Referência fornecida na conversa; autoria e licença de terceiros não verificadas. Placas das referências não identificam necessariamente o veículo do projeto.",
+    "width": 800,
+    "height": 534,
+    "format": "image/jpeg",
+    "assets": {
+      "original": {
+        "path": "documentation/asset-source/acervo-fotografico/interior/AutomaticSelector.jpg",
+        "sha256": "cc2f2d6f5b36c3b4126d6df3900ca03ab8bafa1e852bb467e4ec454c36067dc4",
+        "gitSha": "997ee9799a78b61457d3fcb5077aae7ade0cbd61",
+        "bytes": 67500,
+        "format": "jpg",
+        "width": 800,
+        "height": 534
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/webp/AutomaticSelector.webp",
+        "sha256": "76502775983778fcd87d0da3ff37715eb72a9f600746827d40fddf7a506caf38",
+        "gitSha": "7d9be371b6fdee18a2e7709e3213bebab77da164",
+        "bytes": 42894,
+        "format": "webp",
+        "width": 600,
+        "height": 401
+      },
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/png/AutomaticSelector.png",
+        "sha256": "55799735b4f06042b00e9d8321f093bfecdcf6df8626885dfa2aafe7d8f063b1",
+        "gitSha": "7897902e02a8cfb20969328c0142deeb747c81f4",
+        "bytes": 461661,
+        "format": "png",
+        "width": 800,
+        "height": 534
+      }
+    }
+  },
+  {
+    "assetId": "FrontCabin",
+    "photoId": "1edb2ba0fece8259ab89071e11cfadb7ac9f6baa510e3ba49b6dd3f9c14e3d63",
+    "sha256": "1edb2ba0fece8259ab89071e11cfadb7ac9f6baa510e3ba49b6dd3f9c14e3d63",
+    "vehicleId": "Vectra2000",
+    "originalName": "interiorVectra_VisãoAmplaBancos daFrentePainel(1).jpeg",
+    "logicalName": "Visão ampla do interior",
+    "group": "interior",
+    "categories": [
+      "Interior / Visão ampla",
+      "Interior / Painel",
+      "Interior / Instrumentação",
+      "Interior / Volante",
+      "Interior / Console central",
+      "Interior / Câmbio automático",
+      "Interior / Bancos dianteiros",
+      "Interior / Portas",
+      "Interior / Carpete"
+    ],
+    "components": [
+      "Dashboard",
+      "InstrumentCluster",
+      "SteeringWheel",
+      "CenterConsole",
+      "AutomaticSelector",
+      "FrontSeats",
+      "DoorPanels",
+      "Carpet"
+    ],
+    "perspective": "Cabine vista de trás",
+    "origin": "Desconhecida",
+    "author": "Não informado",
+    "license": "Não informada",
+    "rights": "Não confirmados",
+    "approval": "Aprovada",
+    "publication": "Publicação solicitada pelo responsável",
+    "classification": "Classificação visual manual",
+    "notes": "Referência fornecida na conversa; autoria e licença de terceiros não verificadas. Placas das referências não identificam necessariamente o veículo do projeto.",
+    "width": 1920,
+    "height": 1440,
+    "format": "image/jpeg",
+    "assets": {
+      "original": {
+        "path": "documentation/asset-source/acervo-fotografico/interior/FrontCabin.jpg",
+        "sha256": "1edb2ba0fece8259ab89071e11cfadb7ac9f6baa510e3ba49b6dd3f9c14e3d63",
+        "gitSha": "53d8b0be11427002f65d781b44b5e179a903d606",
+        "bytes": 325444,
+        "format": "jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/interior/webp/FrontCabin.webp",
+        "sha256": "b5a1718da4c83f82e3c48d83f2a37b4dbc76fce06d6ab4f2ffad0a66f76410b4",
+        "gitSha": "5ef8734dd1f9aa694650d7ddf96c66f94f2f70a0",
+        "bytes": 28946,
+        "format": "webp",
+        "width": 600,
+        "height": 450
+      },
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/interior/png/FrontCabin.png",
+        "sha256": "6a144dd8204b885749ac427e72e9695f9d5dcbd72951958a9426d9c826724252",
+        "gitSha": "38eea9b2c834c6d1bc83952cee00d12c0742b14e",
+        "bytes": 3308670,
+        "format": "png",
+        "width": 1920,
+        "height": 1440
+      }
+    }
+  },
+  {
+    "assetId": "FrontLeft",
+    "photoId": "1da5fac26370d94bc8fb981ee5346fba283ab687c971ec7200776993ee707f31",
+    "sha256": "1da5fac26370d94bc8fb981ee5346fba283ab687c971ec7200776993ee707f31",
+    "vehicleId": "Vectra2000",
+    "originalName": "vectra3(1).jpg",
+    "logicalName": "Exterior — frente esquerda",
+    "group": "exterior",
+    "categories": [
+      "Exterior / Frente",
+      "Exterior / Lateral esquerda",
+      "Exterior / Rodas",
+      "Exterior / Faróis",
+      "Exterior / Retrovisores",
+      "Exterior / Para-choques",
+      "Exterior / Detalhes da carroceria"
+    ],
+    "components": [
+      "Body",
+      "Wheels",
+      "Headlights",
+      "Mirrors",
+      "FrontBumper"
+    ],
+    "perspective": "Três quartos dianteiro esquerdo",
+    "origin": "Desconhecida",
+    "author": "Não informado",
+    "license": "Não informada",
+    "rights": "Não confirmados",
+    "approval": "Aprovada",
+    "publication": "Publicação solicitada pelo responsável",
+    "classification": "Classificação visual manual",
+    "notes": "Referência fornecida na conversa; autoria e licença de terceiros não verificadas. Placas das referências não identificam necessariamente o veículo do projeto.",
+    "width": 1024,
+    "height": 576,
+    "format": "image/jpeg",
+    "assets": {
+      "original": {
+        "path": "documentation/asset-source/acervo-fotografico/exterior/FrontLeft.jpg",
+        "sha256": "1da5fac26370d94bc8fb981ee5346fba283ab687c971ec7200776993ee707f31",
+        "gitSha": "dd8bac04da9c4ad2a9b7ee6dc1ea1328f1a3df94",
+        "bytes": 85948,
+        "format": "jpg",
+        "width": 1024,
+        "height": 576
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/exterior/webp/FrontLeft.webp",
+        "sha256": "04b8f5e0704cfd6aeb8feddf3569b3c69e7274dc487d44ad1a04b557ab8209cc",
+        "gitSha": "527187bf843273729b3dc6f8c036ce0d1fee0b59",
+        "bytes": 40976,
+        "format": "webp",
+        "width": 600,
+        "height": 338
+      },
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/exterior/png/FrontLeft.png",
+        "sha256": "4d9824f8a0c2f82544f36953151333aa757e7c5c84a1d1527811bb27166779a3",
+        "gitSha": "a1f500c9e3a76ed6229c4dd7a09196bddacc3337",
+        "bytes": 770715,
+        "format": "png",
+        "width": 1024,
+        "height": 576
+      }
+    }
+  },
+  {
+    "assetId": "RearLeft",
+    "photoId": "98b9773d962cc439b760cb395992fdf86f19bb4147d10680ab3b621bd55b4588",
+    "sha256": "98b9773d962cc439b760cb395992fdf86f19bb4147d10680ab3b621bd55b4588",
+    "vehicleId": "Vectra2000",
+    "originalName": "vectra2(1).jpg",
+    "logicalName": "Exterior — traseira esquerda",
+    "group": "exterior",
+    "categories": [
+      "Exterior / Traseira",
+      "Exterior / Lateral esquerda",
+      "Exterior / Rodas",
+      "Exterior / Lanternas",
+      "Exterior / Para-choques",
+      "Exterior / Detalhes da carroceria",
+      "Porta-malas / Visão geral"
+    ],
+    "components": [
+      "Body",
+      "Wheels",
+      "RearLights",
+      "RearBumper",
+      "Trunk"
+    ],
+    "perspective": "Três quartos traseiro esquerdo",
+    "origin": "Desconhecida",
+    "author": "Não informado",
+    "license": "Não informada",
+    "rights": "Não confirmados",
+    "approval": "Aprovada",
+    "publication": "Publicação solicitada pelo responsável",
+    "classification": "Classificação visual manual",
+    "notes": "Referência fornecida na conversa; autoria e licença de terceiros não verificadas. Placas das referências não identificam necessariamente o veículo do projeto.",
+    "width": 1024,
+    "height": 576,
+    "format": "image/jpeg",
+    "assets": {
+      "original": {
+        "path": "documentation/asset-source/acervo-fotografico/exterior/RearLeft.jpg",
+        "sha256": "98b9773d962cc439b760cb395992fdf86f19bb4147d10680ab3b621bd55b4588",
+        "gitSha": "8771285ae52ff62eb2f97975cfb3c7b9924b7213",
+        "bytes": 102727,
+        "format": "jpg",
+        "width": 1024,
+        "height": 576
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/exterior/webp/RearLeft.webp",
+        "sha256": "f2666d48276f0a3bb70f3ae7f43b7065a81a50930a83215a69514e403a6f3173",
+        "gitSha": "34ea5f313770920a1b8bc1d15e26e8f09199e520",
+        "bytes": 49206,
+        "format": "webp",
+        "width": 600,
+        "height": 338
+      },
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/exterior/png/RearLeft.png",
+        "sha256": "1e3c468610ec39a62ab645e5c66d3d4c8eef807f90816098678191151800b769",
+        "gitSha": "b0b2389975ee8824257f84e539875b5fc08bd1d5",
+        "bytes": 889152,
+        "format": "png",
+        "width": 1024,
+        "height": 576
+      }
+    }
+  },
+  {
+    "assetId": "FrontRight",
+    "photoId": "cc186688441edbea69f85ed8802629074ae972f8105bcafae5aca16f914cd377",
+    "sha256": "cc186688441edbea69f85ed8802629074ae972f8105bcafae5aca16f914cd377",
+    "vehicleId": "Vectra2000",
+    "originalName": "vectra1(1).jpg",
+    "logicalName": "Exterior — frente direita",
+    "group": "exterior",
+    "categories": [
+      "Exterior / Frente",
+      "Exterior / Lateral direita",
+      "Exterior / Rodas",
+      "Exterior / Faróis",
+      "Exterior / Retrovisores",
+      "Exterior / Para-choques",
+      "Exterior / Detalhes da carroceria"
+    ],
+    "components": [
+      "Body",
+      "Wheels",
+      "Headlights",
+      "Mirrors",
+      "FrontBumper"
+    ],
+    "perspective": "Três quartos dianteiro direito, elevado",
+    "origin": "Desconhecida",
+    "author": "Não informado",
+    "license": "Não informada",
+    "rights": "Não confirmados",
+    "approval": "Aprovada",
+    "publication": "Publicação solicitada pelo responsável",
+    "classification": "Classificação visual manual",
+    "notes": "Referência fornecida na conversa; autoria e licença de terceiros não verificadas. Placas das referências não identificam necessariamente o veículo do projeto.",
+    "width": 1024,
+    "height": 576,
+    "format": "image/jpeg",
+    "assets": {
+      "original": {
+        "path": "documentation/asset-source/acervo-fotografico/exterior/FrontRight.jpg",
+        "sha256": "cc186688441edbea69f85ed8802629074ae972f8105bcafae5aca16f914cd377",
+        "gitSha": "ecd9b00e77f89e2b881c265a17117b07440debb1",
+        "bytes": 94520,
+        "format": "jpg",
+        "width": 1024,
+        "height": 576
+      },
+      "webp": {
+        "path": "code/public/assets/acervo-fotografico/exterior/webp/FrontRight.webp",
+        "sha256": "25afa93587b56052e803f561ef7e577419516a0b998851c1f5f1d5ed9c42bf9e",
+        "gitSha": "ef8c43e4d8b33df9d787bffd7f46b15f6ebdcd2a",
+        "bytes": 43892,
+        "format": "webp",
+        "width": 600,
+        "height": 338
+      },
+      "png": {
+        "path": "code/public/assets/acervo-fotografico/exterior/png/FrontRight.png",
+        "sha256": "996d33144260d093fef79a8482a479c47dca2d55ac5b4b3015c615d99105e4f2",
+        "gitSha": "4c0ad5575d09a461833cc8b367c084e1742082d9",
+        "bytes": 853955,
+        "format": "png",
+        "width": 1024,
+        "height": 576
+      }
+    }
+  }
+]
