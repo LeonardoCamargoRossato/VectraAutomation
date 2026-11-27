@@ -43,6 +43,8 @@ jobs:
         run: VECTRA_PRODUCTION=1 npx playwright test --config PlaywrightConfig.js AssetArchitecture.spec.js --output test-results/AssetArchitecture
       - name: English-first and bilingual mobile regression
         run: npx playwright test --config PlaywrightConfig.js LocaleV71.spec.js --output test-results/LocaleV71
+      - name: V7.2 immersive Home, interactive artwork and accessibility
+        run: npx playwright test --config PlaywrightConfig.js HomeV72.spec.js --output test-results/HomeV72
       - name: Browser navigation, capture and mobile
         run: npx playwright test --config PlaywrightConfig.js Browser.spec.js --output test-results/Browser
       - name: Stock model and undo

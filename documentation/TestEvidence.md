@@ -6,3 +6,6 @@ Baseline 6e73f9401d13c13ebfb61345d6e847943acff95f (V7) was published by workflow
 
 ### V7.1 localization validation
 First candidate passed unit tests, build, asset validation, original identity and production asset smoke, and four bilingual viewport tests. The operational locale test was blocked by ambiguous substring matching of Ambiente and Luz ambiente; exact labels are now used (no product-state change). Final run must pass all gates. Public release workflow includes direct HTTP SHA-256 verification for three hero formats and stock GLB, plus Chromium smoke screenshots on the deployed URL.
+
+## V7.2 baseline and evidence
+V7.1 main c46e48cfd144893ec1dc83839e18bf117c71628d; full Quality Gate 46073279890 and public deployment 46074719126 succeeded. Screenshot source: public release artifact 15234438332, Stock.png, 1440×900; cropped to (260,360,1000,840), 740×480, unchanged scene pixels in PNG; WebP quality 88. SHA-256 and Git blob hashes in inventory. Before: DesktopEnglish.png and MobileEnglish.png in same artifact. V7.2 test suite captures normal, hovered, expanded, sidebar/profile, flags, mobile and below-fold screenshot; covers pointer return, no prefetch, zoom/pan/fullscreen/download/focus, reduced motion and alternative portrait fixture. Results pending.
