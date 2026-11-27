@@ -4,7 +4,7 @@ Stable route IDs remain unchanged. Paths below are canonical; only pages with st
 
 | Stable ID | EN-US menu | Implementation | Static assets |
 |---|---|---|---|
-| home | Home (top) | code/src/pages/home/HomePage.jsx | top-menu/home/svg/VectraTwin.svg |
+| home | Home (top) | code/src/pages/home/HomePage.jsx | top-menu/home/webp/VectraHeroTriptych.webp; png/VectraHeroTriptych.png; svg/VectraHeroTriptych.svg; svg/VectraTwin.svg (archived alternative) |
 | sobre-o-autor | About the Author (top) | code/src/pages/about-author/AboutAuthorPage.jsx | top-menu/about-author/webp/AuthorProfile.webp |
 | saiba-mais | Learn More (top) | code/src/pages/learn-more/LearnMorePage.jsx | None |
 | shared | Header, locale, footer | code/src/components/layout/; code/src/components/navigation/ | top-menu/shared/branding/svg/; top-menu/shared/language/svg/ |
@@ -16,3 +16,5 @@ Stable route IDs remain unchanged. Paths below are canonical; only pages with st
 | sobre | About the Project | code/src/Main.jsx | None |
 
 Asset root: code/public/assets/. Canonical catalogs: [AssetInventory.json](AssetInventory.json), its referenced model and photo catalogs. [AssetMigrationMap.json](AssetMigrationMap.json) is historical migration evidence, not a competing inventory. Old public paths are temporarily retained for validation and authorized cleanup.
+
+`assets-novos/.gitkeep` is the empty intake directory marker, not a production asset.

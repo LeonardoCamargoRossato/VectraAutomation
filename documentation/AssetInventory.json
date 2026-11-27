@@ -1,5 +1,5 @@
 {
-  "version": "7.1-migration",
+  "version": "7.1",
   "scope": "New presentation assets; existing photographic and GLB catalogs remain authoritative",
   "catalogs": [
     {
@@ -77,6 +77,60 @@
       ],
       "gitBlobSha": "ad311ecaa26b0b37ba26bbea7fec36a41aae9e61",
       "sha256": "c2b93202bee240a884d49a6aeaa55b2f99768a0202d8d2579cdfa59b0671b9dc"
+    },
+    {
+      "id": "vectra-hero-triptych-png",
+      "path": "code/public/assets/top-menu/home/png/VectraHeroTriptych.png",
+      "format": "png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1747987,
+      "sha256": "deb34ca6738d81271536897477e47015c7d9fc733c02c2708a1f98ddeee86568",
+      "gitBlobSha": "8d5db3d0d6c8b1227a7eaaec038b02deba315327",
+      "origin": "Drawer V1 approved artwork, uploaded by owner to main@486caf021e00090b0ba6f660edeb199a7360ca77",
+      "rights": "Artwork generated for project; third-party emblems in references",
+      "approval": "Visual approved by owner; integration candidate",
+      "usage": [
+        "home"
+      ],
+      "derivation": "Approved original, PNG RGBA",
+      "sourcePath": "code/public/assets/assets-novos/VectraHeroTriptych.png"
+    },
+    {
+      "id": "vectra-hero-triptych-webp",
+      "path": "code/public/assets/top-menu/home/webp/VectraHeroTriptych.webp",
+      "format": "webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 206872,
+      "sha256": "66abbff58ebc309681412898f891f04615dc81d93d0b43eec58decaae620ed95",
+      "gitBlobSha": "edb8f527a1fcd63e7bf3d51b5cbb69feb40f0e0b",
+      "origin": "Drawer V1 approved artwork, uploaded by owner to main@486caf021e00090b0ba6f660edeb199a7360ca77",
+      "rights": "Artwork generated for project; third-party emblems in references",
+      "approval": "Visual approved by owner; integration candidate",
+      "usage": [
+        "home"
+      ],
+      "derivation": "Optimized WebP quality 88, alpha preserved",
+      "sourcePath": "code/public/assets/assets-novos/VectraHeroTriptych.webp"
+    },
+    {
+      "id": "vectra-hero-triptych-svg",
+      "path": "code/public/assets/top-menu/home/svg/VectraHeroTriptych.svg",
+      "format": "svg",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2331047,
+      "sha256": "96030859825411b94dbddfe8e526f81cab39dbda4acfcda44a4056b27cca646e",
+      "gitBlobSha": "5676ea52315d9afd6b0fb762b0e2db8ea42559b4",
+      "origin": "Drawer V1 approved artwork, uploaded by owner to main@486caf021e00090b0ba6f660edeb199a7360ca77",
+      "rights": "Artwork generated for project; third-party emblems in references",
+      "approval": "Visual approved by owner; integration candidate",
+      "usage": [
+        "home"
+      ],
+      "derivation": "Self-contained SVG embedding original PNG, not separate vector layers",
+      "sourcePath": "code/public/assets/assets-novos/VectraHeroTriptych.svg"
     }
   ]
 }

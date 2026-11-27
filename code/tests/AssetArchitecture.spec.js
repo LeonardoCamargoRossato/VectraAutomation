@@ -8,8 +8,15 @@ test('production public paths load without legacy requests',async({page},info)=>
  await page.goto('/VectraAutomation/');
  await expect(page.getByRole('heading',{name:'Digital Twins & Automations'})).toBeVisible();
  await expect.poll(()=>page.locator('.vectra-hero-visual img').evaluate(e=>e.complete&&e.naturalWidth>0)).toBe(true);
- expect(urls.some(u=>u.includes('/assets/top-menu/home/svg/VectraTwin.svg'))).toBe(true);
+ expect(urls.some(u=>u.includes('/assets/top-menu/home/webp/VectraHeroTriptych.webp'))).toBe(true);
  expect(urls.some(u=>u.endsWith('.glb'))).toBe(false);
+ expect(urls.some(u=>/VectraHeroTriptych\.(png|svg)$/.test(u))).toBe(false);
+ await page.getByRole('button',{name:'Ampliar capa do Vectra'}).click();
+ const dialog=page.getByRole('dialog',{name:'Capa do Vectra ampliada'});await expect(dialog).toBeVisible();
+ await expect.poll(()=>dialog.locator('img').evaluate(e=>e.complete&&e.naturalWidth===1672)).toBe(true);
+ expect(urls.some(u=>u.endsWith('/png/VectraHeroTriptych.png'))).toBe(true);
+ await expect(dialog.getByRole('link',{name:'Baixar PNG'})).toHaveAttribute('download','VectraHeroTriptych.png');
+ await page.keyboard.press('Escape');await expect(dialog).toHaveCount(0);
  const favicon=await page.locator('link[rel=icon]').getAttribute('href');
  expect(favicon).toContain('/assets/top-menu/shared/branding/svg/VectraMark.svg');
  expect((await page.request.get(new URL(favicon,page.url()).href)).ok()).toBe(true);

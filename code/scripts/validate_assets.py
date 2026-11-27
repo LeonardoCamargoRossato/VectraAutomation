@@ -32,7 +32,16 @@ def validate(require_clean=False):
             assert require_clean, f"Legacy copy removed before cleanup: {p}"
         check(q, r.get("newBytes", r["bytes"]), r.get("newSha256", r["sha256"]), r.get("newGitBlobSha", r["gitBlobSha"]))
         assert q.relative_to(PUBLIC).parts[0] in ("top-menu", "side-menu")
-    actual = {p.relative_to(ROOT).as_posix() for p in PUBLIC.rglob("*") if p.is_file()}
+    inventory = json.loads((ROOT / 'documentation/AssetInventory.json').read_text())
+    approved = {a['path'] for a in inventory['assets'] if a['id'].startswith('vectra-hero-triptych-')}
+    assert len(approved) == 3
+    for a in inventory['assets']:
+        if a['path'] in approved:
+            check(ROOT / a['path'], a['bytes'], a['sha256'], a['gitBlobSha'])
+    new |= approved
+    intake = PUBLIC / 'assets-novos' / '.gitkeep'
+    assert intake.is_file() and intake.stat().st_size == 0
+    actual = {p.relative_to(ROOT).as_posix() for p in PUBLIC.rglob("*") if p.is_file() and p != intake}
     expected = new if require_clean else old | new
     assert actual == expected, f"Unexpected assets: {actual ^ expected}"
     obsolete = ("assets/home/", "assets/about-author/", "assets/branding/", "assets/explorar/", "assets/acervo-fotografico/", r"assets\/acervo-fotografico\/", "/veiculo-real/")
