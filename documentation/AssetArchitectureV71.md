@@ -1,0 +1,12 @@
+# V7.1 — Menu-based asset architecture
+
+Baseline: 6e73f9401d13c13ebfb61345d6e847943acff95f. Source: LCR Asset Organization Standard v1.2, confirmed in Google Drive; AGENTS.md. Existing PR #8 is independent and untouched.
+
+The canonical root has two menu groups: top-menu and side-menu. Shared global brand and locale assets use top-menu/shared. Empty page directories are not created. Existing page IDs, saved states, catalog IDs and private IndexedDB are unchanged. The V7 baseline has 130 public files (including 124 photo derivatives, one stock GLB, one model catalog and four presentation assets). All copied files were verified against source Git blob SHA and size. The new ModelCatalog.json alone intentionally differs because its stock path was changed; both original and new hashes are documented. Photo records preserve all metadata except public paths. Legacy source copies remain pending explicit cleanup approval after gates; no private originals are removed. Rollback: revert migration PR or restore baseline commit, without changing browser storage.
+
+The approved Drawer Triptych ZIP was not available in the current conversation or connected repository/Drive search. No replacement artwork is generated. VectraTwin.svg remains active. Interactive modularization requires separate approved assets with masks and occlusion reconstruction. English-first localization is independent and not claimed by this PR.
+
+Validation: Python checks SHA-256, Git blob hash, file sizes, collisions, exact public file inventory, stale executable paths and catalog mapping. Existing tests keep the 56 real photos, six references and full stock/garage/camera coverage. A production-build browser smoke test verifies the new prefix, image/favicon, WebP delivery and actual stock load. Full cleanup is a subsequent controlled commit after approval. No access permissions changed.
+
+## Approved Drawer intake — 27 November 2026
+All three files from main@486caf021e00090b0ba6f660edeb199a7360ca77 were copied byte-identically to their canonical Home folders, and confirmed against the original ZIP SHA-256, Git SHA, dimensions and alpha. SVG is a single embedded raster, not separable scenes. The inventory incorporates all three records. After verification, the three intake copies are removed and `.gitkeep` preserves the folder. Home renders WebP first; PNG opens only on demand. Legacy 130 migration copies remain until separately authorized. Full English translation and independent scene assets remain pending.

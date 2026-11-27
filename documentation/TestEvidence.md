@@ -1,2 +1,5 @@
 # Evidência de teste inicial
 Node v22.16.0, comando node --test tests/*.test.js em cópia local de três arquivos verificada por git hash-object contra blobs remotos: SceneState.js c4b6e284aea70fd0c54ededc177642a63021fb96; Sheets.js 3d79a8f571d8c49c2b3529090c45026b793cd588; Domain.test.js 0fc78e0e8a4b79bd9a29ffd09b7e92377afc5a80. Resultado: 4 testes aprovados, 0 falhas (timestamp, histórico utilitário, URL segura, proteção de IDs/fórmulas e conflitos detectáveis). Não prova integração da interface. DNS do ambiente local não resolveu github.com; build completo, navegador e auditoria de dependências aguardam CI. Nenhum deploy autorizado.
+
+## V7.1 baseline and candidate
+Baseline 6e73f9401d13c13ebfb61345d6e847943acff95f (V7) was published by workflow 46053779288 following successful Quality Gate 46052633226. Prior browser screenshots are in artifact 15225452447. Candidate copy verification: 130/130 same Git blob SHA and byte length before catalog path update. SHA-256, catalog format, runtime and production build validation are required in the new gate; results not yet asserted.
