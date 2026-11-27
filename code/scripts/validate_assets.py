@@ -38,7 +38,16 @@ def validate(require_clean=False):
     for a in inventory['assets']:
         if a['path'] in approved:
             check(ROOT / a['path'], a['bytes'], a['sha256'], a['gitBlobSha'])
-    new |= approved
+    additions = {a['path'] for a in inventory['assets'] if a['id'] in ('vectra-explorer-exterior-png', 'vectra-explorer-exterior-webp', 'flag-us')}
+    assert len(additions) == 3
+    for a in inventory['assets']:
+        if a['path'] in additions:
+            p = ROOT / a['path']
+            data = p.read_bytes()
+            assert hashlib.sha1(f'blob {len(data)}'.encode() + bytes([0]) + data).hexdigest() == a['gitBlobSha']
+            if 'sha256' in a:
+                check(p, a['bytes'], a['sha256'], a['gitBlobSha'])
+    new |= approved | additions
     intake = PUBLIC / 'assets-novos' / '.gitkeep'
     assert intake.is_file() and intake.stat().st_size == 0
     actual = {p.relative_to(ROOT).as_posix() for p in PUBLIC.rglob("*") if p.is_file() and p != intake}

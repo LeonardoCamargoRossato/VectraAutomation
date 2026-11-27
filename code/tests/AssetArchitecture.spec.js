@@ -21,6 +21,7 @@ test('production public paths load without legacy requests',async({page},info)=>
  expect(favicon).toContain('/assets/top-menu/shared/branding/svg/VectraMark.svg');
  expect((await page.request.get(new URL(favicon,page.url()).href)).ok()).toBe(true);
  await page.screenshot({path:info.outputPath('Home.png')});
+ await page.getByRole('button',{name:'Expandir menu'}).click();
  await page.getByRole('button',{name:'Acervo Fotográfico',exact:true}).click();
  await expect(page.getByTestId('real-count')).toHaveText('56/56');
  const img=page.locator('.reference-thumb img').first();await img.scrollIntoViewIfNeeded();

@@ -1,5 +1,5 @@
 {
-  "version": "7.1",
+  "version": "7.2",
   "scope": "New presentation assets; existing photographic and GLB catalogs remain authoritative",
   "catalogs": [
     {
@@ -131,6 +131,50 @@
       ],
       "derivation": "Self-contained SVG embedding original PNG, not separate vector layers",
       "sourcePath": "code/public/assets/assets-novos/VectraHeroTriptych.svg"
+    },
+    {
+      "id": "vectra-explorer-exterior-png",
+      "path": "code/public/assets/top-menu/home/png/VectraExplorerExterior.png",
+      "format": "png",
+      "bytes": 83605,
+      "sha256": "af8d9cf79d1226299db2c97d9328161ed9409dc1d950d830089408cd6701b597",
+      "gitBlobSha": "bdf31a73eccfc7b6218f6cb553f3341c112fdbcb",
+      "width": 740,
+      "height": 480,
+      "origin": "Actual deployed V7.1 Chromium capture, PublicReleaseEvidence artifact 15234438332 / Stock.png; crop (260,360,1000,840) of 1440x900 screenshot, no generated content",
+      "applicationSha": "c46e48cfd144893ec1dc83839e18bf117c71628d",
+      "environment": "Studio, stock exterior front three-quarter, default paint #18191b",
+      "usage": [
+        "home"
+      ],
+      "derivation": "Lossless screenshot crop"
+    },
+    {
+      "id": "vectra-explorer-exterior-webp",
+      "path": "code/public/assets/top-menu/home/webp/VectraExplorerExterior.webp",
+      "format": "webp",
+      "bytes": 11734,
+      "sha256": "56b35842703bf7e252850cc0aef5a2357fd916e000dbde59b2ee2ebdf24e4012",
+      "gitBlobSha": "e3c98cb22921a1e0d8eb3dd5c944c983e71b4b25",
+      "width": 740,
+      "height": 480,
+      "origin": "Actual deployed V7.1 Chromium capture, PublicReleaseEvidence artifact 15234438332 / Stock.png; crop (260,360,1000,840) of 1440x900 screenshot, no generated content",
+      "applicationSha": "c46e48cfd144893ec1dc83839e18bf117c71628d",
+      "environment": "Studio, stock exterior front three-quarter, default paint #18191b",
+      "usage": [
+        "home"
+      ],
+      "derivation": "WebP quality 88 from screenshot crop"
+    },
+    {
+      "id": "flag-us",
+      "path": "code/public/assets/top-menu/shared/language/svg/FlagUs.svg",
+      "format": "svg",
+      "gitBlobSha": "286fc399c381e66ceafccbc4de5543311b55e4d0",
+      "origin": "Existing LCR template: Unifesp-ITA-Execel-nciaOperacional/code/public/assets/branding/UsFlag.svg",
+      "usage": [
+        "shared"
+      ]
     }
   ]
 }

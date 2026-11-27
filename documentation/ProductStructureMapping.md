@@ -18,3 +18,9 @@ Stable route IDs remain unchanged. Paths below are canonical; only pages with st
 Asset root: code/public/assets/. Canonical catalogs: [AssetInventory.json](AssetInventory.json), its referenced model and photo catalogs. [AssetMigrationMap.json](AssetMigrationMap.json) is historical migration evidence, not a competing inventory. Old public paths are temporarily retained for validation and authorized cleanup.
 
 `assets-novos/.gitkeep` is the empty intake directory marker, not a production asset.
+
+## V7.2 Home additions
+
+- `top-menu/home/png/VectraExplorerExterior.png` and `top-menu/home/webp/VectraExplorerExterior.webp`: real V7.1 deployed stock simulator crop, recorded in AssetInventory.json.
+- `top-menu/shared/language/svg/FlagUs.svg`: existing LCR template flag; no duplicate author image.
+- `homeArtwork` in ProjectContent.js is the single editable artwork record; the Home uses WebP, the shared ReferenceImageViewer opens the matching PNG on demand, and SVG remains archived. Home hides the rail only when collapsed; all legacy routes remain valid.
