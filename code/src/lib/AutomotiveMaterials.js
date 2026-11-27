@@ -28,11 +28,11 @@ const settings={
  headlight:{color:'#a8adb4',metalness:.88,roughness:.23,emissive:'#fff1d0',emissiveIntensity:0},
  tailLens:{color:'#950d1c',metalness:.05,roughness:.17,transparent:true,opacity:.76,depthWrite:false,clearcoat:1},
  tailReflector:{color:'#7b1220',metalness:.38,roughness:.32,emissive:'#ff1726',emissiveIntensity:0},
- suede:{color:'#17212e',metalness:0,roughness:.95,sheen:.9,sheenColor:'#344557',sheenRoughness:.9,envMapIntensity:.35},
- dashboard:{color:'#24272a',metalness:0,roughness:.87,envMapIntensity:.42},
+ suede:{color:'#514641',metalness:0,roughness:.94,sheen:.75,sheenColor:'#817067',sheenRoughness:.86,envMapIntensity:.42},
+ dashboard:{color:'#2b2928',metalness:0,roughness:.81,envMapIntensity:.48},
  steering:{color:'#151719',metalness:0,roughness:.83,envMapIntensity:.45},
  carpet:{color:'#191c22',metalness:0,roughness:1,envMapIntensity:.25},
- lining:{color:'#242a33',metalness:0,roughness:.93,envMapIntensity:.3},
+ lining:{color:'#3b3735',metalness:0,roughness:.92,envMapIntensity:.38},
  tyre:{color:'#17191b',metalness:0,roughness:.93,envMapIntensity:.32},
  rim:{color:'#bcc2c9',metalness:.78,roughness:.35,envMapIntensity:1.15},
  metal:{color:'#aeb6bf',metalness:.78,roughness:.32},
@@ -55,7 +55,7 @@ export function upgradeAutomotive(root){const normal=suedeNormal(),plate=plateTe
  if(name==='chrome'&&parent.startsWith('wheel_')){o.visible=false;return}
  if(role==='paint')paints++;
  const definition=settings[role]??settings.trim;const props={...definition,name,side:definition.side??old.side};
- if(role==='suede'&&o.geometry.attributes.uv){props.normalMap=normal;props.normalScale=new T.Vector2(.17,.17)}
+ if((role==='suede'||role==='lining')&&o.geometry.attributes.uv){props.normalMap=normal;props.normalScale=new T.Vector2(.27,.27)}
  if(role==='plate'&&o.geometry.attributes.uv){props.map=plate;props.color='#ffffff'}
  if(role==='glass'||role.endsWith('Lens')){o.castShadow=false;o.renderOrder=3}
  o.material=new T.MeshPhysicalMaterial(props);old.dispose();

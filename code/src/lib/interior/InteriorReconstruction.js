@@ -1,6 +1,6 @@
 import * as T from 'three';
 import {RoundedBoxGeometry} from 'three/addons/geometries/RoundedBoxGeometry.js';
-export const interiorPresets={'Luz natural':{fill:.7,panel:0},'Inspeção técnica':{fill:2.6,panel:0},'Painel iluminado':{fill:1.2,panel:1.8},'Interior noturno':{fill:.17,panel:2}};
+export const interiorPresets={'Luz natural':{fill:.7,panel:0},'Inspeção técnica':{fill:3.4,panel:.45},'Painel iluminado':{fill:1.2,panel:1.8},'Interior noturno':{fill:.17,panel:2}};
 export function componentFor(o){if(o.userData.referenceComponent)return o.userData.referenceComponent;const r=o.userData.automotiveRole;if(r==='suede'&&/rear|back/i.test(o.parent?.name||''))return 'RearSeats';return ({dashboard:'Dashboard',steering:'SteeringWheel',suede:'FrontSeats',carpet:'Carpet',lining:'DoorPanels'})[r]||null}
 export const interiorViews={'Volante':{eye:[.36,1.04,.10],target:[.36,.71,.60]},'Instrumentação':{eye:[.36,1.05,.20],target:[.36,.83,.79]},'Console central':{eye:[-.38,1.12,.04],target:[0,.65,.57]},'Câmbio automático':{eye:[-.33,.98,-.15],target:[0,.45,.21]},'Visão ampla dos bancos':{eye:[0,1.28,.46],target:[0,.78,-.80]}};
 export function addInterior(root){
@@ -18,9 +18,9 @@ export function addInterior(root){
  for(const x of [-.08,.08])for(const z of [-.025,.04])if(!(x<0&&z===.04))box(console,'WindowSwitch'+x+z,[.042,.017,.045],[x,.40,z],mats.dark);
  box(console,'Armrest',[.18,.10,.24],[0,.39,-.23],mats.rim);
  box(dash,'CenterStack',[.25,.31,.065],[0,.72,.49],mats.plastic,[-.12,0,0]);for(const x of [-.063,.063]){box(dash,'VentFrame'+x,[.11,.068,.022],[x,.83,.45],mats.dark);for(let i=0;i<4;i++)box(dash,'VentSlat'+x+i,[.094,.007,.009],[x,.81+i*.012,.435],mats.trim)}
- box(dash,'Radio',[.22,.064,.024],[0,.70,.45],mats.dark);
- text(dash,'RadioDisplay',.11,.022,[0,.71,.435],c=>{c.fillStyle='#111';c.fillRect(0,0,512,256);c.fillStyle='#e0a35d';c.font='bold 72px monospace';c.textAlign='center';c.fillText('FM',256,160)});
- for(const x of [-.075,0,.075])mesh(dash,'ClimateDial'+x,new T.CylinderGeometry(.025,.025,.018,24),mats.rim,[x,.59,.45],[Math.PI/2,0,0]);
+ box(dash,'Radio',[.22,.064,.024],[0,.70,.45],mats.dark);for(let i=0;i<6;i++)box(dash,'RadioKey'+i,[.023,.012,.007],[-.082+i*.033,.678,.435],mats.rim);
+ text(dash,'RadioDisplay',.11,.022,[0,.71,.435],c=>{c.fillStyle='#111';c.fillRect(0,0,512,256);c.fillStyle='#e0a35d';c.font='bold 72px monospace';c.textAlign='center';c.fillText('FM  98.7',256,160)});
+ for(const x of [-.075,0,.075]){mesh(dash,'ClimateDial'+x,new T.CylinderGeometry(.025,.025,.024,32),mats.rim,[x,.59,.45],[Math.PI/2,0,0]);box(dash,'ClimateMark'+x,[.003,.013,.004],[x,.599,.436],mats.amber)}
  box(cluster,'ClusterHousing',[.30,.137,.045],[.36,.84,.76],mats.dark);
  for(const [x,max,label] of [[.29,240,'km/h'],[.43,8,'rpm']]){const dial=text(cluster,'Dial'+label,.125,.112,[x,.84,.735],c=>{c.fillStyle='#111315';c.fillRect(0,0,512,256);c.save();c.translate(256,128);c.strokeStyle='#dcd9ce';c.fillStyle='#dcd9ce';c.font='22px sans-serif';c.textAlign='center';for(let i=0;i<=12;i++){const a=(-225+i*22.5)*Math.PI/180;c.beginPath();c.moveTo(95*Math.cos(a),95*Math.sin(a));c.lineTo(112*Math.cos(a),112*Math.sin(a));c.stroke();if(i%3===0)c.fillText(String(Math.round(max*i/12)),74*Math.cos(a),74*Math.sin(a)+7)}c.fillText(label,0,51);c.restore()});dial.material.emissive.set('#a4581c');dial.material.emissiveMap=dial.material.map;dial.material.emissiveIntensity=0;const needle=box(cluster,'Needle'+label,[.004,.045,.004],[x-.012,.825,.732],mats.amber,[0,0,-.85]);needle.userData.panelLight=true;dial.userData.panelLight=true}
  for(const x of [.205,.515]){box(cluster,'SmallGauge'+x,[.032,.052,.012],[x,.83,.733],mats.dark);box(cluster,'GaugeNeedle'+x,[.003,.027,.004],[x,.83,.725],mats.amber)}
