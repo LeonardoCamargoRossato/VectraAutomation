@@ -1,0 +1,27 @@
+import {test,expect} from '@playwright/test';
+test('production public paths load without legacy requests',async({page},info)=>{
+ test.setTimeout(120000);
+ const urls=[],errors=[],bad=[];
+ page.on('request',r=>urls.push(r.url()));
+ page.on('pageerror',e=>errors.push(e.message));
+ page.on('response',r=>{if(r.status()>=400&&r.url().includes('/VectraAutomation/assets/'))bad.push(r.url())});
+ await page.goto('/VectraAutomation/');
+ await expect(page.getByRole('heading',{name:'Digital Twins & Automations'})).toBeVisible();
+ await expect.poll(()=>page.locator('.vectra-hero-visual img').evaluate(e=>e.complete&&e.naturalWidth>0)).toBe(true);
+ expect(urls.some(u=>u.includes('/assets/top-menu/home/svg/VectraTwin.svg'))).toBe(true);
+ expect(urls.some(u=>u.endsWith('.glb'))).toBe(false);
+ const favicon=await page.locator('link[rel=icon]').getAttribute('href');
+ expect(favicon).toContain('/assets/top-menu/shared/branding/svg/VectraMark.svg');
+ expect((await page.request.get(new URL(favicon,page.url()).href)).ok()).toBe(true);
+ await page.screenshot({path:info.outputPath('Home.png')});
+ await page.getByRole('button',{name:'Acervo Fotográfico',exact:true}).click();
+ await expect(page.getByTestId('real-count')).toHaveText('56/56');
+ const img=page.locator('.reference-thumb img').first();await img.scrollIntoViewIfNeeded();
+ await expect.poll(()=>img.evaluate(e=>e.complete&&e.naturalWidth>0)).toBe(true);
+ expect(await img.getAttribute('src')).toContain('/assets/side-menu/photo-library/');
+ await page.getByRole('button',{name:'Explorar Vectra',exact:true}).click();
+ await expect(page.locator('.viewport')).toHaveAttribute('data-model-status','stock',{timeout:60000});
+ expect(urls.some(u=>u.endsWith('/assets/side-menu/explore-vectra/models/glb/VectraStock.glb'))).toBe(true);
+ expect(urls.filter(u=>/\/assets\/(home|branding|about-author|explorar|acervo-fotografico)\//.test(u))).toEqual([]);
+ expect(bad).toEqual([]);expect(errors).toEqual([]);
+});
