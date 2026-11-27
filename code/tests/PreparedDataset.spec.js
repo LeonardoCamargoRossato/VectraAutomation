@@ -20,12 +20,12 @@ function pack(rows,n,tamper=false){
 test('private prepared dataset: 56 verified pairs, filters, persistence, duplicate and tamper handling',async({page})=>{
  test.setTimeout(180000);await page.goto('/VectraAutomation/#acervo-fotografico');
  const rows=await page.evaluate(()=>Array.from({length:56},(_,i)=>{const c=document.createElement('canvas');c.width=c.height=32;const x=c.getContext('2d');x.fillStyle='rgb('+i+',80,160)';x.fillRect(0,0,32,32);x.fillStyle='white';x.fillRect(i%16,0,2,16);return {png:c.toDataURL('image/png').split(',')[1],webp:c.toDataURL('image/webp',.82).split(',')[1]}}));
- const input=page.getByLabel('Importar lotes preparados V6.1'),count=page.getByTestId('real-count');
+ await page.getByText('Importação privada opcional',{exact:true}).click();const input=page.getByLabel('Importar lotes preparados V6.1'),count=page.getByTestId('local-real-count');
  await expect(count).toHaveText('0/56');await input.setInputFiles(pack(rows.slice(0,14),1,true));await expect(page.getByText(/Lote interrompido: SHA-256/)).toBeVisible();await expect(count).toHaveText('0/56');
  const packs=Array.from({length:4},(_,i)=>pack(rows.slice(i*14,(i+1)*14),i+1));await input.setInputFiles(packs);await expect(count).toHaveText('56/56',{timeout:90000});
- await page.getByLabel('Filtrar referências').selectOption('source:real');await expect(page.locator('.reference-card')).toHaveCount(56);await expect(page.locator('[data-reference-id]')).toHaveCount(0);
+ await page.getByLabel('Filtrar referências').selectOption('source:real');await expect(page.locator('.reference-card')).toHaveCount(56);await expect(page.locator('[data-reference-id]')).toHaveCount(56);
  const card=page.locator('.reference-card').first();await card.getByRole('button',{name:/Ampliar Fixture/}).click();const dialog=page.getByRole('dialog');await expect(dialog).toBeVisible();await expect.poll(()=>dialog.locator('img').evaluate(e=>e.complete&&e.naturalWidth===32)).toBe(true);await page.keyboard.press('Escape');await expect(dialog).toHaveCount(0);
  await page.getByLabel('Filtrar referências').selectOption('quality:Referência geométrica');await expect(page.locator('.reference-card')).toHaveCount(56);
  await input.setInputFiles(packs);await expect(page.getByText(/0 importada\(s\), 56 duplicata/)).toBeVisible({timeout:90000});
- await page.reload();await expect(count).toHaveText('56/56');await page.getByLabel('Filtrar referências').selectOption('source:external');await expect(page.locator('[data-reference-id]')).toHaveCount(6);await expect(page.locator('.reference-card')).toHaveCount(0);
+ await page.reload();await page.getByText('Importação privada opcional',{exact:true}).click();await expect(count).toHaveText('56/56');await page.getByLabel('Filtrar referências').selectOption('source:external');await expect(page.locator('[data-reference-id]')).toHaveCount(6);await expect(page.locator('.reference-card')).toHaveCount(0);
 });
