@@ -7,7 +7,8 @@ await mkdir(output,{recursive:true});
 const inv=JSON.parse(await readFile('../documentation/AssetInventory.json','utf8'));
 const migration=JSON.parse(await readFile('../documentation/AssetMigrationMap.json','utf8'));
 const assets=[...inv.assets.filter(x=>x.id.startsWith('vectra-hero-triptych-')),...migration.entries.filter(x=>x.assetId==='vectra-stock').map(x=>({path:x.newPath,sha256:x.sha256,bytes:x.bytes}))];
-if(assets.length!==4)throw Error('Expected three approved hero assets and stock GLB');
+assets.push(...inv.assets.filter(x=>x.id.startsWith('vectra-explorer-exterior-')));
+if(assets.length!==6)throw Error('Expected three hero assets, two simulator previews and stock GLB');
 for(const a of assets){
  const url=root+a.path.replace(/^code\/public\//,'');
  const r=await fetch(url,{cache:'no-store',signal:AbortSignal.timeout(60000)});
@@ -23,7 +24,11 @@ try{
  await expect(page.locator('html')).toHaveAttribute('lang','en-US',{timeout:30000});
  await expect(page.getByRole('link',{name:'Explore Vectra'})).toBeVisible({timeout:30000});
  await expect.poll(()=>page.locator('.vectra-hero-trigger img').evaluate(i=>i.complete&&i.naturalWidth===1672)).toBe(true);
+ await expect(page.locator('.nav-sidebar')).toBeHidden();
+ await expect.poll(()=>page.locator('.main-column').evaluate(e=>Math.round(e.getBoundingClientRect().width))).toBe(1440);
  await page.screenshot({path:output+'/DesktopEnglish.png'});
+ await page.getByRole('button',{name:'Enlarge Vectra cover'}).click();await expect(page.getByRole('dialog',{name:'Enlarged Vectra cover'})).toBeVisible();await expect.poll(()=>page.getByRole('dialog').locator('img').evaluate(i=>i.complete&&i.naturalWidth===1672)).toBe(true);await page.screenshot({path:output+'/Expanded.png'});await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).toHaveCount(0);
+ await page.getByRole('button',{name:'Expand menu'}).click();await expect(page.locator('.vectra-author-link')).toBeVisible();await page.screenshot({path:output+'/MenuAuthor.png'});await page.getByRole('button',{name:'Collapse menu'}).click();
  await page.setViewportSize({width:390,height:844});
  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(390);
  await page.screenshot({path:output+'/MobileEnglish.png'});
