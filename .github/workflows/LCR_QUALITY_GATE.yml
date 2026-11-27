@@ -15,6 +15,8 @@ jobs:
         working-directory: code
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -26,6 +28,15 @@ jobs:
       - run: python code/scripts/lcr_naming.py --check
         working-directory: .
       - run: npx playwright install --with-deps chromium
+      - name: V7 header, Home, compatibility and baseline screenshots
+        run: |
+          git worktree add --detach "$RUNNER_TEMP/vectra-baseline" 21e8f583231d8e54af142d6c449ac6fe8ff0c93e
+          ln -s "$PWD/node_modules" "$RUNNER_TEMP/vectra-baseline/code/node_modules"
+          (cd "$RUNNER_TEMP/vectra-baseline/code" && npm run dev -- --port 5174) > "$RUNNER_TEMP/vectra-baseline.log" 2>&1 &
+          BASE_PID=$!
+          trap 'kill "$BASE_PID" 2>/dev/null || true; git worktree remove --force "$RUNNER_TEMP/vectra-baseline"' EXIT
+          for i in $(seq 1 30); do curl -fsS http://127.0.0.1:5174/VectraAutomation/ >/dev/null && break; sleep 1; done
+          VECTRA_BASELINE_URL=http://127.0.0.1:5174/VectraAutomation/ npx playwright test --config PlaywrightConfig.js IdentityV7.spec.js --output test-results/IdentityV7
       - name: Browser navigation, capture and mobile
         run: npx playwright test --config PlaywrightConfig.js Browser.spec.js --output test-results/Browser
       - name: Stock model and undo
