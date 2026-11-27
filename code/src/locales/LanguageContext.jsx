@@ -1,0 +1,19 @@
+import React,{createContext,useContext,useEffect,useMemo,useState} from 'react';
+import {EnUs} from './EnUs.js';
+export const LANGUAGE_KEY='vectra-language-choice';
+export function translate(value,locale='en-US'){
+ if(typeof value!=='string'||locale==='pt-BR')return value;
+ if(Object.hasOwn(EnUs,value))return EnUs[value];
+ if(/^\d+ — /.test(value)){const [n,...rest]=value.split(' — ');return n+' — '+translate(rest.join(' — '),locale)}
+ if(value.includes(' / '))return value.split(' / ').map(x=>translate(x,locale)).join(' / ');
+ for(const key of Object.keys(EnUs).filter(k=>k.endsWith(':')).sort((a,b)=>b.length-a.length))if(value.startsWith(key+' '))return EnUs[key]+' '+translate(value.slice(key.length+1),locale);
+ return value;
+}
+const Context=createContext({locale:'en-US',setLocale:()=>{},t:v=>translate(v)});
+export function LanguageProvider({children}){
+ const [locale,update]=useState(()=>{try{const v=localStorage.getItem(LANGUAGE_KEY);return v==='pt-BR'?'pt-BR':'en-US'}catch{return 'en-US'}});
+ useEffect(()=>{document.documentElement.lang=locale},[locale]);
+ const value=useMemo(()=>({locale,t:v=>translate(v,locale),setLocale:v=>{if(v!=='en-US'&&v!=='pt-BR')return;try{localStorage.setItem(LANGUAGE_KEY,v)}catch{}update(v)}}),[locale]);
+ return <Context.Provider value={value}>{children}</Context.Provider>
+}
+export const useLanguage=()=>useContext(Context);
