@@ -36,6 +36,8 @@ jobs:
         run: npx playwright test --config PlaywrightConfig.js Garage.spec.js --output test-results/Garage
       - name: Private photo references and interior detail
         run: npx playwright test --config PlaywrightConfig.js PhotoReference.spec.js --output test-results/PhotoReference
+      - name: V6.3 stock first frame and connected cabin
+        run: npx playwright test --config PlaywrightConfig.js CabinHotfix.spec.js --output test-results/CabinHotfix
       - name: Published reference photo delivery
         run: npx playwright test --config PlaywrightConfig.js PublishedReferences.spec.js --output test-results/PublishedReferences
       - name: Prepared private photographic dataset
