@@ -44,3 +44,28 @@ jobs:
       - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  verify-publication:
+    needs: deploy
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: code
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: code/package-lock.json
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Verify public HTTP assets and actual browser
+        run: node scripts/VerifyLive.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: PublicReleaseEvidence
+          path: code/test-results/LiveRelease/*.png
+          if-no-files-found: warn
+          retention-days: 14
