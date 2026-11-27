@@ -1,0 +1,71 @@
+{
+  "version": "7",
+  "scope": "New presentation assets; existing photographic and GLB catalogs remain authoritative",
+  "catalogs": [
+    {
+      "path": "code/src/lib/photo-reference/ReferenceCatalog.json",
+      "scope": "Photographic references"
+    },
+    {
+      "path": "code/public/assets/explorar/ModelCatalog.json",
+      "scope": "Model"
+    }
+  ],
+  "assets": [
+    {
+      "id": "vectra-mark",
+      "path": "code/public/assets/branding/VectraMark.svg",
+      "format": "svg",
+      "width": 64,
+      "height": 64,
+      "origin": "Original geometric symbol created for V7; no manufacturer logo",
+      "rights": "Original project artwork",
+      "approval": "Pending owner visual review",
+      "usage": [
+        "header",
+        "favicon"
+      ],
+      "gitBlobSha": "e77435f58a29d8263e33530f5a1aba3cfcc21c08"
+    },
+    {
+      "id": "flag-br",
+      "path": "code/public/assets/branding/FlagBr.svg",
+      "format": "svg",
+      "width": 28,
+      "height": 20,
+      "origin": "Simplified Brazil flag vector, locale indicator",
+      "rights": "Original drawing of national symbol",
+      "usage": [
+        "language"
+      ],
+      "gitBlobSha": "88246d7e727ece3fbd84dc31448ba8297753ea63"
+    },
+    {
+      "id": "vectra-twin",
+      "path": "code/public/assets/home/VectraTwin.svg",
+      "format": "svg",
+      "width": 900,
+      "height": 620,
+      "origin": "Original conceptual vector based on approved FrontLeft/FrontRight/RearLeft reference views; no embedded photograph or plate",
+      "rights": "Original project artwork; reference photos unchanged",
+      "approval": "Pending owner visual review",
+      "usage": [
+        "home"
+      ],
+      "gitBlobSha": "27268097ae6dfe06834a9fbf4aaddf85979e96c3"
+    },
+    {
+      "id": "author-profile",
+      "path": "code/public/assets/about-author/AuthorProfile.webp",
+      "format": "webp",
+      "bytes": 17094,
+      "origin": "LeonardoCamargoRossato/Unifesp-ITA-Execel-nciaOperacional@942bb8e788340eaf899999d7172099f9539b243a:code/public/assets/about-author/AuthorProfile.webp",
+      "rights": "Explicit reuse authorized in V7 task",
+      "derivation": "Byte-identical optimized reference asset; source retained in reference repo",
+      "usage": [
+        "sobre-o-autor"
+      ],
+      "gitBlobSha": "ad311ecaa26b0b37ba26bbea7fec36a41aae9e61"
+    }
+  ]
+}
