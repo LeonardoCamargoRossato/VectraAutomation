@@ -65,4 +65,4 @@ export const EnUs=Object.freeze({...{
   "Baixar PNG": "Download PNG",
   "Fechar": "Close",
   "Fechar navegação": "Close navigation"
-},...OperationalEnUs,...PhotoEnUs});
+},...OperationalEnUs,...PhotoEnUs,"Captura real do simulador":"Actual simulator capture","Do laboratório virtual à experimentação":"From virtual lab to experimentation","Explore o modelo stock, altere materiais e ambientes e salve suas configurações localmente.":"Explore the stock model, edit materials and environments, and save your configurations locally.","Veja o simulador":"See the simulator","Captura real do simulador: Vectra em perspectiva dianteira de três quartos":"Actual simulator capture: Vectra front three-quarter view"});
