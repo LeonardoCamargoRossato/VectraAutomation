@@ -1,0 +1,53 @@
+[
+  {
+    "id": "vectra-hero-triptych-png",
+    "path": "code/public/assets/home/VectraHeroTriptych.png",
+    "format": "png",
+    "width": 1672,
+    "height": 941,
+    "bytes": 1747987,
+    "sha256": "deb34ca6738d81271536897477e47015c7d9fc733c02c2708a1f98ddeee86568",
+    "gitBlobSha": "8d5db3d0d6c8b1227a7eaaec038b02deba315327",
+    "origin": "Drawer V1 — arte gerada por IA a partir de três capturas do Vectra Virtual Lab; aprovação visual do responsável em chat em 2026-11-27",
+    "rights": "Arte gerada para o projeto; emblemas de terceiros presentes nas referências",
+    "approval": "Visual aprovado; integração pendente",
+    "usage": [
+      "home"
+    ],
+    "derivation": "Original aprovado, cópia idêntica"
+  },
+  {
+    "id": "vectra-hero-triptych-webp",
+    "path": "code/public/assets/home/VectraHeroTriptych.webp",
+    "format": "webp",
+    "width": 1672,
+    "height": 941,
+    "bytes": 206872,
+    "sha256": "66abbff58ebc309681412898f891f04615dc81d93d0b43eec58decaae620ed95",
+    "gitBlobSha": "edb8f527a1fcd63e7bf3d51b5cbb69feb40f0e0b",
+    "origin": "Drawer V1 — arte gerada por IA a partir de três capturas do Vectra Virtual Lab; aprovação visual do responsável em chat em 2026-11-27",
+    "rights": "Arte gerada para o projeto; emblemas de terceiros presentes nas referências",
+    "approval": "Visual aprovado; integração pendente",
+    "usage": [
+      "home"
+    ],
+    "derivation": "WebP otimizado, qualidade 88, canal alfa preservado"
+  },
+  {
+    "id": "vectra-hero-triptych-svg",
+    "path": "code/public/assets/home/VectraHeroTriptych.svg",
+    "format": "svg",
+    "width": 1672,
+    "height": 941,
+    "bytes": 2331047,
+    "sha256": "96030859825411b94dbddfe8e526f81cab39dbda4acfcda44a4056b27cca646e",
+    "gitBlobSha": "5676ea52315d9afd6b0fb762b0e2db8ea42559b4",
+    "origin": "Drawer V1 — arte gerada por IA a partir de três capturas do Vectra Virtual Lab; aprovação visual do responsável em chat em 2026-11-27",
+    "rights": "Arte gerada para o projeto; emblemas de terceiros presentes nas referências",
+    "approval": "Visual aprovado; integração pendente",
+    "usage": [
+      "home"
+    ],
+    "derivation": "Contêiner SVG autocontido com PNG original incorporado; não é vetor puro nem camadas separadas"
+  }
+]
