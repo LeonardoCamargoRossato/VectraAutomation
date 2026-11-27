@@ -3,3 +3,6 @@ Node v22.16.0, comando node --test tests/*.test.js em cópia local de três arqu
 
 ## V7.1 baseline and candidate
 Baseline 6e73f9401d13c13ebfb61345d6e847943acff95f (V7) was published by workflow 46053779288 following successful Quality Gate 46052633226. Prior browser screenshots are in artifact 15225452447. Candidate copy verification: 130/130 same Git blob SHA and byte length before catalog path update. SHA-256, catalog format, runtime and production build validation are required in the new gate; results not yet asserted.
+
+### V7.1 localization validation
+First candidate passed unit tests, build, asset validation, original identity and production asset smoke, and four bilingual viewport tests. The operational locale test was blocked by ambiguous substring matching of Ambiente and Luz ambiente; exact labels are now used (no product-state change). Final run must pass all gates. Public release workflow includes direct HTTP SHA-256 verification for three hero formats and stock GLB, plus Chromium smoke screenshots on the deployed URL.

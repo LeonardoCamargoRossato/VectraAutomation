@@ -18,13 +18,13 @@ for(const width of [390,768,1120,1440])test('English default and both languages 
 test('English operational routes and legacy aliases preserve model state',async({page},info)=>{
  test.setTimeout(180000);await page.goto(root+'#explorar');const view=page.locator('.viewport');await expect(view).toHaveAttribute('data-model-status','stock',{timeout:60000});
  await expect(page.getByRole('heading',{name:'Explore Vectra'})).toBeVisible();
- const env=page.getByLabel('Environment');await env.selectOption('Oficina');await expect(env).toHaveValue('Oficina');
+ const env=page.getByLabel('Environment',{exact:true});await env.selectOption('Oficina');await expect(env).toHaveValue('Oficina');
  await expect(page.getByText(/All changes saved/)).toBeVisible({timeout:30000});
  await page.getByRole('button',{name:'Interior',exact:true}).click();await expect(page.getByRole('button',{name:'Driver',exact:true})).toBeVisible();
  await page.screenshot({path:info.outputPath('ExploreEnglish.png')});
- await change(page,'Português — PT-BR');await expect(page.getByRole('button',{name:'Motorista',exact:true})).toBeVisible();await expect(page.getByLabel('Ambiente')).toHaveValue('Oficina');await expect(view).toHaveAttribute('data-model-status','stock');
+ await change(page,'Português — PT-BR');await expect(page.getByRole('button',{name:'Motorista',exact:true})).toBeVisible();await expect(page.getByLabel('Ambiente',{exact:true})).toHaveValue('Oficina');await expect(view).toHaveAttribute('data-model-status','stock');
  await change(page,'English — EN-US');await page.getByRole('button',{name:'My Garage',exact:true}).click();await expect(page.getByRole('heading',{name:'Original Vectra'})).toBeVisible();await page.screenshot({path:info.outputPath('GarageEnglish.png')});
  await page.getByRole('button',{name:'Photo Library',exact:true}).click();await expect(page.getByTestId('real-count')).toHaveText('56/56');await expect(page.getByTestId('external-count')).toHaveText('6');await expect(page.getByRole('heading',{name:'01 — Steering wheel'})).toBeVisible();await page.getByLabel('Filter references').selectOption('source:real');await expect(page.getByTestId('real-collection')).toBeVisible();await page.screenshot({path:info.outputPath('PhotoLibraryEnglish.png')});
  await page.getByRole('button',{name:'Inventory',exact:true}).click();await expect(page.getByText('Disconnected',{exact:true})).toBeVisible();await page.getByRole('button',{name:'Gallery',exact:true}).click();await expect(page.getByText('No saved captures.')).toBeVisible();await page.getByRole('button',{name:'About the Project',exact:true}).click();await expect(page.getByRole('heading',{name:'Virtual modernization lab'})).toBeVisible();
- await page.goto(root+'#explore-vectra');await expect(view).toHaveAttribute('data-model-status','stock',{timeout:60000});await expect(page.getByLabel('Environment')).toHaveValue('Oficina');
+ await page.goto(root+'#explore-vectra');await expect(view).toHaveAttribute('data-model-status','stock',{timeout:60000});await expect(page.getByLabel('Environment',{exact:true})).toHaveValue('Oficina');
 });

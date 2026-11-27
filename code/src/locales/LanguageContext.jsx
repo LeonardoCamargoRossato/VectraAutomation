@@ -9,6 +9,8 @@ export function translate(value,locale='en-US'){
  for(const key of Object.keys(EnUs).filter(k=>k.endsWith(':')).sort((a,b)=>b.length-a.length))if(value.startsWith(key+' '))return EnUs[key]+' '+translate(value.slice(key.length+1),locale);
  // Structured legacy status strings and catalog labels can carry numeric or diagnostic suffixes.
  for(const key of ['Sincronizado às','Opel Vectra B 2001 — adaptação stock'])if(value.startsWith(key+' '))return EnUs[key]+value.slice(key.length);
+ if(value.endsWith(' — orientação e componentes não validados'))return value.slice(0,-' — orientação e componentes não validados'.length)+' — orientation and components not validated';
+ if(value.endsWith('. Importe o GLB preparado.'))return translate(value.slice(0,-' Importe o GLB preparado.'.length),locale)+' Import the prepared GLB.';
  if(value.endsWith(' — câmera de ré'))return translate(value.slice(0,-' — câmera de ré'.length),locale)+' — reversing camera';
  if(/^\d+ (importada\(s\)|verificadas;)/.test(value)){return value.replace('importada(s),','imported,').replace('duplicata(s),','duplicates,').replace('manifesto(s) associado(s).','associated manifests.').replace('verificadas;','verified;').replace('importadas','imported').replace('duplicata(s) — lote privado V6.1','duplicates — V6.1 private batch')}
  return value;
