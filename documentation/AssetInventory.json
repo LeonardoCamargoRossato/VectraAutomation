@@ -29,7 +29,9 @@
         "header",
         "favicon"
       ],
-      "gitBlobSha": "e77435f58a29d8263e33530f5a1aba3cfcc21c08"
+      "gitBlobSha": "e77435f58a29d8263e33530f5a1aba3cfcc21c08",
+      "sha256": "65ca292136b855f8b18490bb223938da5bffc24de9efb883e7ec136ae3bc3cb2",
+      "bytes": 591
     },
     {
       "id": "flag-br",
@@ -42,7 +44,9 @@
       "usage": [
         "language"
       ],
-      "gitBlobSha": "88246d7e727ece3fbd84dc31448ba8297753ea63"
+      "gitBlobSha": "88246d7e727ece3fbd84dc31448ba8297753ea63",
+      "sha256": "c87c0d0e7a5484103f3734b3a57adcc3ffab2de3ee9433e1e712ae469152e0c6",
+      "bytes": 292
     },
     {
       "id": "vectra-twin",
@@ -56,7 +60,9 @@
       "usage": [
         "home"
       ],
-      "gitBlobSha": "27268097ae6dfe06834a9fbf4aaddf85979e96c3"
+      "gitBlobSha": "27268097ae6dfe06834a9fbf4aaddf85979e96c3",
+      "sha256": "b79bb71b142b0348cd0f991b5fa34ae9a19a2d261b6c9e1d8ea6da72c88c6943",
+      "bytes": 6261
     },
     {
       "id": "author-profile",
@@ -69,7 +75,8 @@
       "usage": [
         "sobre-o-autor"
       ],
-      "gitBlobSha": "ad311ecaa26b0b37ba26bbea7fec36a41aae9e61"
+      "gitBlobSha": "ad311ecaa26b0b37ba26bbea7fec36a41aae9e61",
+      "sha256": "c2b93202bee240a884d49a6aeaa55b2f99768a0202d8d2579cdfa59b0671b9dc"
     }
   ]
 }
