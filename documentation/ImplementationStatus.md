@@ -8,3 +8,6 @@ The menu-based hierarchy was introduced on an isolated branch. Existing public a
 
 ## V7.1 — approved hero intake
 Three Drawer image formats are imported and verified against the approved ZIP, the intake images removed, and an empty intake marker retained. Static Home integration uses WebP and on-demand PNG. SVG and previous VectraTwin.svg retained. Independent scene assets, full English localization, and final release gates remain pending.
+
+## V7.1 localization candidate
+English-first locale context and explicit saved language choice, English canonical routes with Portuguese aliases, translated interface labels and photo metadata display; persisted scene IDs, source catalog values and IndexedDB remain unchanged. Mobile menu closes on route selection, outside tap and Escape. Approved static hero retained; independent scene splitting removed from scope by owner. Existing suites explicitly exercise Portuguese. New locale suite validates clean English default, both languages, canonical and legacy routes, persistent choice, actual stock model and saved environment, mobile drawer and screenshots. User-supplied names and private spreadsheet values are not translated. Full CI and deployment pending.

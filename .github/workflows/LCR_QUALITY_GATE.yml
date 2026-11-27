@@ -41,6 +41,8 @@ jobs:
           VECTRA_BASELINE_URL=http://127.0.0.1:5174/VectraAutomation/ npx playwright test --config PlaywrightConfig.js IdentityV7.spec.js --output test-results/IdentityV7
       - name: Production asset routing and stock smoke test
         run: VECTRA_PRODUCTION=1 npx playwright test --config PlaywrightConfig.js AssetArchitecture.spec.js --output test-results/AssetArchitecture
+      - name: English-first and bilingual mobile regression
+        run: npx playwright test --config PlaywrightConfig.js LocaleV71.spec.js --output test-results/LocaleV71
       - name: Browser navigation, capture and mobile
         run: npx playwright test --config PlaywrightConfig.js Browser.spec.js --output test-results/Browser
       - name: Stock model and undo
