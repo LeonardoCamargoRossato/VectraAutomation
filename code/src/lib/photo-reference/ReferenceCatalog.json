@@ -43,7 +43,7 @@
         "height": 540
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/webp/DashboardSteering.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/webp/DashboardSteering.webp",
         "sha256": "59fc0fe092136f6d8acd6e8868be38b72ffe9737e960f817b86e310992728399",
         "gitSha": "1818a11f1d471f434c250c38880945f27f32324d",
         "bytes": 40694,
@@ -52,7 +52,7 @@
         "height": 517
       },
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/png/DashboardSteering.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/png/DashboardSteering.png",
         "sha256": "2720bdd8ace604e026aa0480ec1cb8d9c269b0a921aa93fca93a5510d3bdfee3",
         "gitSha": "2a36b141b7abb4f8beeb2c42f2cdec286fb1ae09",
         "bytes": 374550,
@@ -101,7 +101,7 @@
         "height": 534
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/webp/AutomaticSelector.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/webp/AutomaticSelector.webp",
         "sha256": "76502775983778fcd87d0da3ff37715eb72a9f600746827d40fddf7a506caf38",
         "gitSha": "7d9be371b6fdee18a2e7709e3213bebab77da164",
         "bytes": 42894,
@@ -110,7 +110,7 @@
         "height": 401
       },
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/png/AutomaticSelector.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/png/AutomaticSelector.png",
         "sha256": "55799735b4f06042b00e9d8321f093bfecdcf6df8626885dfa2aafe7d8f063b1",
         "gitSha": "7897902e02a8cfb20969328c0142deeb747c81f4",
         "bytes": 461661,
@@ -172,7 +172,7 @@
         "height": 1440
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/webp/FrontCabin.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/webp/FrontCabin.webp",
         "sha256": "b5a1718da4c83f82e3c48d83f2a37b4dbc76fce06d6ab4f2ffad0a66f76410b4",
         "gitSha": "5ef8734dd1f9aa694650d7ddf96c66f94f2f70a0",
         "bytes": 28946,
@@ -181,7 +181,7 @@
         "height": 450
       },
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/png/FrontCabin.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/png/FrontCabin.png",
         "sha256": "6a144dd8204b885749ac427e72e9695f9d5dcbd72951958a9426d9c826724252",
         "gitSha": "38eea9b2c834c6d1bc83952cee00d12c0742b14e",
         "bytes": 3308670,
@@ -238,7 +238,7 @@
         "height": 576
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/exterior/webp/FrontLeft.webp",
+        "path": "code/public/assets/side-menu/photo-library/exterior/webp/FrontLeft.webp",
         "sha256": "04b8f5e0704cfd6aeb8feddf3569b3c69e7274dc487d44ad1a04b557ab8209cc",
         "gitSha": "527187bf843273729b3dc6f8c036ce0d1fee0b59",
         "bytes": 40976,
@@ -247,7 +247,7 @@
         "height": 338
       },
       "png": {
-        "path": "code/public/assets/acervo-fotografico/exterior/png/FrontLeft.png",
+        "path": "code/public/assets/side-menu/photo-library/exterior/png/FrontLeft.png",
         "sha256": "4d9824f8a0c2f82544f36953151333aa757e7c5c84a1d1527811bb27166779a3",
         "gitSha": "a1f500c9e3a76ed6229c4dd7a09196bddacc3337",
         "bytes": 770715,
@@ -304,7 +304,7 @@
         "height": 576
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/exterior/webp/RearLeft.webp",
+        "path": "code/public/assets/side-menu/photo-library/exterior/webp/RearLeft.webp",
         "sha256": "f2666d48276f0a3bb70f3ae7f43b7065a81a50930a83215a69514e403a6f3173",
         "gitSha": "34ea5f313770920a1b8bc1d15e26e8f09199e520",
         "bytes": 49206,
@@ -313,7 +313,7 @@
         "height": 338
       },
       "png": {
-        "path": "code/public/assets/acervo-fotografico/exterior/png/RearLeft.png",
+        "path": "code/public/assets/side-menu/photo-library/exterior/png/RearLeft.png",
         "sha256": "1e3c468610ec39a62ab645e5c66d3d4c8eef807f90816098678191151800b769",
         "gitSha": "b0b2389975ee8824257f84e539875b5fc08bd1d5",
         "bytes": 889152,
@@ -370,7 +370,7 @@
         "height": 576
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/exterior/webp/FrontRight.webp",
+        "path": "code/public/assets/side-menu/photo-library/exterior/webp/FrontRight.webp",
         "sha256": "25afa93587b56052e803f561ef7e577419516a0b998851c1f5f1d5ed9c42bf9e",
         "gitSha": "ef8c43e4d8b33df9d787bffd7f46b15f6ebdcd2a",
         "bytes": 43892,
@@ -379,7 +379,7 @@
         "height": 338
       },
       "png": {
-        "path": "code/public/assets/acervo-fotografico/exterior/png/FrontRight.png",
+        "path": "code/public/assets/side-menu/photo-library/exterior/png/FrontRight.png",
         "sha256": "996d33144260d093fef79a8482a479c47dca2d55ac5b4b3015c615d99105e4f2",
         "gitSha": "4c0ad5575d09a461833cc8b367c084e1742082d9",
         "bytes": 853955,

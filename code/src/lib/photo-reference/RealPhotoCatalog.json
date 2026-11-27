@@ -31,7 +31,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal01.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal01.png",
         "sha256": "1cc4a2d4765d3e0d224cc249701627e0802fbed4dc20669fae626e6e1f18b2c8",
         "bytes": 392881,
         "format": "png",
@@ -40,7 +40,7 @@
         "gitSha": "2c61d17113b927fe0446a01d3824a86a7ac8fecb"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal01.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal01.webp",
         "sha256": "6af9801e868ce60bf2d8c02e16d29543ef9f7589fed5dc7e6ab0db380710cb13",
         "bytes": 18138,
         "format": "webp",
@@ -84,7 +84,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal02.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal02.png",
         "sha256": "45c1dfb5e4aa82ecb5378639e2352ca28d4840129edb8c83a285970e18c60424",
         "bytes": 292899,
         "format": "png",
@@ -93,7 +93,7 @@
         "gitSha": "de0ce871a19036607b90da86be24cc40d05f752f"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal02.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal02.webp",
         "sha256": "6268da02e3ff413c1a10cbe6b4acbd491fc380743c04764700cc81c28e1b2c67",
         "bytes": 15964,
         "format": "webp",
@@ -137,7 +137,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal03.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal03.png",
         "sha256": "b3a48954c4e188939ef4df56061a481083c5fde8cba122f76cef28c64b5c6525",
         "bytes": 301563,
         "format": "png",
@@ -146,7 +146,7 @@
         "gitSha": "648da6b290b5e3def04a6571486ad77af9566d9f"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal03.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal03.webp",
         "sha256": "f3a91e7094a642a0d0055a3bd56b5fe24f9b06efcef801c40bec87eb416f376e",
         "bytes": 15374,
         "format": "webp",
@@ -190,7 +190,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal04.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal04.png",
         "sha256": "6ae97737de38cef21d0d71b0822f93009e1de3162d6631ed435e7bf8ad5070cf",
         "bytes": 297689,
         "format": "png",
@@ -199,7 +199,7 @@
         "gitSha": "cd86e0e73f3cf1698a52098aaf51c799692fed3f"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal04.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal04.webp",
         "sha256": "343dbf985b1a1f4fc15d1739c6c8f30aa70917c7ad017dd883e89bacefdbce80",
         "bytes": 15536,
         "format": "webp",
@@ -243,7 +243,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal05.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal05.png",
         "sha256": "80732623c60e738f8ab3f84f81d03cf88749a64f64aa8e766e0b36fbc8807517",
         "bytes": 367758,
         "format": "png",
@@ -252,7 +252,7 @@
         "gitSha": "51ff5af3f4b536bf296c4216192b3617236d460e"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal05.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal05.webp",
         "sha256": "89283bd591607a96ce39152a2e4e322565f50daeec0b3615142ff701639a92db",
         "bytes": 17184,
         "format": "webp",
@@ -296,7 +296,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal06.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal06.png",
         "sha256": "c3c95173aca30bff7dec0a77bc74aa46cf14daaf9409c70b3cf83b6e7ebec12f",
         "bytes": 409643,
         "format": "png",
@@ -305,7 +305,7 @@
         "gitSha": "c74df22691b6107baf4723a2661c0cfdec5d548a"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal06.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal06.webp",
         "sha256": "cf8bcfdfd62b8109921188d6e4574cbbefce69b95785137f64f7d4a4cfd51cad",
         "bytes": 17124,
         "format": "webp",
@@ -349,7 +349,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal07.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal07.png",
         "sha256": "7700a7cd897ad76b24eb48730cf1bd3bb012d22cb304806ae8ca06288dc4baaf",
         "bytes": 392467,
         "format": "png",
@@ -358,7 +358,7 @@
         "gitSha": "c70bec56b83c3c88b3d14285002fafed5c28b4f9"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal07.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal07.webp",
         "sha256": "976b90e6dac4ce7decec8a8bdd487487e8674661cdd2bafd302966626c9f0baa",
         "bytes": 13130,
         "format": "webp",
@@ -402,7 +402,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal08.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal08.png",
         "sha256": "72410aa02d17e092c5ec98a45e34881f0bc838970aa9f35a3efcc46eabcad3da",
         "bytes": 397650,
         "format": "png",
@@ -411,7 +411,7 @@
         "gitSha": "0ff99aa31fdf3b6b79dfe263ae6ea059bff57c1b"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal08.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal08.webp",
         "sha256": "10df5ad9b0dbdd1e1459ee5b31499da0a19a8805c6bf258a069072e88f5e45ae",
         "bytes": 9864,
         "format": "webp",
@@ -453,7 +453,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal09.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal09.png",
         "sha256": "4c352b738120c5cd2c5da885b6a0fe2a012e66c9308dca60de489522d9f43a7b",
         "bytes": 407828,
         "format": "png",
@@ -462,7 +462,7 @@
         "gitSha": "fdd38b619293a2fb12cb29b259ec636a9771a691"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal09.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal09.webp",
         "sha256": "9598197b15bcb152bb54cb6c402999e8bdbca64b17b21f8c907158eb12852845",
         "bytes": 7178,
         "format": "webp",
@@ -504,7 +504,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal10.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal10.png",
         "sha256": "a88143a4da1c6e83eba792a6f8092d3b305ea7390590c5ec8ec48a3779bb2cba",
         "bytes": 464551,
         "format": "png",
@@ -513,7 +513,7 @@
         "gitSha": "67b38438d74aedaaf70904b1aa176e50ade9c067"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal10.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal10.webp",
         "sha256": "d2fd9f8d065a8bdda63b711c977dd1b5084f7402166748ce2e9fc56e6dc7e73d",
         "bytes": 16176,
         "format": "webp",
@@ -557,7 +557,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal11.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal11.png",
         "sha256": "c97a6c3df07022a3a9a305903bad7371eccd876714b159e88f684d05267a4fbe",
         "bytes": 436841,
         "format": "png",
@@ -566,7 +566,7 @@
         "gitSha": "e6b70ce887d229b4ecc96f1b75b452536d0b055f"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal11.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal11.webp",
         "sha256": "9001e7090bc52a8c935c9db8e817a8c7399c1b1f38ea063e01e73806920552b5",
         "bytes": 8662,
         "format": "webp",
@@ -612,7 +612,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal12.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal12.png",
         "sha256": "a8bf010dddd576e53304edeb92867e50b4cd4e22a45560c253d459937bd0abbb",
         "bytes": 419103,
         "format": "png",
@@ -621,7 +621,7 @@
         "gitSha": "715ea03b03aa82b2191eddd2378c9a4f746eeeca"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal12.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal12.webp",
         "sha256": "571a71ef607ab8a4247dc9d8f32c6e6d163543a9ff0bb7f6a156d43f4bc8be3e",
         "bytes": 18030,
         "format": "webp",
@@ -665,7 +665,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal13.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal13.png",
         "sha256": "b83691c945d3bd3579aee1d068110e80ef0cb18a2d3ca37ce745eb57c920428e",
         "bytes": 531575,
         "format": "png",
@@ -674,7 +674,7 @@
         "gitSha": "a10c0e3a03f9a749353493f872459a0129d82e47"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal13.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal13.webp",
         "sha256": "4bae5974b4292836194f7c3c033d223937fcd6bcc69fcad04b23a853b4f8e5af",
         "bytes": 18992,
         "format": "webp",
@@ -720,7 +720,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal14.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal14.png",
         "sha256": "a2ed4a054fffb0f34d561c424c8a69f46d070daa8589e316d1e48ece9ab8ad40",
         "bytes": 445054,
         "format": "png",
@@ -729,7 +729,7 @@
         "gitSha": "ad7b3bbf05f20dfcd8a7fe0fb581dcfebed92559"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal14.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal14.webp",
         "sha256": "8d3bdf67274c53aac2b8c320bcced9e86cbecee019b779afe74134da342cd27b",
         "bytes": 23628,
         "format": "webp",
@@ -775,7 +775,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal15.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal15.png",
         "sha256": "d9a481721a02d692284c1fe510587e42aafc7500ec2c9367cfb9a4912d934c4d",
         "bytes": 447923,
         "format": "png",
@@ -784,7 +784,7 @@
         "gitSha": "8eaadd8c5f2a777a899e2a4dc1e6589b24ba59cf"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal15.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal15.webp",
         "sha256": "7210f0536857a2e40d5cbea87ae0be7732e0b01122cddec3f25a2cabd35c1566",
         "bytes": 22162,
         "format": "webp",
@@ -830,7 +830,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal16.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal16.png",
         "sha256": "1bceeba23b1ec1a311714985391e872d3bc01bc0311f179e20ddeee8314d6310",
         "bytes": 437550,
         "format": "png",
@@ -839,7 +839,7 @@
         "gitSha": "d01b09a09c9876e811abe2ac363bd5e753dee8e8"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal16.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal16.webp",
         "sha256": "fb30236ef05d45a6f9bb39744d77d90793f7f9c96fe3943e6d98d5009bb230b3",
         "bytes": 9824,
         "format": "webp",
@@ -888,7 +888,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal17.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal17.png",
         "sha256": "02e1dabc396903118137c2eb9fbc145d38164c7e76df68167245eaf80ac12e75",
         "bytes": 352313,
         "format": "png",
@@ -897,7 +897,7 @@
         "gitSha": "3b69d6fc8fe335429970d08e67c47535aa451af0"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal17.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal17.webp",
         "sha256": "be1c0994013cb2ed7ce31026f61576b481c9035fb19bb901719ef40fec40446a",
         "bytes": 12168,
         "format": "webp",
@@ -945,7 +945,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal18.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal18.png",
         "sha256": "6c091579a444991ccc676b31f729b9b9795d527c6eeb76fbc0686b452935576f",
         "bytes": 282501,
         "format": "png",
@@ -954,7 +954,7 @@
         "gitSha": "12c6ada76e01e444c415f579f59533c58cb431eb"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal18.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal18.webp",
         "sha256": "80c30d0e29ee79149e015383ea655141d4d479147c42102518e8c8c1c7d6893a",
         "bytes": 12454,
         "format": "webp",
@@ -996,7 +996,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal19.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal19.png",
         "sha256": "33b02353f23af54655f0cd84811d5d52c7c3089b1741072bdb5f1daf2d7c1a0e",
         "bytes": 513525,
         "format": "png",
@@ -1005,7 +1005,7 @@
         "gitSha": "484b7de2601db3caa61a452cfe6cdc7691706622"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal19.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal19.webp",
         "sha256": "5b4cb3b3e89ba9f2ba384df064dc85b6bdd5a72ce4da5322ebefd5e3e488ee01",
         "bytes": 6212,
         "format": "webp",
@@ -1057,7 +1057,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal20.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal20.png",
         "sha256": "42098b364d2e260813e66654c1c63e04dc34ab73a4ffa0744d8159d3cbc13def",
         "bytes": 371040,
         "format": "png",
@@ -1066,7 +1066,7 @@
         "gitSha": "4b0ce43bd7800a99e15efca51965b248eada2583"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal20.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal20.webp",
         "sha256": "3fcf7deb9c3e6d54d1fd217c10648225fe8cce67d5cd2e0f20dfd7a8496c24d0",
         "bytes": 18682,
         "format": "webp",
@@ -1118,7 +1118,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal21.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal21.png",
         "sha256": "71374bf1c5a24386b1468bdc7f8c1f3c43d479272d0e20d19d61185d594e30b4",
         "bytes": 366473,
         "format": "png",
@@ -1127,7 +1127,7 @@
         "gitSha": "58cf8611b22e029490801c4b946cdc5c7f63ad86"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal21.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal21.webp",
         "sha256": "8ad4f373180ecbbea4b1a9d02d7d6202b1aa7e352b0a4091e91d759a881215ff",
         "bytes": 18890,
         "format": "webp",
@@ -1177,7 +1177,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal22.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal22.png",
         "sha256": "b2e1cd00a800906f52f881876dbe0de0fa4a1420af4fee3e60e6c005a94158c4",
         "bytes": 419764,
         "format": "png",
@@ -1186,7 +1186,7 @@
         "gitSha": "8c3e7ae26a9ea2cc3961e93fa3bf20086b7dcf57"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal22.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal22.webp",
         "sha256": "b400a2cc0dd99a342a5c14a6306b8ba4321aba16590fcbd35f45ea528f74adbd",
         "bytes": 22874,
         "format": "webp",
@@ -1238,7 +1238,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal23.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal23.png",
         "sha256": "227224b87ac5406bf15faa5b64826dad10cf190e742da0c25240c55e5caba881",
         "bytes": 333554,
         "format": "png",
@@ -1247,7 +1247,7 @@
         "gitSha": "962006b48988788e030068a8a3498e69930b896c"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal23.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal23.webp",
         "sha256": "112a9cb8c8b196be1a81c75a24ba8c90897ed2f118dafb09f92d684be682f1f0",
         "bytes": 18788,
         "format": "webp",
@@ -1291,7 +1291,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal24.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal24.png",
         "sha256": "4d6a6a39170eb38e3d76a28bdd89ceee1bd4c3615e6db1b79113ade46db19297",
         "bytes": 613695,
         "format": "png",
@@ -1300,7 +1300,7 @@
         "gitSha": "7e23cd32a84c1f8531e1eb457878e6969af56a52"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal24.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal24.webp",
         "sha256": "5353d9b6c4df6805b971bee2796162ae8ea3f16d8c0a580a9ae40ed641a890d4",
         "bytes": 24216,
         "format": "webp",
@@ -1346,7 +1346,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal25.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal25.png",
         "sha256": "29d2b1543c55807feec04b84833810310af89f8d27be848bc021f966c3dfa286",
         "bytes": 630608,
         "format": "png",
@@ -1355,7 +1355,7 @@
         "gitSha": "68fe1b1843f78cf6f7fc0a8a8cc47369545abc28"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal25.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal25.webp",
         "sha256": "20f561f9c7c3f99ddce6a470bae5f906b65d143f8ecf7121accba80a9b8908dc",
         "bytes": 25812,
         "format": "webp",
@@ -1407,7 +1407,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal26.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal26.png",
         "sha256": "3dce2e22587adb04fb27f952730394295db9fb30cb11816bb9ed64057ef03cc6",
         "bytes": 534827,
         "format": "png",
@@ -1416,7 +1416,7 @@
         "gitSha": "6e82bddf491349caeb6e010f46abc81fad57d4ec"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal26.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal26.webp",
         "sha256": "d7e6b8a33dff851d9fefe3f1bea3407e787344d033d890124647a2bc6e733cb6",
         "bytes": 21364,
         "format": "webp",
@@ -1468,7 +1468,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal27.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal27.png",
         "sha256": "ee2471d5af1023b52bd99c5ebc1939a3598dea28dd1298de2f8782549040870f",
         "bytes": 449966,
         "format": "png",
@@ -1477,7 +1477,7 @@
         "gitSha": "a86038d0559571dd3a06e78f87233a8a9f0167ea"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal27.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal27.webp",
         "sha256": "8f5d9af2acaff8839c59802b5a24c8f28c1cffbd2206a547a7317b7ff26fa3fb",
         "bytes": 18044,
         "format": "webp",
@@ -1529,7 +1529,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal28.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal28.png",
         "sha256": "2063e27e857e7fb76375ca3543e715b33ac1d25ab0994cf2c2413134fd287cc9",
         "bytes": 454289,
         "format": "png",
@@ -1538,7 +1538,7 @@
         "gitSha": "bb2f4cac81f2bcb3672f83ac2123df6ff62a3b86"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal28.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal28.webp",
         "sha256": "2fe44342120439a64aa543c9b46dd7aed2becf8a46a15183caeabc79b12453d2",
         "bytes": 17096,
         "format": "webp",
@@ -1578,7 +1578,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal29.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal29.png",
         "sha256": "97421e7e633c9fe7bf8588bb341347eb38cacfc576c3a63b1c18ce44d1fdef10",
         "bytes": 477133,
         "format": "png",
@@ -1587,7 +1587,7 @@
         "gitSha": "314a391a07b599c62651fdc8bb12699a04f795be"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal29.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal29.webp",
         "sha256": "16abc9b3de29ee0d4d35a98609a2516e7b612ba697116e05f9bd0b507fdb0ae9",
         "bytes": 15872,
         "format": "webp",
@@ -1627,7 +1627,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal30.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal30.png",
         "sha256": "24e3494c646ae3aee81dccabec3213d9cc43a98592dc43b3a242686d1ab0157a",
         "bytes": 650781,
         "format": "png",
@@ -1636,7 +1636,7 @@
         "gitSha": "08f785413bfd7a435de3452dd1b4db38188dab43"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal30.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal30.webp",
         "sha256": "a85f7aa3413ad7677bfee962c53b09f12e3ed15c145fcf9b4ab399f9b907656f",
         "bytes": 19000,
         "format": "webp",
@@ -1676,7 +1676,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal31.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal31.png",
         "sha256": "6ac8fef593ff91ff633a1b1ee12b80b479b93d1c419f84db46d6b61c68967b94",
         "bytes": 535458,
         "format": "png",
@@ -1685,7 +1685,7 @@
         "gitSha": "2ef705df1d140eae181b2f0437bec099e7a07b6d"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal31.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal31.webp",
         "sha256": "1922d1c0314c46dca00d78a03e8b9bfff6a326d3e0358b926f747c822fa96002",
         "bytes": 23730,
         "format": "webp",
@@ -1725,7 +1725,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal32.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal32.png",
         "sha256": "3fd5fac923856b892d5cd1df60d606b992966df08db761a2703f5360fe1189cf",
         "bytes": 608955,
         "format": "png",
@@ -1734,7 +1734,7 @@
         "gitSha": "f6dfd0db7b6b01e1a2d80e5e36846f4c8cc2a892"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal32.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal32.webp",
         "sha256": "28498e1a5b105c9449888c8fe3020b519a450c5705b08d86a9897c36dd027989",
         "bytes": 20516,
         "format": "webp",
@@ -1786,7 +1786,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal33.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal33.png",
         "sha256": "e3c6db6b76d1fcffe4d817d0159ccfdc9abac41f55e465dbf2a783b8e364146a",
         "bytes": 507748,
         "format": "png",
@@ -1795,7 +1795,7 @@
         "gitSha": "45f7bcebe271046e800564e78dabf2183b2311eb"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal33.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal33.webp",
         "sha256": "ff6b2d0f834e83779f7f816ee22c44e0ef21020c831404b821bb92c7fc628ed0",
         "bytes": 27230,
         "format": "webp",
@@ -1847,7 +1847,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal34.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal34.png",
         "sha256": "e80a277d667e46c679b45167f422f5ee59d4639ef92bc2dd22aacb15a633f7f6",
         "bytes": 475821,
         "format": "png",
@@ -1856,7 +1856,7 @@
         "gitSha": "6de6870d54090148c32f7125f1a7bd6e6d471f7b"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal34.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal34.webp",
         "sha256": "d5705511378a62caf2fdf2816d9888897befe47c6a78fd8de0e4a5ccbd883804",
         "bytes": 25158,
         "format": "webp",
@@ -1908,7 +1908,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal35.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal35.png",
         "sha256": "6e98c77f50d2895de7fe702192a09210bed2ea228f577d9eac06529172383491",
         "bytes": 478455,
         "format": "png",
@@ -1917,7 +1917,7 @@
         "gitSha": "5157a557fb722b69c0164f809ba4e353f8c51fc5"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal35.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal35.webp",
         "sha256": "116522ebcc276caa3bf6e2e43998e0ab3eaddf91c36e867d3e7f1071d1ed8a6b",
         "bytes": 23400,
         "format": "webp",
@@ -1969,7 +1969,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal36.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal36.png",
         "sha256": "19539c2323ddec4b161c04a7463c4f6e3a81928c23ddd5558aed126a42e9f697",
         "bytes": 407391,
         "format": "png",
@@ -1978,7 +1978,7 @@
         "gitSha": "1db37eaee6fb4856615e461443ade81d8a240d0c"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal36.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal36.webp",
         "sha256": "9b5b1fa56372ac1c601150676cb022a20ea233d50e7f9d71eb270980e53ddaa6",
         "bytes": 23298,
         "format": "webp",
@@ -2030,7 +2030,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal37.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal37.png",
         "sha256": "3eaef7671ec813d3f1c7826d664464fc40ae3f9c5cb75705890958095b7a256d",
         "bytes": 417445,
         "format": "png",
@@ -2039,7 +2039,7 @@
         "gitSha": "7b57be5719197fca9a5e0202479eee5228cdd281"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal37.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal37.webp",
         "sha256": "00e8e76f0f00582e28d34665b9331d95c1f3a999932a368931e2c8a85c2c6200",
         "bytes": 21394,
         "format": "webp",
@@ -2091,7 +2091,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal38.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal38.png",
         "sha256": "7f9aa9d8f56a55e9f5d8b823f3ad79c50b8be4e9d90d10af8542cba79857e2e0",
         "bytes": 425734,
         "format": "png",
@@ -2100,7 +2100,7 @@
         "gitSha": "1c1e0a258d8c7d046675698d10a1ae35d10c3bb8"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal38.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal38.webp",
         "sha256": "f6a2cf768456240a5a70bb0ae3c567df84940afa72c40ae383edb674b2620ac2",
         "bytes": 20824,
         "format": "webp",
@@ -2150,7 +2150,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal39.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal39.png",
         "sha256": "ea9256b9cc83f1e1aaa3f1fbe57fa5241b0cd89c6724c359b0b3b082fec35439",
         "bytes": 410902,
         "format": "png",
@@ -2159,7 +2159,7 @@
         "gitSha": "4db61e80e8bff60b15e0ef5787e38fe429407c96"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal39.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal39.webp",
         "sha256": "c4242b71c1b9c7fcc2bc2b4edc4fe8cb51ec77c2b641b163238a7bd25b88d222",
         "bytes": 18002,
         "format": "webp",
@@ -2211,7 +2211,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal40.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal40.png",
         "sha256": "1609d22715f5df1a6f88132944688b0bf399d82fce5fbdca7a8948c18ee70c25",
         "bytes": 407168,
         "format": "png",
@@ -2220,7 +2220,7 @@
         "gitSha": "9fd4346a11759c4f509b0d0e72fe061535d18748"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal40.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal40.webp",
         "sha256": "74def310b9c6d77bf1e677b3279583ddd30756498d2ff31726b63e39f1be27be",
         "bytes": 22346,
         "format": "webp",
@@ -2260,7 +2260,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal41.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal41.png",
         "sha256": "33e36515b6f7654af995160f078201f7d1f7766920de25e24ba0ea56c2cc5381",
         "bytes": 497087,
         "format": "png",
@@ -2269,7 +2269,7 @@
         "gitSha": "7e60078b804ece68dc58133d67a792721159f384"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal41.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal41.webp",
         "sha256": "79c9cbd1b9328094969b4f1f045426e626ee663fffcd704fd200a5107935a1be",
         "bytes": 22450,
         "format": "webp",
@@ -2313,7 +2313,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal42.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal42.png",
         "sha256": "11fc561d349598c76bf1073b91ff7c4d86264ab3136e07fc8568009d3116ed09",
         "bytes": 455386,
         "format": "png",
@@ -2322,7 +2322,7 @@
         "gitSha": "c0115db975997850c3ac83689ec06e04076a0a16"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal42.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal42.webp",
         "sha256": "159449d035d368ca2f8f22547ffaebcdca56917cf53a69dfb71a5fcf455aed3f",
         "bytes": 20720,
         "format": "webp",
@@ -2362,7 +2362,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal43.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal43.png",
         "sha256": "27d970df705e2c02fb88b818efd6f12d7f598a97f177173887161abad1d86c08",
         "bytes": 532997,
         "format": "png",
@@ -2371,7 +2371,7 @@
         "gitSha": "e93391b742910a1c29c41f1e516884dfa9fae3f5"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal43.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal43.webp",
         "sha256": "699526857b2ca42fd763168e542f58a59738fbe9e79d7b7d612ef7184c166c8c",
         "bytes": 26576,
         "format": "webp",
@@ -2415,7 +2415,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal44.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal44.png",
         "sha256": "29afa037a3e1dde4d26475930c4b95c9da7ebceedf07feeb7eb0b2e7443861e1",
         "bytes": 407520,
         "format": "png",
@@ -2424,7 +2424,7 @@
         "gitSha": "6b3d197fde14c599c2debd2781739b95c6ca008f"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal44.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal44.webp",
         "sha256": "c81a8218b65b572fd716de38e1bf5805f5d87b9d8a194045219e2a5771482c13",
         "bytes": 17386,
         "format": "webp",
@@ -2468,7 +2468,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal45.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal45.png",
         "sha256": "e9eaf4a92f7ce160952822249bc3ea9b6ee1b2aedbcf4bfd8a9d4c3dc2935967",
         "bytes": 520193,
         "format": "png",
@@ -2477,7 +2477,7 @@
         "gitSha": "33855c10fc80bd75feb90e5144a9f17a4a2522fb"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal45.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal45.webp",
         "sha256": "5102889f40883d6cd7bf4f70e31c8902e42067734e01a990dd44b1827e0e1b05",
         "bytes": 18878,
         "format": "webp",
@@ -2521,7 +2521,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal46.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal46.png",
         "sha256": "8b4eb584ef1273fa70b9155e2760b530b355edee7e7b3cc37ec838c400d6560f",
         "bytes": 479898,
         "format": "png",
@@ -2530,7 +2530,7 @@
         "gitSha": "52afe2059ba4b2f0b22c5697eb5115185ca8e2b5"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal46.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal46.webp",
         "sha256": "3c0a3fcb8fba05b21bad733a00a3b5558804d350a46eb078c63387aba7a19a1f",
         "bytes": 21384,
         "format": "webp",
@@ -2582,7 +2582,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal47.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal47.png",
         "sha256": "968c112de638df96a06203484992f36862e37ead35f78e00d3c855f0d36149a4",
         "bytes": 463164,
         "format": "png",
@@ -2591,7 +2591,7 @@
         "gitSha": "7b9ca9f3b12c1441a5821e2e5fec44433901a3e8"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal47.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal47.webp",
         "sha256": "b0291b03a803080e0d2e1193d1d92417122f634914a999a5027c119988d6d0dc",
         "bytes": 22994,
         "format": "webp",
@@ -2647,7 +2647,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal48.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal48.png",
         "sha256": "404b880cb0117b6630f95a4f6a94edef9934ac8ba1e1cd4ee83629ffc65cb9c0",
         "bytes": 373337,
         "format": "png",
@@ -2656,7 +2656,7 @@
         "gitSha": "a7005f5dea659280e616deaf0462c3119c10cf33"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal48.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal48.webp",
         "sha256": "cfbf8d29aa68ebe7e751ca7f777517b78b7a3cc9bca4a0c4e24b874b5d9e2b1e",
         "bytes": 17744,
         "format": "webp",
@@ -2712,7 +2712,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal49.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal49.png",
         "sha256": "13cbb8d33c29e314616578f5afb6a5deae9e031051b1d3395e36b93deae66a5d",
         "bytes": 401630,
         "format": "png",
@@ -2721,7 +2721,7 @@
         "gitSha": "2cc99eaf6cd4e0849f9208b88d1aa38897f858db"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal49.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal49.webp",
         "sha256": "7aad35aa66a21db2a5d49b7eb7461a17d37cd199baf63813e4b8aca2a3114d15",
         "bytes": 18296,
         "format": "webp",
@@ -2777,7 +2777,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal50.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal50.png",
         "sha256": "f6eb1d987247c5c5906a8cc1373979f1e803e1c2187049f5afbedc0ed30246de",
         "bytes": 397495,
         "format": "png",
@@ -2786,7 +2786,7 @@
         "gitSha": "8ad3ea6cc662c9f9028e74ddfcc08862125b7c62"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal50.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal50.webp",
         "sha256": "dbbdf3f47f650bd81ceac3719b6a0c546f8d09ad4ed3a88739998fb5ef99c2d5",
         "bytes": 20370,
         "format": "webp",
@@ -2838,7 +2838,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal51.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal51.png",
         "sha256": "0bd0039c3447e1681dbfc5606cdf06480ef69e4f73c0374a7dcea81d28860d76",
         "bytes": 373514,
         "format": "png",
@@ -2847,7 +2847,7 @@
         "gitSha": "0354422b595df9c1f0c677a8a0b72c7006214827"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal51.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal51.webp",
         "sha256": "5c6a2c23614d5f417479b4def9226d80231058423c8d56dcb457ca74eec43088",
         "bytes": 19136,
         "format": "webp",
@@ -2899,7 +2899,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal52.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal52.png",
         "sha256": "9c550a2e4374377b62e4eb8e335661a2e7dbd3704c957b55637fcc5dfb01ef49",
         "bytes": 366850,
         "format": "png",
@@ -2908,7 +2908,7 @@
         "gitSha": "017bdf585734fc51e5b25404e079adbadfa5956b"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal52.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal52.webp",
         "sha256": "8985d6cd39435291401dcd6db55b0fb9302720a97a2b9112f192bcd3a5ac1d09",
         "bytes": 18184,
         "format": "webp",
@@ -2960,7 +2960,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal53.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal53.png",
         "sha256": "c11279aead919d87fde745ceb1abe5fcf68fd0e98a75dd979748947e1612e081",
         "bytes": 415065,
         "format": "png",
@@ -2969,7 +2969,7 @@
         "gitSha": "424d6e849e8e9df3ff298b7f01bbb1e3468c6968"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal53.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal53.webp",
         "sha256": "893dc33e7029725d24487c881fc6c99dd6b308a5c40a59f15fcd049baf5c0045",
         "bytes": 20200,
         "format": "webp",
@@ -3021,7 +3021,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal54.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal54.png",
         "sha256": "f4cb6e06bc929af351db45eb410814ac3af95841777414dd026e73740623b4de",
         "bytes": 414002,
         "format": "png",
@@ -3030,7 +3030,7 @@
         "gitSha": "5d4e7e3b9cd2703115c577932485674463d11bc4"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal54.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal54.webp",
         "sha256": "86a9d37b4b1f1116bff820da2b2d52c2d5085c0f99255a7685f0909f63149418",
         "bytes": 18174,
         "format": "webp",
@@ -3082,7 +3082,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal55.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal55.png",
         "sha256": "bdb70c3f58a769a39551aeb8d602d6b6b7adff9d864c6adfd38053f67e0fdfc6",
         "bytes": 477132,
         "format": "png",
@@ -3091,7 +3091,7 @@
         "gitSha": "8551ac838dbf8e8cb10b665c9c0889f0bf3987bb"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal55.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal55.webp",
         "sha256": "f0afa4e4f2dd0d9248e715306888ea3265fb3a491be98bf8fa479c21cf8d649d",
         "bytes": 21660,
         "format": "webp",
@@ -3143,7 +3143,7 @@
     "format": "image/png",
     "assets": {
       "png": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/png/VectraReal56.png",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/png/VectraReal56.png",
         "sha256": "823ceb9d38abead22476b66d8b3278426325a59c73f2f8786d7b65d9c9d3b386",
         "bytes": 525663,
         "format": "png",
@@ -3152,7 +3152,7 @@
         "gitSha": "33d18069fffa9593af64e137332ddffbf002d45b"
       },
       "webp": {
-        "path": "code/public/assets/acervo-fotografico/interior/veiculo-real/webp/VectraReal56.webp",
+        "path": "code/public/assets/side-menu/photo-library/interior/real-vehicle/webp/VectraReal56.webp",
         "sha256": "ca0fcb119cd5a4017884dcd89fbd675dc820458dbd89568c0ff91f4fe293758a",
         "bytes": 22838,
         "format": "webp",

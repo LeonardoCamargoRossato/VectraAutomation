@@ -1,5 +1,5 @@
 {
-  "version": "7",
+  "version": "7.1-migration",
   "scope": "New presentation assets; existing photographic and GLB catalogs remain authoritative",
   "catalogs": [
     {
@@ -7,14 +7,18 @@
       "scope": "Photographic references"
     },
     {
-      "path": "code/public/assets/explorar/ModelCatalog.json",
+      "path": "code/public/assets/side-menu/explore-vectra/models/ModelCatalog.json",
       "scope": "Model"
+    },
+    {
+      "path": "code/src/lib/photo-reference/RealPhotoCatalog.json",
+      "scope": "56 published real-vehicle derivatives"
     }
   ],
   "assets": [
     {
       "id": "vectra-mark",
-      "path": "code/public/assets/branding/VectraMark.svg",
+      "path": "code/public/assets/top-menu/shared/branding/svg/VectraMark.svg",
       "format": "svg",
       "width": 64,
       "height": 64,
@@ -29,7 +33,7 @@
     },
     {
       "id": "flag-br",
-      "path": "code/public/assets/branding/FlagBr.svg",
+      "path": "code/public/assets/top-menu/shared/language/svg/FlagBr.svg",
       "format": "svg",
       "width": 28,
       "height": 20,
@@ -42,7 +46,7 @@
     },
     {
       "id": "vectra-twin",
-      "path": "code/public/assets/home/VectraTwin.svg",
+      "path": "code/public/assets/top-menu/home/svg/VectraTwin.svg",
       "format": "svg",
       "width": 900,
       "height": 620,
@@ -56,7 +60,7 @@
     },
     {
       "id": "author-profile",
-      "path": "code/public/assets/about-author/AuthorProfile.webp",
+      "path": "code/public/assets/top-menu/about-author/webp/AuthorProfile.webp",
       "format": "webp",
       "bytes": 17094,
       "origin": "LeonardoCamargoRossato/Unifesp-ITA-Execel-nciaOperacional@942bb8e788340eaf899999d7172099f9539b243a:code/public/assets/about-author/AuthorProfile.webp",
