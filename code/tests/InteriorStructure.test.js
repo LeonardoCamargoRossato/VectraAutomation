@@ -12,7 +12,7 @@ test('connection distance distinguishes disconnected and intersecting bounds',()
  b.position.x=.9;b.updateMatrixWorld();assert.equal(connectionGap(a,b),0);
 });
 test('stock GLB structural diagnostic (CPU geometry, not visual certification)',async()=>{
- const source=fs.readFileSync(new URL('../public/assets/explorar/VectraStock.glb',import.meta.url));
+ const source=fs.readFileSync(new URL('../public/assets/side-menu/explore-vectra/models/glb/VectraStock.glb',import.meta.url));
  const jsonLength=source.readUInt32LE(12),data=JSON.parse(source.toString('utf8',20,20+jsonLength));
  // Strip image/texture references for CPU-only Node test; original bytes are never modified.
  const strip=o=>{if(!o||typeof o!=='object')return;for(const k of Object.keys(o)){if(/texture$/i.test(k))delete o[k];else strip(o[k])}};
